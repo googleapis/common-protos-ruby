@@ -3,7 +3,7 @@
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'googleapis-common-protos'
+gem 'googleapis-common-protos-types'
 ```
 
 And then execute:
@@ -12,4 +12,4 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install googleapis-common-protos
+    $ gem install googleapis-common-protos-types
