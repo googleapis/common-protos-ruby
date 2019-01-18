@@ -52,4 +52,7 @@ task :ci do
   Rake::Task[:compile_protos].invoke
 end
 
+Rake::Task[:build].enhance [:compile_protos]
+Rake::Task[:clean].enhance [:clean_protos]
+
 task default: :ci
