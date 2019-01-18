@@ -17,12 +17,12 @@
 Gem::Specification.new do |spec|
   spec.name          = "googleapis-common-protos"
   spec.version       = "1.3.7"
-  spec.authors       = ["Ernest Landrito"]
-  spec.email         = ["landrito@google.com"]
+  spec.authors       = ["Google Inc"]
+  spec.email         = ["googleapis-packages@google.com"]
   spec.licenses      = ["Apache-2.0"]
 
-  spec.summary       = "API Common Proto Types"
-  spec.homepage      = "https://github.com/googleapis"
+  spec.summary       = "Common gRPC and protocol buffer classes used in Google APIs"
+  spec.homepage      = "https://github.com/googleapis/googleapis"
 
   # Specify which files should be added to the gem when it is released. The `git
   # ls-files -z` loads the files in the RubyGem that have been added into git.
