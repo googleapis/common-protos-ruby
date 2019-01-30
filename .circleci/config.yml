@@ -20,7 +20,7 @@ jobs:
             cd /tmp
             unzip protoc-${PROTOBUF_VERSION}.zip
             rm protoc-${PROTOBUF_VERSION}.zip
-            sudo sh -c "mv /tmp/protoc /usr/local/bin/protoc"
+            sudo sh -c "mv bin/protoc /usr/local/bin/protoc"
           environment:
             PROTOBUF_VERSION: 3.6.1
       - restore_cache:
