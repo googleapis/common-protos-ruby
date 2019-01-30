@@ -1,0 +1,45 @@
+# Ruby CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-ruby/ for more details
+#
+version: 2
+jobs:
+  build:
+    docker:
+       - image: circleci/ruby:2.4.1-node-browsers
+    working_directory: ~/api-common-protos-ruby
+    steps:
+      - checkout
+      - run:
+          name: checkout submodules
+          command: git submodule update --init
+      - run:
+          name: install protoc
+          command: |
+            curl --location https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip > /tmp/protoc-${PROTOBUF_VERSION}.zip
+            cd /tmp
+            unzip protoc-${PROTOBUF_VERSION}.zip
+            rm protoc-${PROTOBUF_VERSION}.zip
+            sudo sh -c "mv /tmp/protoc /usr/local/bin/protoc"
+          environment:
+            PROTOBUF_VERSION: 3.6.1
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-
+      - run:
+          name: install dependencies
+          command: bundle install --retry=3 --path vendor/bundle
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+      - run:
+          name: run tests
+          command: bundle exec rake ci
+
+workflows:
+  version: 2
+  build_and_test:
+    jobs:
+      - build
