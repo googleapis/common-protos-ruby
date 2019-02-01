@@ -20,7 +20,7 @@ task :ci do
     Dir.chdir gem do
       Bundler.with_clean_env do
         puts "Running CI for #{gem}"
-        sh "bundle exec rake ci"
+        sh "bundle install && bundle exec rake ci"
       end
     end
   end

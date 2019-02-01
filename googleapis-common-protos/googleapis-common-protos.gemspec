@@ -38,7 +38,7 @@ Gem::Specification.new do |spec|
   spec.add_dependency "google-protobuf", "~> 3.0"
   spec.add_dependency "grpc", "~> 1.0"
 
-  spec.add_development_dependency "bundler", "~> 2.0"
-  spec.add_development_dependency "grpc-tools", "~> 1.17"
+  spec.add_development_dependency "bundler", "~> 1.15"
+  spec.add_development_dependency "grpc-tools", "~> 1.18"
   spec.add_development_dependency "rake", "~> 10.0"
 end
