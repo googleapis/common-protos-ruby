@@ -21,7 +21,6 @@ task :compile_protos do
   Rake::Task[:clean_protos].invoke
   FileUtils.mkdir 'lib'
 
-  # TODO: Add check to ensure protoc is installed.
   protos = [
     "../googleapis/google/api/*.proto",
     "../googleapis/google/logging/type/*.proto",
@@ -31,7 +30,7 @@ task :compile_protos do
   ]
 
   command = []
-  command << "protoc"
+  command << "grpc_tools_ruby_protoc"
   command << "--ruby_out=lib"
   command << "-I ../googleapis"
   command += protos

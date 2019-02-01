@@ -21,8 +21,6 @@ task :compile_protos do
   Rake::Task[:clean_protos].invoke
   FileUtils.mkdir 'lib'
 
-  # TODO: Add check to ensure protoc is installed.
-
   command = []
   command << "grpc_tools_ruby_protoc"
   command << "--grpc_out=lib"
