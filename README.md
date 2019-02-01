@@ -1,9 +1,9 @@
 ## Common Protos Ruby
 
-This repository is a home for the [protocol buffer][protobuf] types which are
+This repository is a home for the [protocol buffer](https://developers.google.com/protocol-buffers/) types which are
 common dependencies throughout the Google API ecosystem, generated for Ruby.
 The protobuf definitions for these generated Ruby classes are provided in the
-[API Common Protos][api-common-protos] repository.
+[API Common Protos](https://github.com/googleapis/api-common-protos) repository.
 
 ## Using these generated classes
 
