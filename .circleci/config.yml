@@ -13,16 +13,6 @@ jobs:
       - run:
           name: checkout submodules
           command: git submodule update --init
-      - run:
-          name: install protoc
-          command: |
-            curl --location https://github.com/google/protobuf/releases/download/v${PROTOBUF_VERSION}/protoc-${PROTOBUF_VERSION}-linux-x86_64.zip > /tmp/protoc-${PROTOBUF_VERSION}.zip
-            cd /tmp
-            unzip protoc-${PROTOBUF_VERSION}.zip
-            rm protoc-${PROTOBUF_VERSION}.zip
-            sudo sh -c "mv bin/protoc /usr/local/bin/protoc"
-          environment:
-            PROTOBUF_VERSION: 3.6.1
       - restore_cache:
           keys:
           - v1-dependencies-{{ checksum "Gemfile.lock" }}

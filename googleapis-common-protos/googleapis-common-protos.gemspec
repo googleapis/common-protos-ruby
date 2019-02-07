@@ -16,7 +16,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "googleapis-common-protos"
-  spec.version       = "1.3.7"
+  spec.version       = "1.3.8"
   spec.authors       = ["Google Inc"]
   spec.email         = ["googleapis-packages@google.com"]
   spec.licenses      = ["Apache-2.0"]
