@@ -1,3 +1,7 @@
+# Common Services
+
+This gem contains common gRPC services for Google APIs.
+
 ## Installation
 
 Add this line to your application's Gemfile:

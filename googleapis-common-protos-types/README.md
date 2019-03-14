@@ -1,3 +1,7 @@
+# Common Types
+
+This gem contains common message types for Google APIs.
+
 ## Installation
 
 Add this line to your application's Gemfile:
