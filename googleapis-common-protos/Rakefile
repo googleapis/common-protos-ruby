@@ -21,11 +21,15 @@ task :compile_protos do
   Rake::Task[:clean_protos].invoke
   FileUtils.mkdir 'lib'
 
+  protos = [
+    "../googleapis/google/longrunning/operations.proto"
+  ]
+
   command = []
   command << "grpc_tools_ruby_protoc"
   command << "--grpc_out=lib"
   command << "-I ../googleapis"
-  command << "../googleapis/google/longrunning/operations.proto"
+  command += protos
   full_command = command.join " "
 
   puts full_command
