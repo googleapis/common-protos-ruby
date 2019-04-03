@@ -26,7 +26,7 @@ task :ci do
   end
 end
 
-desc "Cleanb all gems."
+desc "Clean all gems."
 task :clean do
   gem_dirs.each do |gem|
     Dir.chdir gem do
