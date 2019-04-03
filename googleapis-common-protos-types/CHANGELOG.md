@@ -1,6 +1,6 @@
 # Release History
 
-### 1.0.4 / April 3 2019
+### 1.0.4 / 2019-04-03
 
 * Add WaitOperation RPC to operations_pb.rb and update documentation.
 * Add new common types for:
