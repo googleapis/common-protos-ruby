@@ -5,6 +5,7 @@ require 'google/protobuf'
 
 require 'google/api/annotations_pb'
 require 'google/protobuf/any_pb'
+require 'google/protobuf/duration_pb'
 require 'google/protobuf/empty_pb'
 require 'google/rpc/status_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
@@ -36,6 +37,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_message "google.longrunning.DeleteOperationRequest" do
     optional :name, :string, 1
   end
+  add_message "google.longrunning.WaitOperationRequest" do
+    optional :name, :string, 1
+    optional :timeout, :message, 2, "google.protobuf.Duration"
+  end
+  add_message "google.longrunning.OperationInfo" do
+    optional :response_type, :string, 1
+    optional :metadata_type, :string, 2
+  end
 end
 
 module Google
@@ -46,5 +55,7 @@ module Google
     ListOperationsResponse = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.longrunning.ListOperationsResponse").msgclass
     CancelOperationRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.longrunning.CancelOperationRequest").msgclass
     DeleteOperationRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.longrunning.DeleteOperationRequest").msgclass
+    WaitOperationRequest = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.longrunning.WaitOperationRequest").msgclass
+    OperationInfo = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.longrunning.OperationInfo").msgclass
   end
 end
