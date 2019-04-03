@@ -26,6 +26,18 @@ task :ci do
   end
 end
 
+desc "Clean all gems."
+task :clean do
+  gem_dirs.each do |gem|
+    Dir.chdir gem do
+      Bundler.with_clean_env do
+        puts "Cleaning #{gem}"
+        sh "bundle install && bundle exec rake clean"
+      end
+    end
+  end
+end
+
 def gem_dirs
   `git ls-files -- */*.gemspec`.split("\n").map { |gem| gem.split("/").first }.sort
 end
