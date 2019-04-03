@@ -43,7 +43,7 @@ To add, remove, or modify the common types in these gems do the following.
 1. Update the `CHANGELOG.md`, gem version, and open a release pull request:
 
    Review and document the changes in each gem's `CHANGELOG.md` along with the version number in the `gemspec`.
-   Create a PR to review the changes. Once it's merged, tag the release with the version number and manually pushing the gem as described below.
+   Create a PR to review the changes. Once it's merged, tag the release with the version number and manually push the gem as described below.
 
 1. Build & push the gems as usual:
 
