@@ -23,7 +23,7 @@ Gem::Specification.new do |spec|
 
   spec.description   = "Common protocol buffer types used by Google APIs"
   spec.summary       = "Common protobuf types used in Google APIs"
-  spec.homepage      = "https://github.com/googleapis/googleapis"
+  spec.homepage      = "https://github.com/googleapis/common-protos-ruby"
 
   # Specify which files should be added to the gem when it is released. The `git
   # ls-files -z` loads the files in the RubyGem that have been added into git.
