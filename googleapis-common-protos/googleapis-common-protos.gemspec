@@ -22,7 +22,7 @@ Gem::Specification.new do |spec|
   spec.licenses      = ["Apache-2.0"]
 
   spec.summary       = "Common gRPC and protocol buffer classes used in Google APIs"
-  spec.homepage      = "https://github.com/googleapis/googleapis"
+  spec.homepage      = "https://github.com/googleapis/common-protos-ruby"
 
   # Specify which files should be added to the gem when it is released. The `git
   # ls-files -z` loads the files in the RubyGem that have been added into git.
