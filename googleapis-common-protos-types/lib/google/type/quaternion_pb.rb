@@ -4,16 +4,18 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.type.Quaternion" do
-    optional :x, :double, 1
-    optional :y, :double, 2
-    optional :z, :double, 3
-    optional :w, :double, 4
+  add_file("google/type/quaternion.proto", :syntax => :proto3) do
+    add_message "google.type.Quaternion" do
+      optional :x, :double, 1
+      optional :y, :double, 2
+      optional :z, :double, 3
+      optional :w, :double, 4
+    end
   end
 end
 
 module Google
   module Type
-    Quaternion = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Quaternion").msgclass
+    Quaternion = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Quaternion").msgclass
   end
 end

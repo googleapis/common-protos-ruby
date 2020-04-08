@@ -4,4 +4,5 @@ source "https://rubygems.org"
 
 gem "googleapis-common-protos",       path: "googleapis-common-protos"
 gem "googleapis-common-protos-types", path: "googleapis-common-protos-types"
-gem "rake", "~> 10.0"
+gem "grpc-google-iam-v1",             path: "grpc-google-iam-v1"
+gem "rake", "~> 13.0"

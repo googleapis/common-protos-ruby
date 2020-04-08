@@ -15,13 +15,13 @@
 # limitations under the License.
 
 Gem::Specification.new do |spec|
-  spec.name          = "googleapis-common-protos"
-  spec.version       = "1.3.10"
+  spec.name          = "grpc-google-iam-v1"
+  spec.version       = "0.6.10"
   spec.authors       = ["Google Inc"]
   spec.email         = ["googleapis-packages@google.com"]
   spec.licenses      = ["Apache-2.0"]
 
-  spec.summary       = "Common gRPC and protocol buffer classes used in Google APIs"
+  spec.summary       = "Common protos and gRPC services for Google IAM"
   spec.homepage      = "https://github.com/googleapis/common-protos-ruby"
 
   # Specify which files should be added to the gem when it is released. The `git
@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
   spec.files += Dir.glob "lib/**/*_pb.rb"
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "googleapis-common-protos-types", ">= 1.0.5", "< 2.0"
+  spec.add_dependency "googleapis-common-protos", ">= 1.3.10", "< 2.0"
   spec.add_dependency "google-protobuf", "~> 3.11"
   spec.add_dependency "grpc", "~> 1.27"
 

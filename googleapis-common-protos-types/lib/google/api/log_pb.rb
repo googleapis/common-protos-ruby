@@ -5,16 +5,18 @@ require 'google/protobuf'
 
 require 'google/api/label_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.LogDescriptor" do
-    optional :name, :string, 1
-    repeated :labels, :message, 2, "google.api.LabelDescriptor"
-    optional :description, :string, 3
-    optional :display_name, :string, 4
+  add_file("google/api/log.proto", :syntax => :proto3) do
+    add_message "google.api.LogDescriptor" do
+      optional :name, :string, 1
+      repeated :labels, :message, 2, "google.api.LabelDescriptor"
+      optional :description, :string, 3
+      optional :display_name, :string, 4
+    end
   end
 end
 
 module Google
   module Api
-    LogDescriptor = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LogDescriptor").msgclass
+    LogDescriptor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LogDescriptor").msgclass
   end
 end

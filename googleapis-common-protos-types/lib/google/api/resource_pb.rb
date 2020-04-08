@@ -4,14 +4,31 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Resource" do
-    optional :pattern, :string, 1
-    optional :symbol, :string, 2
+  add_file("google/api/resource.proto", :syntax => :proto3) do
+    add_message "google.api.ResourceDescriptor" do
+      optional :type, :string, 1
+      repeated :pattern, :string, 2
+      optional :name_field, :string, 3
+      optional :history, :enum, 4, "google.api.ResourceDescriptor.History"
+      optional :plural, :string, 5
+      optional :singular, :string, 6
+    end
+    add_enum "google.api.ResourceDescriptor.History" do
+      value :HISTORY_UNSPECIFIED, 0
+      value :ORIGINALLY_SINGLE_PATTERN, 1
+      value :FUTURE_MULTI_PATTERN, 2
+    end
+    add_message "google.api.ResourceReference" do
+      optional :type, :string, 1
+      optional :child_type, :string, 2
+    end
   end
 end
 
 module Google
   module Api
-    Resource = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Resource").msgclass
+    ResourceDescriptor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceDescriptor").msgclass
+    ResourceDescriptor::History = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceDescriptor.History").enummodule
+    ResourceReference = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceReference").msgclass
   end
 end

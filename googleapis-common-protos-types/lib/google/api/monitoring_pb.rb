@@ -3,21 +3,22 @@
 
 require 'google/protobuf'
 
-require 'google/api/annotations_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Monitoring" do
-    repeated :producer_destinations, :message, 1, "google.api.Monitoring.MonitoringDestination"
-    repeated :consumer_destinations, :message, 2, "google.api.Monitoring.MonitoringDestination"
-  end
-  add_message "google.api.Monitoring.MonitoringDestination" do
-    optional :monitored_resource, :string, 1
-    repeated :metrics, :string, 2
+  add_file("google/api/monitoring.proto", :syntax => :proto3) do
+    add_message "google.api.Monitoring" do
+      repeated :producer_destinations, :message, 1, "google.api.Monitoring.MonitoringDestination"
+      repeated :consumer_destinations, :message, 2, "google.api.Monitoring.MonitoringDestination"
+    end
+    add_message "google.api.Monitoring.MonitoringDestination" do
+      optional :monitored_resource, :string, 1
+      repeated :metrics, :string, 2
+    end
   end
 end
 
 module Google
   module Api
-    Monitoring = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Monitoring").msgclass
-    Monitoring::MonitoringDestination = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Monitoring.MonitoringDestination").msgclass
+    Monitoring = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Monitoring").msgclass
+    Monitoring::MonitoringDestination = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Monitoring.MonitoringDestination").msgclass
   end
 end
