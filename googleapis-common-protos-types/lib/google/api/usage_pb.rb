@@ -3,23 +3,24 @@
 
 require 'google/protobuf'
 
-require 'google/api/annotations_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Usage" do
-    repeated :requirements, :string, 1
-    repeated :rules, :message, 6, "google.api.UsageRule"
-    optional :producer_notification_channel, :string, 7
-  end
-  add_message "google.api.UsageRule" do
-    optional :selector, :string, 1
-    optional :allow_unregistered_calls, :bool, 2
-    optional :skip_service_control, :bool, 3
+  add_file("google/api/usage.proto", :syntax => :proto3) do
+    add_message "google.api.Usage" do
+      repeated :requirements, :string, 1
+      repeated :rules, :message, 6, "google.api.UsageRule"
+      optional :producer_notification_channel, :string, 7
+    end
+    add_message "google.api.UsageRule" do
+      optional :selector, :string, 1
+      optional :allow_unregistered_calls, :bool, 2
+      optional :skip_service_control, :bool, 3
+    end
   end
 end
 
 module Google
   module Api
-    Usage = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Usage").msgclass
-    UsageRule = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.UsageRule").msgclass
+    Usage = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Usage").msgclass
+    UsageRule = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.UsageRule").msgclass
   end
 end

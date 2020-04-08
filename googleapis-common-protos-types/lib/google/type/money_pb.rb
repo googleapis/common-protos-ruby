@@ -4,15 +4,17 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.type.Money" do
-    optional :currency_code, :string, 1
-    optional :units, :int64, 2
-    optional :nanos, :int32, 3
+  add_file("google/type/money.proto", :syntax => :proto3) do
+    add_message "google.type.Money" do
+      optional :currency_code, :string, 1
+      optional :units, :int64, 2
+      optional :nanos, :int32, 3
+    end
   end
 end
 
 module Google
   module Type
-    Money = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Money").msgclass
+    Money = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Money").msgclass
   end
 end

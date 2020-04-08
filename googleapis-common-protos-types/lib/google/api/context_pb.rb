@@ -4,21 +4,23 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Context" do
-    repeated :rules, :message, 1, "google.api.ContextRule"
-  end
-  add_message "google.api.ContextRule" do
-    optional :selector, :string, 1
-    repeated :requested, :string, 2
-    repeated :provided, :string, 3
-    repeated :allowed_request_extensions, :string, 4
-    repeated :allowed_response_extensions, :string, 5
+  add_file("google/api/context.proto", :syntax => :proto3) do
+    add_message "google.api.Context" do
+      repeated :rules, :message, 1, "google.api.ContextRule"
+    end
+    add_message "google.api.ContextRule" do
+      optional :selector, :string, 1
+      repeated :requested, :string, 2
+      repeated :provided, :string, 3
+      repeated :allowed_request_extensions, :string, 4
+      repeated :allowed_response_extensions, :string, 5
+    end
   end
 end
 
 module Google
   module Api
-    Context = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Context").msgclass
-    ContextRule = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ContextRule").msgclass
+    Context = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Context").msgclass
+    ContextRule = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ContextRule").msgclass
   end
 end

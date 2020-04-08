@@ -4,6 +4,8 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
+  add_file("google/api/client.proto", :syntax => :proto3) do
+  end
 end
 
 module Google

@@ -16,7 +16,7 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "googleapis-common-protos"
-  spec.version       = "1.3.9"
+  spec.version       = "1.3.10"
   spec.authors       = ["Google Inc"]
   spec.email         = ["googleapis-packages@google.com"]
   spec.licenses      = ["Apache-2.0"]
@@ -34,11 +34,11 @@ Gem::Specification.new do |spec|
   spec.files += Dir.glob "lib/**/*_pb.rb"
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "googleapis-common-protos-types", "~> 1.0"
-  spec.add_dependency "google-protobuf", "~> 3.0"
-  spec.add_dependency "grpc", "~> 1.0"
+  spec.add_dependency "googleapis-common-protos-types", ">= 1.0.5", "< 2.0"
+  spec.add_dependency "google-protobuf", "~> 3.11"
+  spec.add_dependency "grpc", "~> 1.27"
 
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "grpc-tools", "~> 1.18"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_development_dependency "bundler", "~> 2.1"
+  spec.add_development_dependency "grpc-tools", "~> 1.27"
+  spec.add_development_dependency "rake", "~> 13.0"
 end

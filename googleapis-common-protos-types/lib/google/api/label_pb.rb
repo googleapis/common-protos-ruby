@@ -4,21 +4,23 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.LabelDescriptor" do
-    optional :key, :string, 1
-    optional :value_type, :enum, 2, "google.api.LabelDescriptor.ValueType"
-    optional :description, :string, 3
-  end
-  add_enum "google.api.LabelDescriptor.ValueType" do
-    value :STRING, 0
-    value :BOOL, 1
-    value :INT64, 2
+  add_file("google/api/label.proto", :syntax => :proto3) do
+    add_message "google.api.LabelDescriptor" do
+      optional :key, :string, 1
+      optional :value_type, :enum, 2, "google.api.LabelDescriptor.ValueType"
+      optional :description, :string, 3
+    end
+    add_enum "google.api.LabelDescriptor.ValueType" do
+      value :STRING, 0
+      value :BOOL, 1
+      value :INT64, 2
+    end
   end
 end
 
 module Google
   module Api
-    LabelDescriptor = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LabelDescriptor").msgclass
-    LabelDescriptor::ValueType = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LabelDescriptor.ValueType").enummodule
+    LabelDescriptor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LabelDescriptor").msgclass
+    LabelDescriptor::ValueType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.LabelDescriptor.ValueType").enummodule
   end
 end

@@ -4,20 +4,22 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_enum "google.type.CalendarPeriod" do
-    value :CALENDAR_PERIOD_UNSPECIFIED, 0
-    value :DAY, 1
-    value :WEEK, 2
-    value :FORTNIGHT, 3
-    value :MONTH, 4
-    value :QUARTER, 5
-    value :HALF, 6
-    value :YEAR, 7
+  add_file("google/type/calendar_period.proto", :syntax => :proto3) do
+    add_enum "google.type.CalendarPeriod" do
+      value :CALENDAR_PERIOD_UNSPECIFIED, 0
+      value :DAY, 1
+      value :WEEK, 2
+      value :FORTNIGHT, 3
+      value :MONTH, 4
+      value :QUARTER, 5
+      value :HALF, 6
+      value :YEAR, 7
+    end
   end
 end
 
 module Google
   module Type
-    CalendarPeriod = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.CalendarPeriod").enummodule
+    CalendarPeriod = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.CalendarPeriod").enummodule
   end
 end

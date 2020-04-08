@@ -4,31 +4,35 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Backend" do
-    repeated :rules, :message, 1, "google.api.BackendRule"
-  end
-  add_message "google.api.BackendRule" do
-    optional :selector, :string, 1
-    optional :address, :string, 2
-    optional :deadline, :double, 3
-    optional :min_deadline, :double, 4
-    optional :operation_deadline, :double, 5
-    optional :path_translation, :enum, 6, "google.api.BackendRule.PathTranslation"
-    oneof :authentication do
-      optional :jwt_audience, :string, 7
+  add_file("google/api/backend.proto", :syntax => :proto3) do
+    add_message "google.api.Backend" do
+      repeated :rules, :message, 1, "google.api.BackendRule"
     end
-  end
-  add_enum "google.api.BackendRule.PathTranslation" do
-    value :PATH_TRANSLATION_UNSPECIFIED, 0
-    value :CONSTANT_ADDRESS, 1
-    value :APPEND_PATH_TO_ADDRESS, 2
+    add_message "google.api.BackendRule" do
+      optional :selector, :string, 1
+      optional :address, :string, 2
+      optional :deadline, :double, 3
+      optional :min_deadline, :double, 4
+      optional :operation_deadline, :double, 5
+      optional :path_translation, :enum, 6, "google.api.BackendRule.PathTranslation"
+      optional :protocol, :string, 9
+      oneof :authentication do
+        optional :jwt_audience, :string, 7
+        optional :disable_auth, :bool, 8
+      end
+    end
+    add_enum "google.api.BackendRule.PathTranslation" do
+      value :PATH_TRANSLATION_UNSPECIFIED, 0
+      value :CONSTANT_ADDRESS, 1
+      value :APPEND_PATH_TO_ADDRESS, 2
+    end
   end
 end
 
 module Google
   module Api
-    Backend = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Backend").msgclass
-    BackendRule = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BackendRule").msgclass
-    BackendRule::PathTranslation = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BackendRule.PathTranslation").enummodule
+    Backend = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Backend").msgclass
+    BackendRule = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BackendRule").msgclass
+    BackendRule::PathTranslation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BackendRule.PathTranslation").enummodule
   end
 end
