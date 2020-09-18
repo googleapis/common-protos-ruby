@@ -1,0 +1,47 @@
+name: "CI tests"
+
+on:
+  pull_request:
+    branches:
+      - master
+  push:
+    branches:
+      - master
+  workflow_dispatch:
+
+jobs:
+  tests:
+    if: ${{ github.repository == 'googleapis/common-protos-ruby' }}
+    strategy:
+      matrix:
+        include:
+          - os: ubuntu-latest
+            ruby: "2.4"
+          - os: ubuntu-latest
+            ruby: "2.5"
+          - os: ubuntu-latest
+            ruby: "2.6"
+          - os: ubuntu-latest
+            ruby: "2.7"
+          - os: macos-latest
+            ruby: "2.7"
+          - os: windows-latest
+            ruby: "2.7"
+      fail-fast: false
+    runs-on: ${{ matrix.os }}
+    steps:
+      - name: Install Ruby ${{ matrix.ruby }}
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "${{ matrix.ruby }}"
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Checkout submodules
+        run: |
+          git submodule update --init
+      - name: Install dependencies
+        run: |
+          bundle install --retry=3
+      - name: Run CI
+        run: |
+          bundle exec rake ci
