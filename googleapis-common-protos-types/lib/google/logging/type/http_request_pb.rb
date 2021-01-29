@@ -28,9 +28,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Google
+  module Cloud
+    module Logging
+      module Type
+        HttpRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.logging.type.HttpRequest").msgclass
+      end
+    end
+  end
+end
+
+module Google
   module Logging
     module Type
-      HttpRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.logging.type.HttpRequest").msgclass
+      HttpRequest = ::Google::Cloud::Logging::Type::HttpRequest
     end
   end
 end

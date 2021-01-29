@@ -21,9 +21,19 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
 end
 
 module Google
+  module Cloud
+    module Logging
+      module Type
+        LogSeverity = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.logging.type.LogSeverity").enummodule
+      end
+    end
+  end
+end
+
+module Google
   module Logging
     module Type
-      LogSeverity = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.logging.type.LogSeverity").enummodule
+      LogSeverity = ::Google::Cloud::Logging::Type::LogSeverity
     end
   end
 end

@@ -19,8 +19,8 @@ task :ci do
   gem_dirs.each do |gem|
     Dir.chdir gem do
       Bundler.with_clean_env do
-        puts "Running CI for #{gem}"
-        sh "bundle install && bundle exec rake ci"
+        puts "\nRunning CI for #{gem}"
+        sh "bundle update && bundle exec rake ci"
       end
     end
   end

@@ -37,6 +37,15 @@ task :compile_protos do
   system full_command
 end
 
+desc "Test loading all proto files"
+task :test_loading do
+  puts "\nLoading proto files"
+  Dir.glob("lib/google/**/*_pb.rb") do |path|
+    puts path
+    require_relative path
+  end
+end
+
 desc "Remove the compiled protos."
 task :clean_protos do
   FileUtils.rm_rf "lib"
@@ -46,6 +55,7 @@ desc "Run the CI build"
 task :ci do
   puts "\nCompiling Protos\n"
   Rake::Task[:compile_protos].invoke
+  Rake::Task[:test_loading].invoke
 end
 
 Rake::Task[:build].enhance [:compile_protos]

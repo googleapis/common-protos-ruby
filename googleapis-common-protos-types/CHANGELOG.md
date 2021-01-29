@@ -1,5 +1,19 @@
 # Release History
 
+### 1.0.6 / 2021-02-01
+
+* Add Google::Type::Interval type.
+* Add Google::Type::LocalizedText type.
+* Add Google::Type::PhoneNumber and Google::Type::PhoneNumber::ShortCode types.
+* Add "service_root_url" field to Google::Api::Documentation.
+* Add UNORDERED_LIST value to Google::Api::FieldBehavior.
+* Add UNIMPLEMENTED and PRELAUNCH values to Google::Api::LaunchStage.
+* Add "monitored_resource_types" field to Google::Api::MetricDescriptor.
+* Add Google::Api::ResourceDescriptor::Style type and add "style" field to Google::Api::ResourceDescriptor.
+* Moved HttpRequest and LogSeverity types from Google::Logging::Type to Google::Cloud::Logging::Type, and created aliases for backward compatibility.
+* Remove internal "features" field from Google::Api::Endpoint.
+* Require protobuf 3.14.
+
 ### 1.0.5 / 2020-04-08
 
 * Add JWT location support in Google::Api::AuthProvider.
@@ -9,7 +23,7 @@
 * Remove obsolete "experimental" field from Google::Api::Service type.
 * Add Google::Rpc::ErrorInfo type.
 * Add Google::Type::DateTime, Google::Type::Month, and Google::Type::TimeZone types.
-* Require protobuf 3.11 and grpc 1.27.
+* Require protobuf 3.11.
 
 ### 1.0.4 / 2019-04-03
 

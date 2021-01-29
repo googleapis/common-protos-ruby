@@ -49,16 +49,16 @@ module Google
         # For backwards compatibility, the default name includes the operations
         # collection id, however overriding users must ensure the name binding
         # is the parent resource, without the operations collection id.
-        rpc :ListOperations, ListOperationsRequest, ListOperationsResponse
+        rpc :ListOperations, ::Google::Longrunning::ListOperationsRequest, ::Google::Longrunning::ListOperationsResponse
         # Gets the latest state of a long-running operation.  Clients can use this
         # method to poll the operation result at intervals as recommended by the API
         # service.
-        rpc :GetOperation, GetOperationRequest, Operation
+        rpc :GetOperation, ::Google::Longrunning::GetOperationRequest, ::Google::Longrunning::Operation
         # Deletes a long-running operation. This method indicates that the client is
         # no longer interested in the operation result. It does not cancel the
         # operation. If the server doesn't support this method, it returns
         # `google.rpc.Code.UNIMPLEMENTED`.
-        rpc :DeleteOperation, DeleteOperationRequest, Google::Protobuf::Empty
+        rpc :DeleteOperation, ::Google::Longrunning::DeleteOperationRequest, ::Google::Protobuf::Empty
         # Starts asynchronous cancellation on a long-running operation.  The server
         # makes a best effort to cancel the operation, but success is not
         # guaranteed.  If the server doesn't support this method, it returns
@@ -69,7 +69,7 @@ module Google
         # the operation is not deleted; instead, it becomes an operation with
         # an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
         # corresponding to `Code.CANCELLED`.
-        rpc :CancelOperation, CancelOperationRequest, Google::Protobuf::Empty
+        rpc :CancelOperation, ::Google::Longrunning::CancelOperationRequest, ::Google::Protobuf::Empty
         # Waits for the specified long-running operation until it is done or reaches
         # at most a specified timeout, returning the latest state.  If the operation
         # is already done, the latest state is immediately returned.  If the timeout
@@ -79,7 +79,7 @@ module Google
         # Note that this method is on a best-effort basis.  It may return the latest
         # state before the specified timeout (including immediately), meaning even an
         # immediate response is no guarantee that the operation is done.
-        rpc :WaitOperation, WaitOperationRequest, Operation
+        rpc :WaitOperation, ::Google::Longrunning::WaitOperationRequest, ::Google::Longrunning::Operation
       end
 
       Stub = Service.rpc_stub_class

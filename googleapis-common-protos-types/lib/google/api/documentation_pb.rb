@@ -10,6 +10,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       repeated :pages, :message, 5, "google.api.Page"
       repeated :rules, :message, 3, "google.api.DocumentationRule"
       optional :documentation_root_url, :string, 4
+      optional :service_root_url, :string, 6
       optional :overview, :string, 2
     end
     add_message "google.api.DocumentationRule" do
