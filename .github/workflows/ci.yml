@@ -1,4 +1,4 @@
-name: "CI tests"
+name: "CI"
 
 on:
   pull_request:
@@ -10,19 +10,19 @@ on:
   workflow_dispatch:
 
 jobs:
-  tests:
+  CI:
     if: ${{ github.repository == 'googleapis/common-protos-ruby' }}
     strategy:
       matrix:
         include:
-          - os: ubuntu-latest
-            ruby: "2.4"
           - os: ubuntu-latest
             ruby: "2.5"
           - os: ubuntu-latest
             ruby: "2.6"
           - os: ubuntu-latest
             ruby: "2.7"
+          - os: ubuntu-latest
+            ruby: "3.0"
           - os: macos-latest
             ruby: "2.7"
           - os: windows-latest
@@ -41,7 +41,7 @@ jobs:
           git submodule update --init
       - name: Install dependencies
         run: |
-          bundle install --retry=3
+          gem install --no-document toys bundler
       - name: Run CI
         run: |
-          bundle exec rake ci
+          toys ci -v --build --test --github-event-name=${{ github.event_name }} --github-event-payload=${{ github.event_path }}
