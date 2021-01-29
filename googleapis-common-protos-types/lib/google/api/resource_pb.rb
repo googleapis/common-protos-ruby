@@ -12,11 +12,16 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :history, :enum, 4, "google.api.ResourceDescriptor.History"
       optional :plural, :string, 5
       optional :singular, :string, 6
+      repeated :style, :enum, 10, "google.api.ResourceDescriptor.Style"
     end
     add_enum "google.api.ResourceDescriptor.History" do
       value :HISTORY_UNSPECIFIED, 0
       value :ORIGINALLY_SINGLE_PATTERN, 1
       value :FUTURE_MULTI_PATTERN, 2
+    end
+    add_enum "google.api.ResourceDescriptor.Style" do
+      value :STYLE_UNSPECIFIED, 0
+      value :DECLARATIVE_FRIENDLY, 1
     end
     add_message "google.api.ResourceReference" do
       optional :type, :string, 1
@@ -29,6 +34,7 @@ module Google
   module Api
     ResourceDescriptor = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceDescriptor").msgclass
     ResourceDescriptor::History = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceDescriptor.History").enummodule
+    ResourceDescriptor::Style = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceDescriptor.Style").enummodule
     ResourceReference = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ResourceReference").msgclass
   end
 end

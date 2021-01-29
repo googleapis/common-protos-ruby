@@ -7,6 +7,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/launch_stage.proto", :syntax => :proto3) do
     add_enum "google.api.LaunchStage" do
       value :LAUNCH_STAGE_UNSPECIFIED, 0
+      value :UNIMPLEMENTED, 6
+      value :PRELAUNCH, 7
       value :EARLY_ACCESS, 1
       value :ALPHA, 2
       value :BETA, 3

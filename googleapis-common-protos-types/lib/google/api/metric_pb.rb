@@ -19,6 +19,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :display_name, :string, 7
       optional :metadata, :message, 10, "google.api.MetricDescriptor.MetricDescriptorMetadata"
       optional :launch_stage, :enum, 12, "google.api.LaunchStage"
+      repeated :monitored_resource_types, :string, 13
     end
     add_message "google.api.MetricDescriptor.MetricDescriptorMetadata" do
       optional :launch_stage, :enum, 1, "google.api.LaunchStage"
