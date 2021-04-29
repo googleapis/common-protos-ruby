@@ -64,3 +64,5 @@ end
 expand :clean, paths: :gitignore
 
 expand :gem_build
+
+expand :gem_build, name: "release", push_gem: true

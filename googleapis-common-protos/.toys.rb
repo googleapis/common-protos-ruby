@@ -34,7 +34,7 @@ tool "compile" do
     end
     cmd = [
       "grpc_tools_ruby_protoc",
-      "--grpc_out=lib", "--ruby_out=lib",
+      "--grpc_out=lib",
       "-I", "../googleapis"
     ] + PROTO_GLOBS.flat_map { |glob| Dir.glob glob }
     exec cmd
@@ -64,3 +64,5 @@ end
 expand :clean, paths: :gitignore
 
 expand :gem_build
+
+expand :gem_build, name: "release", push_gem: true

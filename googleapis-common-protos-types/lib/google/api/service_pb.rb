@@ -29,11 +29,10 @@ require 'google/protobuf/wrappers_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/service.proto", :syntax => :proto3) do
     add_message "google.api.Service" do
-      optional :config_version, :message, 20, "google.protobuf.UInt32Value"
       optional :name, :string, 1
-      optional :id, :string, 33
       optional :title, :string, 2
       optional :producer_project_id, :string, 22
+      optional :id, :string, 33
       repeated :apis, :message, 3, "google.protobuf.Api"
       repeated :types, :message, 4, "google.protobuf.Type"
       repeated :enums, :message, 5, "google.protobuf.Enum"
@@ -54,6 +53,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :monitoring, :message, 28, "google.api.Monitoring"
       optional :system_parameters, :message, 29, "google.api.SystemParameters"
       optional :source_info, :message, 37, "google.api.SourceInfo"
+      optional :config_version, :message, 20, "google.protobuf.UInt32Value"
     end
   end
 end
