@@ -3,15 +3,14 @@ squashMergeAllowed: true
 mergeCommitAllowed: false
 branchProtectionRules:
 - pattern: master
-  isAdminEnforced: true
   requiredStatusCheckContexts:
     - 'conventionalcommits.org'
-    - 'tests (macos-latest, 2.7)'
-    - 'tests (ubuntu-latest, 2.4)'
-    - 'tests (ubuntu-latest, 2.5)'
-    - 'tests (ubuntu-latest, 2.6)'
-    - 'tests (ubuntu-latest, 2.7)'
-    - 'tests (windows-latest, 2.7)'
+    - 'CI (macos-latest, 2.7)'
+    - 'CI (ubuntu-latest, 2.5)'
+    - 'CI (ubuntu-latest, 2.6)'
+    - 'CI (ubuntu-latest, 2.7)'
+    - 'CI (ubuntu-latest, 3.0)'
+    - 'CI (windows-latest, 2.7)'
     - 'cla/google'
   requiredApprovingReviewCount: 1
   requiresCodeOwnerReviews: true
