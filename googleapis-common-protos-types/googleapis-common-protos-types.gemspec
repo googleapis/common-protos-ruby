@@ -36,8 +36,4 @@ Gem::Specification.new do |spec|
   spec.require_paths = ["lib"]
 
   spec.add_dependency "google-protobuf", "~> 3.14"
-
-  spec.add_development_dependency "bundler", "~> 2.1"
-  spec.add_development_dependency "grpc-tools", "~> 1.27"
-  spec.add_development_dependency "rake", "~> 13.0"
 end

@@ -26,18 +26,18 @@ To add, remove, or modify the common types in these gems do the following.
     $ git pull
     ```
 
-1. Edit the appropriate `Rakefile`:
+1. Edit the appropriate Toys script:
 
-    For message types: [googleapis-common-protos-types/Rakefile](googleapis-common-protos-types/Rakefile)
-    For grpc types: [googleapis-common-protos/Rakefile](googleapis-common-protos/Rakefile)
+    For message types: [googleapis-common-protos-types/.toys.rb](googleapis-common-protos-types/.toys.rb)
+    For grpc types: [googleapis-common-protos/.toys.rb](googleapis-common-protos/.toys.rb)
 
-    Update the `protos` section of the `Rakefile`. For example:
+    Update the `PROTO_GLOBS` array. For example:
 
     ```ruby
-    protos = [
-        "../googleapis/google/api/*.proto",
-        # list all protos that should be included in the gem here
-      ]
+    PROTO_GLOBS = [
+      "../googleapis/google/api/*.proto",
+      # list all protos that should be included in the gem here
+    ]
     ```
 
 1. Update the `CHANGELOG.md`, gem version, and open a release pull request:
@@ -49,8 +49,8 @@ To add, remove, or modify the common types in these gems do the following.
 
     ```bash
     $ cd googleapis-common-protos-types # or googleapis-common-protos
-    $ bundle install
-    $ bundle exec rake build
+    $ toys compile
+    $ toys build
     ```
 
     Finally, double check that the local gem in `pkg` includes all of the types before publishing it to Rubygems.

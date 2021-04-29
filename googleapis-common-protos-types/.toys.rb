@@ -27,16 +27,17 @@ tool "compile" do
 
   include :fileutils
   include :exec, e: true
-  include :bundler
+  include :gems
 
   def run
     cd context_directory
+    gem "grpc-tools", "~> 1.37"
     if clean
       rm_rf "lib"
       mkdir "lib"
     end
     cmd = [
-      "bundle", "exec", "grpc_tools_ruby_protoc",
+      "grpc_tools_ruby_protoc",
       "--grpc_out=lib", "--ruby_out=lib",
       "-I", "../googleapis"
     ] + PROTO_GLOBS.flat_map { |glob| Dir.glob glob }
