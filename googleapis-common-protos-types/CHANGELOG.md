@@ -1,5 +1,11 @@
 # Release History
 
+### 1.1.0 / unreleased
+
+* Add Google::Api::ErrorReason
+* Add Google::Api::Visibility and Google::Api::VisibilityRule
+* Add Google::Type::Decimal
+
 ### 1.0.6 / 2021-02-01
 
 * Add Google::Type::Interval type.
