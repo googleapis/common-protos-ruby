@@ -13,6 +13,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :INPUT_ONLY, 4
       value :IMMUTABLE, 5
       value :UNORDERED_LIST, 6
+      value :NON_EMPTY_DEFAULT, 7
     end
   end
 end
