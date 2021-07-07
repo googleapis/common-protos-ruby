@@ -1,10 +1,11 @@
 # Release History
 
-### 1.1.0 / unreleased
+### 1.1.0 / 2021-07-07
 
 * Add Google::Api::ErrorReason
 * Add Google::Api::Visibility and Google::Api::VisibilityRule
 * Add Google::Type::Decimal
+* Add NON_EMPTY_DEFAULT value to Google::Api::FieldBehavior.
 
 ### 1.0.6 / 2021-02-01
 
