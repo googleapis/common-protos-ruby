@@ -1,6 +1,6 @@
 ## Common Protos Ruby
 
-[![CircleCI](https://circleci.com/gh/googleapis/common-protos-ruby.svg?style=svg)](https://circleci.com/gh/googleapis/common-protos-ruby) [![Gem Version](https://badge.fury.io/rb/googleapis-common-protos.svg)](https://badge.fury.io/rb/googleapis-common-protos) [![Gem Version](https://badge.fury.io/rb/googleapis-common-protos-types.svg)](https://badge.fury.io/rb/googleapis-common-protos-types)
+[![Gem Version](https://badge.fury.io/rb/googleapis-common-protos.svg)](https://badge.fury.io/rb/googleapis-common-protos) [![Gem Version](https://badge.fury.io/rb/googleapis-common-protos-types.svg)](https://badge.fury.io/rb/googleapis-common-protos-types)
 
 This repository is a home for the [protocol buffer](https://developers.google.com/protocol-buffers/) types which are
 common dependencies throughout the Google API ecosystem, generated for Ruby.
@@ -19,38 +19,31 @@ These packages are also available from [rubygems](https://rubygems.org):
 
 To add, remove, or modify the common types in these gems do the following.
 
-1. Update the sub-module containing all of Google's public .proto files:
+1.  Update the sub-module containing all of Google's public .proto files:
 
     ```bash
-    $ cd googleapis
-    $ git pull
+    $ git submodule update --remote googleapis
     ```
 
-1. Edit the appropriate `Rakefile`:
+2.  If necessary, update the list of protos to include. These are globs in the
+    `PROTO_GLOBS` array in the library's Toys script (e.g. for message types:
+    [googleapis-common-protos-types/.toys.rb](googleapis-common-protos-types/.toys.rb)).
+    This is needed only if new directories are added (which should be rare).
 
-    For message types: [googleapis-common-protos-types/Rakefile](googleapis-common-protos-types/Rakefile)
-    For grpc types: [googleapis-common-protos/Rakefile](googleapis-common-protos/Rakefile)
-
-    Update the `protos` section of the `Rakefile`. For example:
-
-    ```ruby
-    protos = [
-        "../googleapis/google/api/*.proto",
-        # list all protos that should be included in the gem here
-      ]
-    ```
-
-1. Update the `CHANGELOG.md`, gem version, and open a release pull request:
-
-   Review and document the changes in each gem's `CHANGELOG.md` along with the version number in the `gemspec`.
-   Create a PR to review the changes. Once it's merged, tag the release with the version number and manually push the gem as described below.
-
-1. Build & push the gems as usual:
+3.  Compile new proto classes. This can be run at the top level to recompile
+    all gems, or in a gem's directory to recompile only that one.
 
     ```bash
-    $ cd googleapis-common-protos-types # or googleapis-common-protos
-    $ bundle install
-    $ bundle exec rake build
+    $ toys compile
     ```
 
-    Finally, double check that the local gem in `pkg` includes all of the types before publishing it to Rubygems.
+4.  Update Gem version (which is located in the `.gemspec` file), and write an
+    entry in the `CHANGELOG.md`. Create and merge a PR for this, and tag it
+    with the gem name and version.
+
+5.  Build and release the gem:
+
+    ```bash
+    $ cd $GEM_TO_RELEASE
+    $ toys release
+    ```

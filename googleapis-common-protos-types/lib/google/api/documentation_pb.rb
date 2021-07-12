@@ -4,29 +4,32 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.api.Documentation" do
-    optional :summary, :string, 1
-    repeated :pages, :message, 5, "google.api.Page"
-    repeated :rules, :message, 3, "google.api.DocumentationRule"
-    optional :documentation_root_url, :string, 4
-    optional :overview, :string, 2
-  end
-  add_message "google.api.DocumentationRule" do
-    optional :selector, :string, 1
-    optional :description, :string, 2
-    optional :deprecation_description, :string, 3
-  end
-  add_message "google.api.Page" do
-    optional :name, :string, 1
-    optional :content, :string, 2
-    repeated :subpages, :message, 3, "google.api.Page"
+  add_file("google/api/documentation.proto", :syntax => :proto3) do
+    add_message "google.api.Documentation" do
+      optional :summary, :string, 1
+      repeated :pages, :message, 5, "google.api.Page"
+      repeated :rules, :message, 3, "google.api.DocumentationRule"
+      optional :documentation_root_url, :string, 4
+      optional :service_root_url, :string, 6
+      optional :overview, :string, 2
+    end
+    add_message "google.api.DocumentationRule" do
+      optional :selector, :string, 1
+      optional :description, :string, 2
+      optional :deprecation_description, :string, 3
+    end
+    add_message "google.api.Page" do
+      optional :name, :string, 1
+      optional :content, :string, 2
+      repeated :subpages, :message, 3, "google.api.Page"
+    end
   end
 end
 
 module Google
   module Api
-    Documentation = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Documentation").msgclass
-    DocumentationRule = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.DocumentationRule").msgclass
-    Page = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Page").msgclass
+    Documentation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Documentation").msgclass
+    DocumentationRule = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.DocumentationRule").msgclass
+    Page = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Page").msgclass
   end
 end

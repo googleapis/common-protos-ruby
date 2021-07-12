@@ -16,14 +16,14 @@
 
 Gem::Specification.new do |spec|
   spec.name          = "googleapis-common-protos-types"
-  spec.version       = "1.0.4"
+  spec.version       = "1.1.0"
   spec.authors       = ["Google Inc"]
   spec.email         = ["googleapis-packages@google.com"]
   spec.licenses      = ["Apache-2.0"]
 
   spec.description   = "Common protocol buffer types used by Google APIs"
   spec.summary       = "Common protobuf types used in Google APIs"
-  spec.homepage      = "https://github.com/googleapis/googleapis"
+  spec.homepage      = "https://github.com/googleapis/common-protos-ruby"
 
   # Specify which files should be added to the gem when it is released. The `git
   # ls-files -z` loads the files in the RubyGem that have been added into git.
@@ -35,9 +35,5 @@ Gem::Specification.new do |spec|
   spec.files += Dir.glob "lib/**/*_pb.rb"
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "google-protobuf", "~> 3.0"
-
-  spec.add_development_dependency "bundler", "~> 1.15"
-  spec.add_development_dependency "grpc-tools", "~> 1.18"
-  spec.add_development_dependency "rake", "~> 10.0"
+  spec.add_dependency "google-protobuf", "~> 3.14"
 end

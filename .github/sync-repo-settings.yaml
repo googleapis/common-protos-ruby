@@ -1,0 +1,24 @@
+rebaseMergeAllowed: true
+squashMergeAllowed: true
+mergeCommitAllowed: false
+branchProtectionRules:
+- pattern: master
+  requiredStatusCheckContexts:
+    - 'conventionalcommits.org'
+    - 'CI (macos-latest, 2.7)'
+    - 'CI (ubuntu-latest, 2.5)'
+    - 'CI (ubuntu-latest, 2.6)'
+    - 'CI (ubuntu-latest, 2.7)'
+    - 'CI (ubuntu-latest, 3.0)'
+    - 'CI (windows-latest, 2.7)'
+    - 'cla/google'
+  requiredApprovingReviewCount: 1
+  requiresCodeOwnerReviews: true
+  requiresStrictStatusChecks: true
+permissionRules:
+  - team: actools
+    permission: admin
+  - team: yoshi-ruby-admins
+    permission: admin
+  - team: yoshi-ruby
+    permission: push

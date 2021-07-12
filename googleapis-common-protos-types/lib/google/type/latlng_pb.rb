@@ -4,14 +4,16 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.type.LatLng" do
-    optional :latitude, :double, 1
-    optional :longitude, :double, 2
+  add_file("google/type/latlng.proto", :syntax => :proto3) do
+    add_message "google.type.LatLng" do
+      optional :latitude, :double, 1
+      optional :longitude, :double, 2
+    end
   end
 end
 
 module Google
   module Type
-    LatLng = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.LatLng").msgclass
+    LatLng = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.LatLng").msgclass
   end
 end

@@ -4,16 +4,18 @@
 require 'google/protobuf'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
-  add_message "google.type.Expr" do
-    optional :expression, :string, 1
-    optional :title, :string, 2
-    optional :description, :string, 3
-    optional :location, :string, 4
+  add_file("google/type/expr.proto", :syntax => :proto3) do
+    add_message "google.type.Expr" do
+      optional :expression, :string, 1
+      optional :title, :string, 2
+      optional :description, :string, 3
+      optional :location, :string, 4
+    end
   end
 end
 
 module Google
   module Type
-    Expr = Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Expr").msgclass
+    Expr = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.type.Expr").msgclass
   end
 end
