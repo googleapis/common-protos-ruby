@@ -33,8 +33,8 @@ tool "compile" do
     cd context_directory
     gem "grpc-tools", "~> 1.37"
     if clean
-      rm_rf "lib"
-      mkdir "lib"
+      rm_rf "lib/google"
+      mkdir_p "lib"
     end
     cmd = [
       "grpc_tools_ruby_protoc",
