@@ -9,3 +9,5 @@ Gemfile.lock
 /spec/reports/
 /tmp/
 /vendor/
+/node_modules/
+/package-lock.json
