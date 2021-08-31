@@ -14,27 +14,27 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
+lib = File.expand_path "lib", __dir__
+$LOAD_PATH.unshift lib unless $LOAD_PATH.include? lib
+require "googleapis/common/protos/version"
+
 Gem::Specification.new do |spec|
-  spec.name          = "googleapis-common-protos"
-  spec.version       = "1.3.11"
-  spec.authors       = ["Google Inc"]
-  spec.email         = ["googleapis-packages@google.com"]
-  spec.licenses      = ["Apache-2.0"]
+  spec.name = "googleapis-common-protos"
+  spec.version = Google::CommonProtos::VERSION
 
-  spec.summary       = "Common gRPC and protocol buffer classes used in Google APIs"
-  spec.homepage      = "https://github.com/googleapis/common-protos-ruby"
+  spec.authors = ["Google LLC"]
+  spec.email = ["googleapis-packages@google.com"]
+  spec.licenses = ["Apache-2.0"]
+  spec.description = "Common gRPC and protocol buffer classes used in Google APIs"
+  spec.summary = "Common gRPC and protocol buffer classes used in Google APIs"
+  spec.homepage = "https://github.com/googleapis/common-protos-ruby"
 
-  # Specify which files should be added to the gem when it is released. The `git
-  # ls-files -z` loads the files in the RubyGem that have been added into git.
-  spec.files         = Dir.chdir File.expand_path(__dir__) do
-    `git ls-files -z`.split("\x0").reject do |f|
-      f.match %r{^(test|spec|features)/}
-    end
-  end
-  spec.files += Dir.glob "lib/**/*_pb.rb"
+  spec.files = Dir.glob("lib/**/*.rb") + Dir.glob("*.md")
   spec.require_paths = ["lib"]
 
-  spec.add_dependency "googleapis-common-protos-types", ">= 1.0.6", "< 2.0"
+  spec.required_ruby_version = ">= 2.3"
+
+  spec.add_dependency "googleapis-common-protos-types", ">= 1.1.0", "< 2.0"
   spec.add_dependency "google-protobuf", "~> 3.14"
   spec.add_dependency "grpc", "~> 1.27"
 end
