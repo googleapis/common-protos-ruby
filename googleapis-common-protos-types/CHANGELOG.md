@@ -1,5 +1,12 @@
 # Release History
 
+### [1.1.1](https://www.github.com/googleapis/common-protos-ruby/compare/googleapis-common-protos-types/v1.1.0...googleapis-common-protos-types/v1.1.1) (2021-09-01)
+
+
+### Bug Fixes
+
+* **common-protos-types:** Removed unnecessary files from the gem package ([967b64a](https://www.github.com/googleapis/common-protos-ruby/commit/967b64ae2fd58aa9b0f92d6c6176acdaf46b47fc))
+
 ### 1.1.0 / 2021-07-07
 
 * Add Google::Api::ErrorReason
@@ -41,4 +48,3 @@
   + google/type/expr.proto
   + google/type/fraction.proto
   + google/type/quaternion.proto
- 
