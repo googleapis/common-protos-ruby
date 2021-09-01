@@ -6,6 +6,3 @@ gemspec
 
 gem "googleapis-common-protos", path: "../googleapis-common-protos"
 gem "googleapis-common-protos-types", path: "../googleapis-common-protos-types"
-
-gem "rake", ">= 13.0"
-gem "toys", ">= 0.12.2"
