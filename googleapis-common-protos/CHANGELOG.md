@@ -1,5 +1,10 @@
 # Release History
 
+## 1.3.12 (2021-09-03)
+
+* Removed unnecessary files from the gem package
+* Update googleapis-common-protos-types dependency to 1.2.
+
 ## 1.3.11 / 2021-02-01
 
 * Fully qualify proto names internally.
