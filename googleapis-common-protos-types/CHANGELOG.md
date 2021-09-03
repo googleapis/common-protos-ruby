@@ -1,5 +1,12 @@
 # Release History
 
+## [1.2.0](https://www.github.com/googleapis/common-protos-ruby/compare/googleapis-common-protos-types/v1.1.1...googleapis-common-protos-types/v1.2.0) (2021-09-03)
+
+
+### Features
+
+* **common-protos-types:** Add Google::Cloud::OperationResponseMapping and the extended_operations_pb file ([#41](https://www.github.com/googleapis/common-protos-ruby/issues/41)) ([15c4f24](https://www.github.com/googleapis/common-protos-ruby/commit/15c4f241c5eee5e2829e1942145531b6b6d1c482))
+
 ### [1.1.1](https://www.github.com/googleapis/common-protos-ruby/compare/googleapis-common-protos-types/v1.1.0...googleapis-common-protos-types/v1.1.1) (2021-09-01)
 
 
