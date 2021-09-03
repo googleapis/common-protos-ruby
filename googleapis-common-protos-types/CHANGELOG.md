@@ -1,13 +1,5 @@
 # Release History
 
-## 1.2.0 (2021-09-03)
-
-* Add Google::Cloud::OperationResponseMapping and the extended_operations_pb file
-
-## 1.1.1 (2021-09-01)
-
-* Removed unnecessary files from the gem package
-
 ## 1.1.0 / 2021-07-07
 
 * Add Google::Api::ErrorReason
