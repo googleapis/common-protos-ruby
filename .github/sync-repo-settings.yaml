@@ -3,6 +3,7 @@ squashMergeAllowed: true
 mergeCommitAllowed: false
 branchProtectionRules:
 - pattern: master
+  isAdminEnforced: false
   requiredStatusCheckContexts:
     - 'conventionalcommits.org'
     - 'CI (macos-latest, 2.7)'
