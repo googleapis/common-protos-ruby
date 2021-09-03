@@ -16,6 +16,6 @@
 
 module Google
   module CommonProtos
-    VERSION = "1.3.11".freeze
+    VERSION = "1.3.12".freeze
   end
 end
