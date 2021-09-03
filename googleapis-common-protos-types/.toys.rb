@@ -20,6 +20,7 @@ PROTO_GLOBS = [
   "../googleapis/google/longrunning/*.proto",
   "../googleapis/google/rpc/*.proto",
   "../googleapis/google/type/*.proto",
+  "../googleapis/google/cloud/extended_operations.proto",
 ]
 
 tool "compile" do
