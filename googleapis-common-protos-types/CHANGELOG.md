@@ -1,5 +1,10 @@
 # Release History
 
+## 1.3.0 (2021-10-19)
+
+* Add google/api/routing to common-protos-types
+* Remove cloud-specific extended_operations proto. It's being moved to google-cloud-common.
+
 ## 1.2.0 (2021-09-03)
 
 * Add Google::Cloud::OperationResponseMapping and the extended_operations_pb file
