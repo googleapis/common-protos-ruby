@@ -1,5 +1,8 @@
 {
+  "client_documentation": "https://googleapis.dev/ruby/google-cloud-common/latest",
   "distribution-name": "google-cloud-common",
   "language": "ruby",
-  "library_type": "OTHER"
+  "library_type": "OTHER",
+  "release_level": "stable",
+  "repo": "googleapis/common-protos-ruby"
 }
