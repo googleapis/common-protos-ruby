@@ -1,5 +1,8 @@
 {
+  "client_documentation": "https://googleapis.dev/ruby/googleapis-common-protos-types/latest",
   "distribution-name": "googleapis-common-protos-types",
   "language": "ruby",
-  "library_type": "OTHER"
+  "library_type": "OTHER",
+  "release_level": "stable",
+  "repo": "googleapis/common-protos-ruby"
 }
