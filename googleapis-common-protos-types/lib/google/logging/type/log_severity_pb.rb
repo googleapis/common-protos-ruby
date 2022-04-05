@@ -3,7 +3,6 @@
 
 require 'google/protobuf'
 
-require 'google/api/annotations_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/logging/type/log_severity.proto", :syntax => :proto3) do
     add_enum "google.logging.type.LogSeverity" do
