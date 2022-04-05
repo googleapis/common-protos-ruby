@@ -1,23 +1,27 @@
 # Release History
 
-## 1.3.0 (2021-10-19)
+### 1.3.1 (2022-04-05)
+
+* Sync updates to imports in the source protos
+
+### 1.3.0 (2021-10-19)
 
 * Add google/api/routing to common-protos-types
 * Remove cloud-specific extended_operations proto. It's being moved to google-cloud-common.
 
-## 1.2.0 (2021-09-03)
+### 1.2.0 (2021-09-03)
 
 * Add Google::Cloud::OperationResponseMapping and the extended_operations_pb file
 * Removed unnecessary files from the gem package
 
-## 1.1.0 / 2021-07-07
+### 1.1.0 / 2021-07-07
 
 * Add Google::Api::ErrorReason
 * Add Google::Api::Visibility and Google::Api::VisibilityRule
 * Add Google::Type::Decimal
 * Add NON_EMPTY_DEFAULT value to Google::Api::FieldBehavior.
 
-## 1.0.6 / 2021-02-01
+### 1.0.6 / 2021-02-01
 
 * Add Google::Type::Interval type.
 * Add Google::Type::LocalizedText type.
@@ -31,7 +35,7 @@
 * Remove internal "features" field from Google::Api::Endpoint.
 * Require protobuf 3.14.
 
-## 1.0.5 / 2020-04-08
+### 1.0.5 / 2020-04-08
 
 * Add JWT location support in Google::Api::AuthProvider.
 * Add "protocol" field and a "disable_auth" option to Google::Api::BackendRule.
@@ -42,7 +46,7 @@
 * Add Google::Type::DateTime, Google::Type::Month, and Google::Type::TimeZone types.
 * Require protobuf 3.11.
 
-## 1.0.4 / 2019-04-03
+### 1.0.4 / 2019-04-03
 
 * Add WaitOperation RPC to operations_pb.rb and update documentation.
 * Add new common types for:
