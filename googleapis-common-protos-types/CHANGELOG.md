@@ -1,5 +1,12 @@
 # Release History
 
+### [1.3.1](https://www.github.com/googleapis/common-protos-ruby/compare/googleapis-common-protos-types/v1.3.0...googleapis-common-protos-types/v1.3.1) (2022-04-05)
+
+
+### Bug Fixes
+
+* **common-protos-types:** Sync updates to imports in the source protos ([899a47c](https://www.github.com/googleapis/common-protos-ruby/commit/899a47c8dd55f32de26aab904b72841c95f38699))
+
 ## 1.3.0 (2021-10-19)
 
 * Add google/api/routing to common-protos-types
