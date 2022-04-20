@@ -1,0 +1,31 @@
+{
+  "bump-minor-pre-major": true,
+  "bump-patch-for-minor-pre-major": false,
+  "draft": false,
+  "include-component-in-tag": true,
+  "include-v-in-tag": true,
+  "prerelease": false,
+  "release-type": "ruby-yoshi",
+  "skip-github-release": false,
+  "separate-pull-requests": true,
+  "tag-separator": "/",
+  "sequential-calls": true,
+  "packages": {
+    "google-cloud-common": {
+      "component": "google-cloud-common",
+      "version-file": "lib/google/cloud/common/version.rb"
+    },
+    "googleapis-common-protos": {
+      "component": "googleapis-common-protos",
+      "version-file": "lib/googleapis/common/protos/version.rb"
+    },
+    "googleapis-common-protos-types": {
+      "component": "googleapis-common-protos-types",
+      "version-file": "lib/googleapis/common/protos/types/version.rb"
+    },
+    "grpc-google-iam-v1": {
+      "component": "grpc-google-iam-v1",
+      "version-file": "lib/grpc/google/iam/v1/version.rb"
+    }
+  }
+}
