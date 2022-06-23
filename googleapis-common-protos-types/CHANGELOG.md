@@ -1,5 +1,11 @@
 # Release History
 
+### 1.3.2 (2022-06-23)
+
+#### Bug Fixes
+
+* Remove some unnecessary requires
+
 ### 1.3.1 (2022-04-05)
 
 * Sync updates to imports in the source protos
