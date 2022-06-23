@@ -1,5 +1,11 @@
 # Release History
 
+### 1.1.1 (2022-06-23)
+
+#### Bug Fixes
+
+* Remove some unnecessary requires
+
 ### 1.1.0 (2022-04-05)
 
 * Added audit_configs field to the Policy object.
