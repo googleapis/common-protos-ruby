@@ -4,6 +4,8 @@
 require 'google/protobuf'
 
 require 'google/api/http_pb'
+require 'google/protobuf/descriptor_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/annotations.proto", :syntax => :proto3) do
   end

@@ -3,6 +3,8 @@
 
 require 'google/protobuf'
 
+require 'google/protobuf/descriptor_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/cloud/extended_operations.proto", :syntax => :proto3) do
     add_enum "google.cloud.OperationResponseMapping" do

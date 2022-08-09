@@ -4,6 +4,7 @@
 require 'google/protobuf'
 
 require 'google/protobuf/any_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/httpbody.proto", :syntax => :proto3) do
     add_message "google.api.HttpBody" do

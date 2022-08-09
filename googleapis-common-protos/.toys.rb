@@ -27,7 +27,7 @@ tool "compile" do
 
   def run
     cd context_directory
-    gem "grpc-tools", "~> 1.37"
+    gem "grpc-tools", "~> 1.48"
     if clean
       rm_rf "lib/google"
       mkdir_p "lib"

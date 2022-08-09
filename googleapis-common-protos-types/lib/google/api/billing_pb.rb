@@ -3,7 +3,6 @@
 
 require 'google/protobuf'
 
-require 'google/api/metric_pb'
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/billing.proto", :syntax => :proto3) do
     add_message "google.api.Billing" do

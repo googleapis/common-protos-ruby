@@ -6,6 +6,7 @@ require 'google/protobuf'
 require 'google/api/label_pb'
 require 'google/api/launch_stage_pb'
 require 'google/protobuf/struct_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/monitored_resource.proto", :syntax => :proto3) do
     add_message "google.api.MonitoredResourceDescriptor" do
