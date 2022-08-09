@@ -45,6 +45,7 @@ def prepare_changes
     set :git_remote, "pull-request-fork" unless git_remote
     yoshi_utils.gh_ensure_fork remote: git_remote
   end
+  exec ["git", "submodule", "update", "--init"]
 end
 
 def make_changes
