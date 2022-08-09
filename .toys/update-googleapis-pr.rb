@@ -14,7 +14,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-desc "Update the googleapis subremote in a PR and merge it automatically."
+desc "Update the googleapis submodule in a PR and merge it automatically."
 
 flag :git_remote, "--remote=NAME" do
   desc "The name of the git remote to use as the pull request head. If omitted, does not open a pull request."
@@ -50,8 +50,8 @@ end
 
 def make_changes
   branch_name = "gen/googleapis-#{@timestamp}"
-  commit_message = "chore: Automated update of the googleapis subremote at #{@timestamp}"
-  approval_message = "Rubber-stamped client auto-generation!"
+  commit_message = "chore: Automated update of the googleapis submodule at #{@timestamp}"
+  approval_message = "Rubber-stamped update of googleapis submodule!"
   yoshi_pr_generator.capture enabled: !git_remote.nil?,
                              remote: git_remote,
                              branch_name: branch_name,
@@ -66,10 +66,10 @@ end
 def output result
   case result
   when Integer
-    puts "Opened pull request #{result} for googleapis subremote", :green, :bold
+    puts "Opened pull request #{result} for googleapis submodule", :green, :bold
   when :unchanged
-    puts "No changes for googleapis subremote", :magenta
+    puts "No changes for googleapis submodule", :magenta
   else
-    puts "Updated googleapis subremote but did not open a pull request", :cyan
+    puts "Updated googleapis submodule but did not open a pull request", :cyan
   end
 end
