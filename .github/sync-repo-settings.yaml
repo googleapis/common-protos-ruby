@@ -7,7 +7,6 @@ branchProtectionRules:
   requiredStatusCheckContexts:
     - 'conventionalcommits.org'
     - 'CI (macos-latest, 3.0)'
-    - 'CI (ubuntu-latest, 2.5)'
     - 'CI (ubuntu-latest, 2.6)'
     - 'CI (ubuntu-latest, 2.7)'
     - 'CI (ubuntu-latest, 3.0)'
@@ -20,7 +19,7 @@ branchProtectionRules:
 permissionRules:
   - team: actools
     permission: admin
-  - team: yoshi-ruby-admins
+  - team: ruby-admins
     permission: admin
-  - team: yoshi-ruby
+  - team: ruby-team
     permission: push
