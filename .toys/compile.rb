@@ -20,7 +20,9 @@ flag :gems, "--gems=NAMES" do |f|
   f.accept Array
   f.desc "Update only the given gems (comma-delimited)."
 end
-flag :update_googleapis
+flag :update_googleapis do
+  desc "Update the googleapis subremote first before compiling"
+end
 
 include :exec, e: true
 include :terminal, styled: true

@@ -1,0 +1,29 @@
+name: Update Googleapis
+on:
+  schedule:
+    - cron: '23 10 * * 0'
+  workflow_dispatch:
+    inputs:
+      args:
+        description: "Extra command line arguments."
+        required: false
+
+jobs:
+  generate-updates:
+    if: ${{ github.repository == 'googleapis/common-protos-ruby' }}
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+      APPROVAL_GITHUB_TOKEN: ${{secrets.YOSHI_APPROVER_TOKEN}}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+      - name: Install Ruby 3.0
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.0"
+      - name: Install tools
+        run: "gem install --no-document toys grpc-tools"
+      - name: execute
+        run: |
+          toys update-googleapis-pr -v --fork ${{ github.event.inputs.args }}
