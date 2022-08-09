@@ -9,6 +9,8 @@ require 'google/protobuf/any_pb'
 require 'google/protobuf/duration_pb'
 require 'google/protobuf/empty_pb'
 require 'google/rpc/status_pb'
+require 'google/protobuf/descriptor_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/longrunning/operations.proto", :syntax => :proto3) do
     add_message "google.longrunning.Operation" do

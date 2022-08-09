@@ -4,6 +4,7 @@
 require 'google/protobuf'
 
 require 'google/protobuf/wrappers_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/type/color.proto", :syntax => :proto3) do
     add_message "google.type.Color" do

@@ -4,6 +4,7 @@
 require 'google/protobuf'
 
 require 'google/type/expr_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/iam/v1/policy.proto", :syntax => :proto3) do
     add_message "google.iam.v1.Policy" do

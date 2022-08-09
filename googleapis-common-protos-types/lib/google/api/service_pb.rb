@@ -11,21 +11,19 @@ require 'google/api/control_pb'
 require 'google/api/documentation_pb'
 require 'google/api/endpoint_pb'
 require 'google/api/http_pb'
-require 'google/api/label_pb'
 require 'google/api/log_pb'
 require 'google/api/logging_pb'
 require 'google/api/metric_pb'
 require 'google/api/monitored_resource_pb'
 require 'google/api/monitoring_pb'
 require 'google/api/quota_pb'
-require 'google/api/resource_pb'
 require 'google/api/source_info_pb'
 require 'google/api/system_parameter_pb'
 require 'google/api/usage_pb'
-require 'google/protobuf/any_pb'
 require 'google/protobuf/api_pb'
 require 'google/protobuf/type_pb'
 require 'google/protobuf/wrappers_pb'
+
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/service.proto", :syntax => :proto3) do
     add_message "google.api.Service" do
