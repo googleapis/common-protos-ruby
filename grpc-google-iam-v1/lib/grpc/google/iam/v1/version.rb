@@ -17,7 +17,7 @@
 module Google
   module Iam
     module V1
-      VERSION = "1.1.1".freeze
+      VERSION = "1.2.0".freeze
     end
   end
 end
