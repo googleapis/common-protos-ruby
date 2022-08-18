@@ -1,5 +1,11 @@
 # Release History
 
+### 1.4.0 (2022-08-17)
+
+#### Features
+
+* Update minimum Ruby version to 2.6 ([#75](https://github.com/googleapis/common-protos-ruby/issues/75)) 
+
 ### 1.3.12 (2021-09-03)
 
 * Removed unnecessary files from the gem package
