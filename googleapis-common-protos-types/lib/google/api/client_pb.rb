@@ -3,14 +3,107 @@
 
 require 'google/protobuf'
 
+require 'google/api/launch_stage_pb'
 require 'google/protobuf/descriptor_pb'
+require 'google/protobuf/duration_pb'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/api/client.proto", :syntax => :proto3) do
+    add_message "google.api.CommonLanguageSettings" do
+      optional :reference_docs_uri, :string, 1
+      repeated :destinations, :enum, 2, "google.api.ClientLibraryDestination"
+    end
+    add_message "google.api.ClientLibrarySettings" do
+      optional :version, :string, 1
+      optional :launch_stage, :enum, 2, "google.api.LaunchStage"
+      optional :rest_numeric_enums, :bool, 3
+      optional :java_settings, :message, 21, "google.api.JavaSettings"
+      optional :cpp_settings, :message, 22, "google.api.CppSettings"
+      optional :php_settings, :message, 23, "google.api.PhpSettings"
+      optional :python_settings, :message, 24, "google.api.PythonSettings"
+      optional :node_settings, :message, 25, "google.api.NodeSettings"
+      optional :dotnet_settings, :message, 26, "google.api.DotnetSettings"
+      optional :ruby_settings, :message, 27, "google.api.RubySettings"
+      optional :go_settings, :message, 28, "google.api.GoSettings"
+    end
+    add_message "google.api.Publishing" do
+      repeated :method_settings, :message, 2, "google.api.MethodSettings"
+      optional :new_issue_uri, :string, 101
+      optional :documentation_uri, :string, 102
+      optional :api_short_name, :string, 103
+      optional :github_label, :string, 104
+      repeated :codeowner_github_teams, :string, 105
+      optional :doc_tag_prefix, :string, 106
+      optional :organization, :enum, 107, "google.api.ClientLibraryOrganization"
+      repeated :library_settings, :message, 109, "google.api.ClientLibrarySettings"
+    end
+    add_message "google.api.JavaSettings" do
+      optional :library_package, :string, 1
+      map :service_class_names, :string, :string, 2
+      optional :common, :message, 3, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.CppSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.PhpSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.PythonSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.NodeSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.DotnetSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.RubySettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.GoSettings" do
+      optional :common, :message, 1, "google.api.CommonLanguageSettings"
+    end
+    add_message "google.api.MethodSettings" do
+      optional :selector, :string, 1
+      optional :long_running, :message, 2, "google.api.MethodSettings.LongRunning"
+    end
+    add_message "google.api.MethodSettings.LongRunning" do
+      optional :initial_poll_delay, :message, 1, "google.protobuf.Duration"
+      optional :poll_delay_multiplier, :float, 2
+      optional :max_poll_delay, :message, 3, "google.protobuf.Duration"
+      optional :total_poll_timeout, :message, 4, "google.protobuf.Duration"
+    end
+    add_enum "google.api.ClientLibraryOrganization" do
+      value :CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIED, 0
+      value :CLOUD, 1
+      value :ADS, 2
+      value :PHOTOS, 3
+      value :STREET_VIEW, 4
+    end
+    add_enum "google.api.ClientLibraryDestination" do
+      value :CLIENT_LIBRARY_DESTINATION_UNSPECIFIED, 0
+      value :GITHUB, 10
+      value :PACKAGE_MANAGER, 20
+    end
   end
 end
 
 module Google
   module Api
+    CommonLanguageSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.CommonLanguageSettings").msgclass
+    ClientLibrarySettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ClientLibrarySettings").msgclass
+    Publishing = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.Publishing").msgclass
+    JavaSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.JavaSettings").msgclass
+    CppSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.CppSettings").msgclass
+    PhpSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.PhpSettings").msgclass
+    PythonSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.PythonSettings").msgclass
+    NodeSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.NodeSettings").msgclass
+    DotnetSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.DotnetSettings").msgclass
+    RubySettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.RubySettings").msgclass
+    GoSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.GoSettings").msgclass
+    MethodSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.MethodSettings").msgclass
+    MethodSettings::LongRunning = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.MethodSettings.LongRunning").msgclass
+    ClientLibraryOrganization = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ClientLibraryOrganization").enummodule
+    ClientLibraryDestination = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ClientLibraryDestination").enummodule
   end
 end
