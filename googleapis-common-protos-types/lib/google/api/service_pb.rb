@@ -6,6 +6,7 @@ require 'google/protobuf'
 require 'google/api/auth_pb'
 require 'google/api/backend_pb'
 require 'google/api/billing_pb'
+require 'google/api/client_pb'
 require 'google/api/context_pb'
 require 'google/api/control_pb'
 require 'google/api/documentation_pb'
@@ -51,6 +52,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :monitoring, :message, 28, "google.api.Monitoring"
       optional :system_parameters, :message, 29, "google.api.SystemParameters"
       optional :source_info, :message, 37, "google.api.SourceInfo"
+      optional :publishing, :message, 45, "google.api.Publishing"
       optional :config_version, :message, 20, "google.protobuf.UInt32Value"
     end
   end

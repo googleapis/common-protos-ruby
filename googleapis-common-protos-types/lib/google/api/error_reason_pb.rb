@@ -26,6 +26,14 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :ACCESS_TOKEN_SCOPE_INSUFFICIENT, 17
       value :ACCOUNT_STATE_INVALID, 18
       value :ACCESS_TOKEN_TYPE_UNSUPPORTED, 19
+      value :CREDENTIALS_MISSING, 20
+      value :RESOURCE_PROJECT_INVALID, 21
+      value :SESSION_COOKIE_INVALID, 23
+      value :USER_BLOCKED_BY_ADMIN, 24
+      value :RESOURCE_USAGE_RESTRICTION_VIOLATED, 25
+      value :SYSTEM_PARAMETER_UNSUPPORTED, 26
+      value :ORG_RESTRICTION_VIOLATION, 27
+      value :ORG_RESTRICTION_HEADER_INVALID, 28
     end
   end
 end

@@ -20,6 +20,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       oneof :in do
         optional :header, :string, 1
         optional :query, :string, 2
+        optional :cookie, :string, 4
       end
     end
     add_message "google.api.AuthProvider" do
