@@ -7,6 +7,11 @@ require 'google/protobuf/duration_pb'
 
 Google::Protobuf::DescriptorPool.generated_pool.build do
   add_file("google/rpc/error_details.proto", :syntax => :proto3) do
+    add_message "google.rpc.ErrorInfo" do
+      optional :reason, :string, 1
+      optional :domain, :string, 2
+      map :metadata, :string, :string, 3
+    end
     add_message "google.rpc.RetryInfo" do
       optional :retry_delay, :message, 1, "google.protobuf.Duration"
     end
@@ -20,11 +25,6 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     add_message "google.rpc.QuotaFailure.Violation" do
       optional :subject, :string, 1
       optional :description, :string, 2
-    end
-    add_message "google.rpc.ErrorInfo" do
-      optional :reason, :string, 1
-      optional :domain, :string, 2
-      map :metadata, :string, :string, 3
     end
     add_message "google.rpc.PreconditionFailure" do
       repeated :violations, :message, 1, "google.rpc.PreconditionFailure.Violation"
@@ -67,11 +67,11 @@ end
 
 module Google
   module Rpc
+    ErrorInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.ErrorInfo").msgclass
     RetryInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.RetryInfo").msgclass
     DebugInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.DebugInfo").msgclass
     QuotaFailure = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.QuotaFailure").msgclass
     QuotaFailure::Violation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.QuotaFailure.Violation").msgclass
-    ErrorInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.ErrorInfo").msgclass
     PreconditionFailure = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.PreconditionFailure").msgclass
     PreconditionFailure::Violation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.PreconditionFailure.Violation").msgclass
     BadRequest = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.rpc.BadRequest").msgclass
