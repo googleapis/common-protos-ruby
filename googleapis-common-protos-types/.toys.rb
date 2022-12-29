@@ -31,28 +31,24 @@ tool "compile" do
 
   def run
     cd context_directory
-    gem "grpc-tools", "~> 1.48"
-    if clean
-      rm_rf "lib/google"
-      mkdir_p "lib"
-    end
+    gem "grpc-tools", "~> 1.50"
+    Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
     cmd = [
       "grpc_tools_ruby_protoc",
       "--ruby_out=lib",
       "-I", "../googleapis"
     ] + PROTO_GLOBS.flat_map { |glob| Dir.glob glob }
     exec cmd
-    postprocess_protos
+    process_additions
   end
 
-  # Perform post-compile steps on a couple of protos to install backward
-  # compatibility aliases.
-  def postprocess_protos
-    File.open "lib/google/logging/type/http_request_pb.rb", "a" do |file|
-      file.puts "\nmodule Google\n  module Logging\n    module Type\n      HttpRequest = ::Google::Cloud::Logging::Type::HttpRequest\n    end\n  end\nend"
-    end
-    File.open "lib/google/logging/type/log_severity_pb.rb", "a" do |file|
-      file.puts "\nmodule Google\n  module Logging\n    module Type\n      LogSeverity = ::Google::Cloud::Logging::Type::LogSeverity\n    end\n  end\nend"
+  def process_additions
+    Dir.glob "**/*.*", base: "additions" do |path|
+      add_content = File.read "additions/#{path}"
+      add_content.sub! %r{\A\n*(#[^\n]*\n+)*}, "\n"
+      File.open "lib/#{path}", "a" do |file|
+        file.write add_content
+      end
     end
   end
 end

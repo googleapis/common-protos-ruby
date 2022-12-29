@@ -28,22 +28,14 @@ tool "compile" do
 
   def run
     cd context_directory
-    gem "grpc-tools", "~> 1.37"
-    version_content = File.read "lib/google/cloud/common/version.rb"
-    version = Regexp.last_match[0] if version_content =~ /VERSION = "\d+\.\d+\.\d+"/
-    if clean
-      rm_rf "lib/google"
-      mkdir_p "lib"
-    end
+    gem "grpc-tools", "~> 1.50"
+    Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
     cmd = [
       "grpc_tools_ruby_protoc",
       "--ruby_out=lib",
       "-I", "../googleapis"
     ] + PROTO_GLOBS.flat_map { |glob| Dir.glob glob }
     exec cmd
-    version_content = File.read "src/version.rb"
-    version_content.sub! "VERSION = \"0.0.1\"", version if version
-    File.open("lib/google/cloud/common/version.rb", "w") { |file| file.write version_content }
   end
 end
 
