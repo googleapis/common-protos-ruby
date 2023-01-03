@@ -32,7 +32,7 @@ def run
   exec ["git", "submodule", "update", "--remote", "googleapis"] if update_googleapis
   determine_dirs.each do |dir|
     Dir.chdir dir do
-      exec_separate_tool ["compile"]
+      exec_separate_tool ["compile"] + verbosity_flags
     end
   end
 end

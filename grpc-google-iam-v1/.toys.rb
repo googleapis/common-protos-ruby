@@ -27,11 +27,8 @@ tool "compile" do
 
   def run
     cd context_directory
-    gem "grpc-tools", "~> 1.48"
-    if clean
-      rm_rf "lib/google"
-      mkdir_p "lib"
-    end
+    gem "grpc-tools", "~> 1.50"
+    Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
     cmd = [
       "grpc_tools_ruby_protoc",
       "--grpc_out=lib", "--ruby_out=lib",
