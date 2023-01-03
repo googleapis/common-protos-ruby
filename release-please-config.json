@@ -11,6 +11,10 @@
   "tag-separator": "/",
   "sequential-calls": true,
   "packages": {
+    "google-apps-script-type": {
+      "component": "google-apps-script-type",
+      "version-file": "lib/google/apps/script/type/version.rb"
+    },
     "google-cloud-common": {
       "component": "google-cloud-common",
       "version-file": "lib/google/cloud/common/version.rb"
