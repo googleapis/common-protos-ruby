@@ -4,8 +4,10 @@
 
 #### Features
 
-* Automated update of googleapis-common-protos-types ([#102](https://github.com/googleapis/common-protos-ruby/issues/102)) 
-* Automated update of googleapis-common-protos-types ([#110](https://github.com/googleapis/common-protos-ruby/issues/110)) 
+* Added "cookie" JwtLocation
+* Added protos related to client library publishing
+* Added several new error reasons
+* Added protos describing HTTP requests and responses
 
 ### 1.4.0 (2022-08-17)
 
