@@ -1,5 +1,14 @@
 # Release History
 
+### 1.5.0 (2023-01-04)
+
+#### Features
+
+* Added "cookie" JwtLocation
+* Added protos related to client library publishing
+* Added several new error reasons
+* Added protos describing HTTP requests and responses
+
 ### 1.4.0 (2022-08-17)
 
 #### Features
