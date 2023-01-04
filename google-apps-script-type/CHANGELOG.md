@@ -5,5 +5,3 @@
 #### Features
 
 * Initial generation of google-apps-script-type gem 
-
-## Release History
