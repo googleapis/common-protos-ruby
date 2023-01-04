@@ -1,0 +1,8 @@
+{
+  "client_documentation": "https://googleapis.dev/ruby/google-apps-script-type/latest",
+  "distribution-name": "google-apps-script-type",
+  "language": "ruby",
+  "library_type": "OTHER",
+  "release_level": "stable",
+  "repo": "googleapis/common-protos-ruby"
+}
