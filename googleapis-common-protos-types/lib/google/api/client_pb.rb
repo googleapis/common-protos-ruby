@@ -36,6 +36,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :doc_tag_prefix, :string, 106
       optional :organization, :enum, 107, "google.api.ClientLibraryOrganization"
       repeated :library_settings, :message, 109, "google.api.ClientLibrarySettings"
+      optional :proto_reference_documentation_uri, :string, 110
     end
     add_message "google.api.JavaSettings" do
       optional :library_package, :string, 1

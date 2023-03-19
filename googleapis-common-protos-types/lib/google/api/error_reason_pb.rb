@@ -34,6 +34,8 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :SYSTEM_PARAMETER_UNSUPPORTED, 26
       value :ORG_RESTRICTION_VIOLATION, 27
       value :ORG_RESTRICTION_HEADER_INVALID, 28
+      value :SERVICE_NOT_VISIBLE, 29
+      value :GCP_SUSPENDED, 30
     end
   end
 end
