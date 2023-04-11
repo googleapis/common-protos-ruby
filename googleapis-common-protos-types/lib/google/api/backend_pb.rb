@@ -16,6 +16,7 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       optional :operation_deadline, :double, 5
       optional :path_translation, :enum, 6, "google.api.BackendRule.PathTranslation"
       optional :protocol, :string, 9
+      map :overrides_by_request_protocol, :string, :message, 10, "google.api.BackendRule"
       oneof :authentication do
         optional :jwt_audience, :string, 7
         optional :disable_auth, :bool, 8
