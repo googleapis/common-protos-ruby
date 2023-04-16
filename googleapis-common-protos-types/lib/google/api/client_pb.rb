@@ -57,6 +57,11 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
     end
     add_message "google.api.DotnetSettings" do
       optional :common, :message, 1, "google.api.CommonLanguageSettings"
+      map :renamed_services, :string, :string, 2
+      map :renamed_resources, :string, :string, 3
+      repeated :ignored_resources, :string, 4
+      repeated :forced_namespace_aliases, :string, 5
+      repeated :handwritten_signatures, :string, 6
     end
     add_message "google.api.RubySettings" do
       optional :common, :message, 1, "google.api.CommonLanguageSettings"
