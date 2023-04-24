@@ -1,5 +1,16 @@
 # Release History
 
+### 1.6.0 (2023-04-24)
+
+#### Features
+
+* Added Google::Rpc::Context::AttributeContext
+* Added Google::Rpc::Context::AuditContext
+* Added dotnet-specific fields to API language settings
+* Added overrides_by_request_protocol to api.BackendRule
+* Added proto_reference_documentation_uri to api.Publishing
+* Added SERVICE_NOT_VISIBLE and GCP_SUSPENDED error reason values
+
 ### 1.5.0 (2023-01-04)
 
 #### Features
