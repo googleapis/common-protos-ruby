@@ -19,6 +19,7 @@ PROTO_GLOBS = [
   "../googleapis/google/logging/type/*.proto",
   "../googleapis/google/longrunning/*.proto",
   "../googleapis/google/rpc/*.proto",
+  "../googleapis/google/rpc/context/*.proto",
   "../googleapis/google/type/*.proto",
 ]
 
