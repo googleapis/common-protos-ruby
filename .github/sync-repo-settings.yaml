@@ -6,12 +6,13 @@ branchProtectionRules:
   isAdminEnforced: false
   requiredStatusCheckContexts:
     - 'conventionalcommits.org'
-    - 'CI (macos-latest, 3.0)'
+    - 'CI (macos-latest, 3.2)'
     - 'CI (ubuntu-latest, 2.6)'
     - 'CI (ubuntu-latest, 2.7)'
     - 'CI (ubuntu-latest, 3.0)'
     - 'CI (ubuntu-latest, 3.1)'
-    - 'CI (windows-latest, 3.0)'
+    - 'CI (ubuntu-latest, 3.2)'
+    - 'CI (windows-latest, 3.2)'
     - 'cla/google'
   requiredApprovingReviewCount: 1
   requiresCodeOwnerReviews: true
