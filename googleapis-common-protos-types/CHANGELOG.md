@@ -4,9 +4,12 @@
 
 #### Features
 
-* Added dotnet-specific fields to API language settings ([#135](https://github.com/googleapis/common-protos-ruby/issues/135)) 
-* Automated update of googleapis-common-protos-types ([#128](https://github.com/googleapis/common-protos-ruby/issues/128)) 
-* Added Google::Rpc::Context::AttributeContext and Google::Rpc::Context::AuditContext ([#138](https://github.com/googleapis/common-protos-ruby/issues/138)) 
+* Added Google::Rpc::Context::AttributeContext
+* Added Google::Rpc::Context::AuditContext
+* Added dotnet-specific fields to API language settings
+* Added overrides_by_request_protocol to api.BackendRule
+* Added proto_reference_documentation_uri to api.Publishing
+* Added SERVICE_NOT_VISIBLE and GCP_SUSPENDED error reason values
 
 ### 1.5.0 (2023-01-04)
 
