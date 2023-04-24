@@ -1,5 +1,13 @@
 # Release History
 
+### 1.6.0 (2023-04-24)
+
+#### Features
+
+* Added dotnet-specific fields to API language settings ([#135](https://github.com/googleapis/common-protos-ruby/issues/135)) 
+* Automated update of googleapis-common-protos-types ([#128](https://github.com/googleapis/common-protos-ruby/issues/128)) 
+* Added Google::Rpc::Context::AttributeContext and Google::Rpc::Context::AuditContext ([#138](https://github.com/googleapis/common-protos-ruby/issues/138)) 
+
 ### 1.5.0 (2023-01-04)
 
 #### Features
