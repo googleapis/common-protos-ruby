@@ -85,6 +85,9 @@ Google::Protobuf::DescriptorPool.generated_pool.build do
       value :ADS, 2
       value :PHOTOS, 3
       value :STREET_VIEW, 4
+      value :SHOPPING, 5
+      value :GEO, 6
+      value :GENERATIVE_AI, 7
     end
     add_enum "google.api.ClientLibraryDestination" do
       value :CLIENT_LIBRARY_DESTINATION_UNSPECIFIED, 0
