@@ -1,5 +1,11 @@
 # Release History
 
+### 1.7.0 (2023-07-16)
+
+#### Features
+
+* Support for a few additional client library organizations ([#141](https://github.com/googleapis/common-protos-ruby/issues/141)) 
+
 ### 1.6.0 (2023-04-24)
 
 #### Features
