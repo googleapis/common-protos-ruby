@@ -21,4 +21,6 @@ proto_globs = [
 ]
 
 expand "common-proto-tools", proto_globs: proto_globs,
-                             include_proto_comments: true
+                             include_proto_comments: true,
+                             include_grpc_plugin: true,
+                             include_ruby_plugin: false

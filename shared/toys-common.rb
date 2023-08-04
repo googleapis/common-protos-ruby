@@ -19,12 +19,16 @@ template "common-proto-tools" do
                  compile_tool_name: nil,
                  test_tool_name: nil,
                  additions_dir: nil,
+                 include_ruby_plugin: true,
+                 include_grpc_plugin: false,
                  include_proto_comments: false
     @proto_globs = proto_globs || []
     @compile_tool_name = compile_tool_name || "compile"
     @test_tool_name = test_tool_name || "test"
     @additions_dir = additions_dir
     @include_proto_comments = include_proto_comments
+    @include_ruby_plugin = include_ruby_plugin
+    @include_grpc_plugin = include_grpc_plugin
   end
 
   attr_reader :proto_globs
@@ -32,6 +36,8 @@ template "common-proto-tools" do
   attr_reader :test_tool_name
   attr_reader :additions_dir
   attr_reader :include_proto_comments
+  attr_reader :include_ruby_plugin
+  attr_reader :include_grpc_plugin
 
   to_expand do |template|
     tool template.compile_tool_name do
@@ -42,6 +48,8 @@ template "common-proto-tools" do
       static :proto_globs, template.proto_globs.map { |glob| "../googleapis/#{glob}" }
       static :additions_dir, template.additions_dir
       static :include_proto_comments, template.include_proto_comments
+      static :include_ruby_plugin, template.include_ruby_plugin
+      static :include_grpc_plugin, template.include_grpc_plugin
 
       include :fileutils
       include :exec, e: true
@@ -51,11 +59,11 @@ template "common-proto-tools" do
         cd context_directory
         gem "grpc-tools", "~> 1.55"
         Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
-        cmd = [
-          "grpc_tools_ruby_protoc",
-          "--ruby_out=lib",
-          "-I", "../googleapis"
-        ] + proto_globs.flat_map { |glob| Dir.glob glob }
+        cmd = ["grpc_tools_ruby_protoc"]
+        cmd += ["--ruby_out=lib"] if include_ruby_plugin
+        cmd += ["--grpc_out=lib"] if include_grpc_plugin
+        cmd += ["-I", "../googleapis"]
+        cmd += proto_globs.flat_map { |glob| Dir.glob glob }
         exec cmd
         process_additions if additions_dir
         process_proto_comments if include_proto_comments
