@@ -34,7 +34,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = ">= 2.6"
 
-  spec.add_dependency "googleapis-common-protos", ">= 1.3.12", "< 2.0"
-  spec.add_dependency "google-protobuf", "~> 3.14"
-  spec.add_dependency "grpc", "~> 1.27"
+  spec.add_dependency "googleapis-common-protos", "~> 1.4"
+  spec.add_dependency "google-protobuf", "~> 3.18"
+  spec.add_dependency "grpc", "~> 1.41"
 end
