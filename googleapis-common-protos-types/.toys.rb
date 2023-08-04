@@ -14,68 +14,17 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PROTO_GLOBS = [
-  "../googleapis/google/api/*.proto",
-  "../googleapis/google/logging/type/*.proto",
-  "../googleapis/google/longrunning/*.proto",
-  "../googleapis/google/rpc/*.proto",
-  "../googleapis/google/rpc/context/*.proto",
-  "../googleapis/google/type/*.proto",
+load "#{context_directory}/../shared/toys-common.rb"
+
+proto_globs = [
+  "google/api/*.proto",
+  "google/logging/type/*.proto",
+  "google/longrunning/*.proto",
+  "google/rpc/*.proto",
+  "google/rpc/context/*.proto",
+  "google/type/*.proto",
 ]
 
-tool "compile" do
-  flag :clean, "--[no-]clean", default: true
-
-  include :fileutils
-  include :exec, e: true
-  include :gems
-
-  def run
-    cd context_directory
-    gem "grpc-tools", "~> 1.50"
-    Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
-    cmd = [
-      "grpc_tools_ruby_protoc",
-      "--ruby_out=lib",
-      "-I", "../googleapis"
-    ] + PROTO_GLOBS.flat_map { |glob| Dir.glob glob }
-    exec cmd
-    process_additions
-  end
-
-  def process_additions
-    Dir.glob "**/*.*", base: "additions" do |path|
-      add_content = File.read "additions/#{path}"
-      add_content.sub! %r{\A\n*(#[^\n]*\n+)*}, "\n"
-      File.open "lib/#{path}", "a" do |file|
-        file.write add_content
-      end
-    end
-  end
-end
-
-tool "test" do
-  include :fileutils
-  include :exec, e: true
-  include :bundler
-
-  def run
-    cd context_directory
-    exec_ruby [], in: :controller do |controller|
-      controller.in.puts "puts 'Loading proto files'"
-      controller.in.puts "$LOAD_PATH.unshift File.expand_path 'lib'"
-      cd "lib" do
-        Dir.glob("google/**/*_pb.rb") do |path|
-          controller.in.puts "puts #{path.inspect}"
-          controller.in.puts "require #{path.inspect}"
-        end
-      end
-    end
-  end
-end
-
-expand :clean, paths: :gitignore
-
-expand :gem_build
-
-expand :gem_build, name: "release", push_gem: true
+expand "common-proto-tools", proto_globs: proto_globs,
+                             additions_dir: "additions",
+                             include_proto_comments: true
