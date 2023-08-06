@@ -4,8 +4,10 @@
 
 require 'google/protobuf'
 
+require 'google/api/policy_pb'
 
-descriptor_data = "\n\x18google/api/control.proto\x12\ngoogle.api\"\x1e\n\x07\x43ontrol\x12\x13\n\x0b\x65nvironment\x18\x01 \x01(\tBn\n\x0e\x63om.google.apiB\x0c\x43ontrolProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
+
+descriptor_data = "\n\x18google/api/control.proto\x12\ngoogle.api\x1a\x17google/api/policy.proto\"Q\n\x07\x43ontrol\x12\x13\n\x0b\x65nvironment\x18\x01 \x01(\t\x12\x31\n\x0fmethod_policies\x18\x04 \x03(\x0b\x32\x18.google.api.MethodPolicyBn\n\x0e\x63om.google.apiB\x0c\x43ontrolProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -20,6 +22,7 @@ rescue TypeError => e
   file = pool.add_serialized_file(serialized)
   warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
   imports = [
+    ["google.api.MethodPolicy", "google/api/policy.proto"],
   ]
   imports.each do |type_name, expected_filename|
     import_file = pool.lookup(type_name).file_descriptor
@@ -57,6 +60,8 @@ end
 #
 # package google.api;
 #
+# import "google/api/policy.proto";
+#
 # option go_package = "google.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig";
 # option java_multiple_files = true;
 # option java_outer_classname = "ControlProto";
@@ -74,4 +79,7 @@ end
 #   // feature (like quota and billing) will be enabled. The recommended value for
 #   // most services is servicecontrol.googleapis.com
 #   string environment = 1;
+#
+#   // Defines policies applying to the API methods of the service.
+#   repeated MethodPolicy method_policies = 4;
 # }
