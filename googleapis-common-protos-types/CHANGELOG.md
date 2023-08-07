@@ -4,7 +4,6 @@
 
 #### Features
 
-* Added Google::Api::Control#method_policies and related types 
 * Support for API method policies ([#175](https://github.com/googleapis/common-protos-ruby/issues/175)) 
 * Updated generated protobuf output to use binary descriptors for better future compatibility ([#165](https://github.com/googleapis/common-protos-ruby/issues/165)) 
 
