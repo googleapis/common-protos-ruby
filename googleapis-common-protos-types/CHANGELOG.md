@@ -1,5 +1,12 @@
 # Release History
 
+### 1.8.0 (2023-08-07)
+
+#### Features
+
+* Support for API method policies ([#175](https://github.com/googleapis/common-protos-ruby/issues/175)) 
+* Updated generated protobuf output to use binary descriptors for better future compatibility ([#165](https://github.com/googleapis/common-protos-ruby/issues/165)) 
+
 ### 1.7.0 (2023-07-16)
 
 #### Features
