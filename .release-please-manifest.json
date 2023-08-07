@@ -1,7 +1,7 @@
 {
   "google-apps-script-type": "0.1.0",
   "google-apps-script-type+FILLER": "0.0.0",
-  "google-cloud-common": "1.1.0",
+  "google-cloud-common": "1.2.0",
   "google-cloud-common+FILLER": "0.0.0",
   "googleapis-common-protos": "1.4.0",
   "googleapis-common-protos+FILLER": "0.0.0",
