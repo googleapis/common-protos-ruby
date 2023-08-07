@@ -5,7 +5,7 @@
   "google-cloud-common+FILLER": "0.0.0",
   "googleapis-common-protos": "1.4.0",
   "googleapis-common-protos+FILLER": "0.0.0",
-  "googleapis-common-protos-types": "1.7.0",
+  "googleapis-common-protos-types": "1.8.0",
   "googleapis-common-protos-types+FILLER": "0.0.0",
   "grpc-google-iam-v1": "1.2.0",
   "grpc-google-iam-v1+FILLER": "0.0.0"
