@@ -1,5 +1,11 @@
 # Release History
 
+### 1.3.0 (2023-08-07)
+
+#### Features
+
+* Updated generated protobuf output to use binary descriptors for better future compatibility ([#172](https://github.com/googleapis/common-protos-ruby/issues/172)) 
+
 ### 1.2.0 (2022-08-17)
 
 #### Features
