@@ -1,5 +1,11 @@
 # Release History
 
+### 1.9.0 (2023-09-19)
+
+#### Features
+
+* Added the "IDENTIFIER" field behavior ([#181](https://github.com/googleapis/common-protos-ruby/issues/181)) 
+
 ### 1.8.0 (2023-08-07)
 
 #### Features
