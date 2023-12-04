@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.2.0 (2023-12-04)
+
+#### Features
+
+* Automated update of google-shopping-type ([#216](https://github.com/googleapis/common-protos-ruby/issues/216)) 
+
 ### 0.1.0 (2023-10-17)
 
 #### Features
