@@ -7,7 +7,6 @@ branchProtectionRules:
   requiredStatusCheckContexts:
     - 'conventionalcommits.org'
     - 'CI (macos-latest, 3.2)'
-    - 'CI (ubuntu-latest, 2.6)'
     - 'CI (ubuntu-latest, 2.7)'
     - 'CI (ubuntu-latest, 3.0)'
     - 'CI (ubuntu-latest, 3.1)'
