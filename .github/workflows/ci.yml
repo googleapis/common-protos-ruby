@@ -41,7 +41,7 @@ jobs:
           git submodule update --init
       - name: Install dependencies
         run: |
-          gem install --no-document toys bundler
+          gem install --no-document toys
       - name: Run CI
         run: |
           toys ci -v --build --test --github-event-name=${{ github.event_name }} --github-event-payload=${{ github.event_path }}
