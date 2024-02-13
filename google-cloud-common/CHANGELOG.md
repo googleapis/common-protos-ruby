@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.5.0 (2024-02-13)
+
+#### Features
+
+* Automated update of google-cloud-common ([#238](https://github.com/googleapis/common-protos-ruby/issues/238)) 
+
 ### 1.4.0 (2023-12-04)
 
 #### Features
