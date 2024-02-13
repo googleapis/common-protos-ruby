@@ -1,5 +1,11 @@
 # Release History
 
+### 1.6.0 (2024-02-13)
+
+#### Features
+
+* Automated update of grpc-google-iam-v1 ([#240](https://github.com/googleapis/common-protos-ruby/issues/240)) 
+
 ### 1.5.0 (2024-01-08)
 
 #### Features
