@@ -1,5 +1,11 @@
 # Release History
 
+### 1.12.0 (2024-02-13)
+
+#### Features
+
+* set packed to false on field_behavior extension ([#239](https://github.com/googleapis/common-protos-ruby/issues/239)) 
+
 ### 1.11.0 (2023-12-04)
 
 #### Features
