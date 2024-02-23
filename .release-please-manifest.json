@@ -9,6 +9,6 @@
   "googleapis-common-protos+FILLER": "0.0.0",
   "googleapis-common-protos-types": "1.13.0",
   "googleapis-common-protos-types+FILLER": "0.0.0",
-  "grpc-google-iam-v1": "1.6.0",
+  "grpc-google-iam-v1": "1.7.0",
   "grpc-google-iam-v1+FILLER": "0.0.0"
 }
