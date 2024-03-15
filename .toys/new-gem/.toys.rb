@@ -35,7 +35,6 @@ end
 include :exec, e: true
 include :fileutils
 include :terminal
-include :git_cache
 include "yoshi-pr-generator"
 
 def run
@@ -68,6 +67,7 @@ def setup
     set :git_remote, "pull-request-fork" unless git_remote
     yoshi_utils.gh_ensure_fork remote: git_remote
   end
+  exec ["git", "submodule", "update", "--init"]
 end
 
 def write_base_files
