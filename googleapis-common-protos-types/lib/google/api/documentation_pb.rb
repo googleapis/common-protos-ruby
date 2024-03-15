@@ -77,7 +77,7 @@ end
 # //     content: &#40;== include google/foo/overview.md ==&#41;
 # //   - name: Tutorial
 # //     content: &#40;== include google/foo/tutorial.md ==&#41;
-# //     subpages;
+# //     subpages:
 # //     - name: Java
 # //       content: &#40;== include google/foo/tutorial_java.md ==&#41;
 # //   rules:
