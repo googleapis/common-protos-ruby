@@ -1,0 +1,29 @@
+name: Create New Gem
+on:
+  workflow_dispatch:
+    inputs:
+      protoPath:
+        description: "The path to the protos"
+        required: true
+      args:
+        description: "Extra command line arguments."
+        required: false
+
+jobs:
+  NewGem:
+    if: ${{ github.repository == 'googleapis/common-protos-ruby' }}
+    runs-on: ubuntu-latest
+    env:
+      GITHUB_TOKEN: ${{ secrets.YOSHI_CODE_BOT_TOKEN }}
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11 # v4
+      - name: Install Ruby 3.3
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: "3.3"
+      - name: Install tools
+        run: "gem install --no-document toys grpc-tools"
+      - name: execute
+        run: |
+          toys new-gem -v --fork ${{ github.event.inputs.protoPath }} ${{ github.event.inputs.args }}
