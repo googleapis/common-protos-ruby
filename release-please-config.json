@@ -11,6 +11,10 @@
   "tag-separator": "/",
   "sequential-calls": true,
   "packages": {
+    "google-apps-card-v1": {
+      "component": "google-apps-card-v1",
+      "version_file": "lib/google/apps/card/v1/version.rb"
+    },
     "google-apps-script-type": {
       "component": "google-apps-script-type",
       "version-file": "lib/google/apps/script/type/version.rb"

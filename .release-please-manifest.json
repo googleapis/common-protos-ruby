@@ -1,4 +1,6 @@
 {
+  "google-apps-card-v1": "0.0.1",
+  "google-apps-card-v1+FILLER": "0.0.0",
   "google-apps-script-type": "1.4.0",
   "google-apps-script-type+FILLER": "0.0.0",
   "google-cloud-common": "1.6.0",
