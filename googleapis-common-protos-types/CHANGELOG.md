@@ -1,5 +1,16 @@
 # Release History
 
+### 1.14.0 (2024-03-16)
+
+#### Features
+
+* Added LOCATION_POLICY_VIOLATED as an error reason 
+* Added rest_reference_documentation_uri to the Publishing config 
+* Added the google.api.api_version service option 
+#### Documentation
+
+* Minor documentation updates 
+
 ### 1.13.0 (2024-02-23)
 
 #### Features
