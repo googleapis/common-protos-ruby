@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xc1\x01\n\x0b\x44\x65stination\"\xb1\x01\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\"\xd9\x02\n\x10ReportingContext\"\xc4\x02\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x11\n\rDISCOVERY_ADS\x10\x02\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
+descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xc1\x01\n\x0b\x44\x65stination\"\xb1\x01\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\"\x96\x03\n\x10ReportingContext\"\x81\x03\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x15\n\rDISCOVERY_ADS\x10\x02\x1a\x02\x08\x01\x12\x12\n\x0e\x44\x45MAND_GEN_ADS\x10\r\x12#\n\x1f\x44\x45MAND_GEN_ADS_DISCOVER_SURFACE\x10\x0e\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -139,7 +139,7 @@ end
 # // Reporting contexts are groups of surfaces and formats for product results on
 # // Google. They can represent the entire destination (for example, [Shopping
 # // ads](https://support.google.com/merchants/answer/6149970)) or a subset of
-# // formats within a destination (for example, [Discovery
+# // formats within a destination (for example, [Demand Gen
 # // ads](https://support.google.com/merchants/answer/13389785)).
 # //
 # message ReportingContext {
@@ -151,9 +151,17 @@ end
 #     // [Shopping ads](https://support.google.com/merchants/answer/6149970).
 #     SHOPPING_ADS = 1;
 #
+#     // Deprecated:  Use `DEMAND_GEN_ADS` instead.
 #     // [Discovery and Demand Gen
 #     // ads](https://support.google.com/merchants/answer/13389785).
-#     DISCOVERY_ADS = 2;
+#     DISCOVERY_ADS = 2 [deprecated = true];
+#
+#     // [Demand Gen ads](https://support.google.com/merchants/answer/13389785).
+#     DEMAND_GEN_ADS = 13;
+#
+#     // [Demand Gen ads on Discover
+#     // surface](https://support.google.com/merchants/answer/13389785).
+#     DEMAND_GEN_ADS_DISCOVER_SURFACE = 14;
 #
 #     // [Video ads](https://support.google.com/google-ads/answer/6340491).
 #     VIDEO_ADS = 3;
