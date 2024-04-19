@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.4.0 (2024-04-14)
+
+#### Features
+
+* Recommend DEMAND_GEN_ADS over deprecated DISCOVERY_ADS in google-shopping-type ([#269](https://github.com/googleapis/common-protos-ruby/issues/269)) 
+
 ### 0.3.0 (2024-02-23)
 
 #### Features
