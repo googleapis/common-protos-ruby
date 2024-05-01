@@ -23,6 +23,10 @@
       "component": "google-cloud-common",
       "version-file": "lib/google/cloud/common/version.rb"
     },
+    "google-geo-type": {
+      "component": "google-geo-type",
+      "version_file": "lib/google/geo/type/version.rb"
+    },
     "google-shopping-type": {
       "component": "google-shopping-type",
       "version-file": "lib/google/shopping/type/version.rb"
