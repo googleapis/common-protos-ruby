@@ -1,0 +1,8 @@
+{
+  "client_documentation": "https://googleapis.dev/ruby/google-geo-type/latest",
+  "distribution-name": "google-geo-type",
+  "language": "ruby",
+  "library_type": "OTHER",
+  "release_level": "stable",
+  "repo": "googleapis/common-protos-ruby"
+}
