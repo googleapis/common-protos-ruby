@@ -11,30 +11,7 @@ require 'google/protobuf/timestamp_pb'
 descriptor_data = "\n\x1dgoogle/api/distribution.proto\x12\ngoogle.api\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\"\xd9\x06\n\x0c\x44istribution\x12\r\n\x05\x63ount\x18\x01 \x01(\x03\x12\x0c\n\x04mean\x18\x02 \x01(\x01\x12 \n\x18sum_of_squared_deviation\x18\x03 \x01(\x01\x12-\n\x05range\x18\x04 \x01(\x0b\x32\x1e.google.api.Distribution.Range\x12>\n\x0e\x62ucket_options\x18\x06 \x01(\x0b\x32&.google.api.Distribution.BucketOptions\x12\x15\n\rbucket_counts\x18\x07 \x03(\x03\x12\x34\n\texemplars\x18\n \x03(\x0b\x32!.google.api.Distribution.Exemplar\x1a!\n\x05Range\x12\x0b\n\x03min\x18\x01 \x01(\x01\x12\x0b\n\x03max\x18\x02 \x01(\x01\x1a\xb5\x03\n\rBucketOptions\x12G\n\x0elinear_buckets\x18\x01 \x01(\x0b\x32-.google.api.Distribution.BucketOptions.LinearH\x00\x12Q\n\x13\x65xponential_buckets\x18\x02 \x01(\x0b\x32\x32.google.api.Distribution.BucketOptions.ExponentialH\x00\x12K\n\x10\x65xplicit_buckets\x18\x03 \x01(\x0b\x32/.google.api.Distribution.BucketOptions.ExplicitH\x00\x1a\x43\n\x06Linear\x12\x1a\n\x12num_finite_buckets\x18\x01 \x01(\x05\x12\r\n\x05width\x18\x02 \x01(\x01\x12\x0e\n\x06offset\x18\x03 \x01(\x01\x1aO\n\x0b\x45xponential\x12\x1a\n\x12num_finite_buckets\x18\x01 \x01(\x05\x12\x15\n\rgrowth_factor\x18\x02 \x01(\x01\x12\r\n\x05scale\x18\x03 \x01(\x01\x1a\x1a\n\x08\x45xplicit\x12\x0e\n\x06\x62ounds\x18\x01 \x03(\x01\x42\t\n\x07options\x1as\n\x08\x45xemplar\x12\r\n\x05value\x18\x01 \x01(\x01\x12-\n\ttimestamp\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12)\n\x0b\x61ttachments\x18\x03 \x03(\x0b\x32\x14.google.protobuf.AnyBq\n\x0e\x63om.google.apiB\x11\x44istributionProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/distribution;distribution\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
-
-begin
-  pool.add_serialized_file(descriptor_data)
-rescue TypeError
-  # Compatibility code: will be removed in the next major version.
-  require 'google/protobuf/descriptor_pb'
-  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
-  parsed.clear_dependency
-  serialized = parsed.class.encode(parsed)
-  file = pool.add_serialized_file(serialized)
-  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
-  imports = [
-    ["google.protobuf.Timestamp", "google/protobuf/timestamp.proto"],
-    ["google.protobuf.Any", "google/protobuf/any.proto"],
-  ]
-  imports.each do |type_name, expected_filename|
-    import_file = pool.lookup(type_name).file_descriptor
-    if import_file.name != expected_filename
-      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
-    end
-  end
-  warn "Each proto file must use a consistent fully-qualified name."
-  warn "This will become an error in the next major version."
-end
+pool.add_serialized_file(descriptor_data)
 
 module Google
   module Api
