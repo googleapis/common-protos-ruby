@@ -57,7 +57,9 @@ template "common-proto-tools" do
 
       def run
         cd context_directory
-        gem "grpc-tools", "~> 1.55"
+        # Pin grpc-tools to 1.62 because 1.63 updates libprotoc to v26 which
+        # has breaking changes.
+        gem "grpc-tools", "~> 1.62.0"
         Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
         cmd = ["grpc_tools_ruby_protoc"]
         cmd += ["--ruby_out=lib"] if include_ruby_plugin
