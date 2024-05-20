@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.3.0 (2024-05-20)
+
+#### Features
+
+* Automated update of google-apps-card-v1 ([#300](https://github.com/googleapis/common-protos-ruby/issues/300)) 
+
 ### 0.2.0 (2024-04-22)
 
 #### Features
