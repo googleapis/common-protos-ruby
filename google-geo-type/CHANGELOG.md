@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.1.1 (2024-05-20)
+
+#### Bug Fixes
+
+* Restored compatibility code 
+
 ### 0.1.0 (2024-05-01)
 
 #### Features
