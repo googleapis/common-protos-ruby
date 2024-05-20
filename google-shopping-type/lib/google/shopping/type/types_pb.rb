@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xc1\x01\n\x0b\x44\x65stination\"\xb1\x01\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\"\x96\x03\n\x10ReportingContext\"\x81\x03\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x15\n\rDISCOVERY_ADS\x10\x02\x1a\x02\x08\x01\x12\x12\n\x0e\x44\x45MAND_GEN_ADS\x10\r\x12#\n\x1f\x44\x45MAND_GEN_ADS_DISCOVER_SURFACE\x10\x0e\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
+descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"\xb1\x01\n\x06Weight\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x35\n\x04unit\x18\x02 \x01(\x0e\x32\'.google.shopping.type.Weight.WeightUnit\"B\n\nWeightUnit\x12\x1b\n\x17WEIGHT_UNIT_UNSPECIFIED\x10\x00\x12\t\n\x05POUND\x10\x01\x12\x0c\n\x08KILOGRAM\x10\x02\x42\x10\n\x0e_amount_micros\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xc1\x01\n\x0b\x44\x65stination\"\xb1\x01\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\"\x96\x03\n\x10ReportingContext\"\x81\x03\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x15\n\rDISCOVERY_ADS\x10\x02\x1a\x02\x08\x01\x12\x12\n\x0e\x44\x45MAND_GEN_ADS\x10\r\x12#\n\x1f\x44\x45MAND_GEN_ADS_DISCOVER_SURFACE\x10\x0e\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -34,6 +34,8 @@ end
 module Google
   module Shopping
     module Type
+      Weight = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.shopping.type.Weight").msgclass
+      Weight::WeightUnit = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.shopping.type.Weight.WeightUnit").enummodule
       Price = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.shopping.type.Price").msgclass
       CustomAttribute = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.shopping.type.CustomAttribute").msgclass
       Destination = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.shopping.type.Destination").msgclass
@@ -48,7 +50,7 @@ end
 
 #### Source proto file: google/shopping/type/types.proto ####
 #
-# // Copyright 2023 Google LLC
+# // Copyright 2024 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -72,13 +74,37 @@ end
 # option java_outer_classname = "TypesProto";
 # option java_package = "com.google.shopping.type";
 #
+# // The weight represented as the value in string and the unit.
+# message Weight {
+#   // The weight unit.
+#   enum WeightUnit {
+#     // unit unspecified
+#     WEIGHT_UNIT_UNSPECIFIED = 0;
+#
+#     // lb unit.
+#     POUND = 1;
+#
+#     // kg unit.
+#     KILOGRAM = 2;
+#   }
+#
+#   // Required. The weight represented as a number in micros (1 million micros is
+#   // an equivalent to one's currency standard unit, for example, 1 kg = 1000000
+#   // micros).
+#   // This field can also be set as infinity by setting to -1.
+#   // This field only support -1 and positive value.
+#   optional int64 amount_micros = 1;
+#
+#   // Required. The weight unit.
+#   // Acceptable values are: kg and lb
+#   WeightUnit unit = 2;
+# }
+#
 # // The price represented as a number and currency.
 # message Price {
 #   // The price represented as a number in micros (1 million micros is an
 #   // equivalent to one's currency standard unit, for example, 1 USD = 1000000
 #   // micros).
-#   // This field can also be set as infinity by setting to -1.
-#   // This field only support -1 and positive value.
 #   optional int64 amount_micros = 1;
 #
 #   // The currency of the price using three-letter acronyms according to [ISO
