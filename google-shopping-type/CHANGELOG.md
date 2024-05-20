@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.5.0 (2024-05-20)
+
+#### Features
+
+* Added Google::Shopping::Type::Weight 
+
 ### 0.4.0 (2024-04-14)
 
 #### Features
