@@ -50,7 +50,7 @@ end
 
 #### Source proto file: google/apps/script/type/sheets/sheets_addon_manifest.proto ####
 #
-# // Copyright 2020 Google LLC
+# // Copyright 2024 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
