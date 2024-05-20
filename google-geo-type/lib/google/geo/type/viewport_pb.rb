@@ -10,7 +10,29 @@ require 'google/type/latlng_pb'
 descriptor_data = "\n\x1egoogle/geo/type/viewport.proto\x12\x0fgoogle.geo.type\x1a\x18google/type/latlng.proto\"O\n\x08Viewport\x12 \n\x03low\x18\x01 \x01(\x0b\x32\x13.google.type.LatLng\x12!\n\x04high\x18\x02 \x01(\x0b\x32\x13.google.type.LatLngBo\n\x13\x63om.google.geo.typeB\rViewportProtoP\x01Z@google.golang.org/genproto/googleapis/geo/type/viewport;viewport\xa2\x02\x04GGTPb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
-pool.add_serialized_file(descriptor_data)
+
+begin
+  pool.add_serialized_file(descriptor_data)
+rescue TypeError
+  # Compatibility code: will be removed in the next major version.
+  require 'google/protobuf/descriptor_pb'
+  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
+  parsed.clear_dependency
+  serialized = parsed.class.encode(parsed)
+  file = pool.add_serialized_file(serialized)
+  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
+  imports = [
+    ["google.type.LatLng", "google/type/latlng.proto"],
+  ]
+  imports.each do |type_name, expected_filename|
+    import_file = pool.lookup(type_name).file_descriptor
+    if import_file.name != expected_filename
+      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
+    end
+  end
+  warn "Each proto file must use a consistent fully-qualified name."
+  warn "This will become an error in the next major version."
+end
 
 module Google
   module Geo
@@ -22,7 +44,7 @@ end
 
 #### Source proto file: google/geo/type/viewport.proto ####
 #
-# // Copyright 2019 Google LLC.
+# // Copyright 2024 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
