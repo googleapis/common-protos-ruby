@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.2.0 (2024-06-11)
+
+#### Features
+
+* Support for google-protobuf 4.x ([#315](https://github.com/googleapis/common-protos-ruby/issues/315)) 
+
 ### 0.1.1 (2024-05-20)
 
 #### Bug Fixes
