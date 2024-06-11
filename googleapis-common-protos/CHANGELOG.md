@@ -1,5 +1,11 @@
 # Release History
 
+### 1.6.0 (2024-06-11)
+
+#### Features
+
+* Support for google-protobuf 4.x ([#315](https://github.com/googleapis/common-protos-ruby/issues/315)) 
+
 ### 1.5.0 (2024-02-23)
 
 #### Features
