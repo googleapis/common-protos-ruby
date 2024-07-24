@@ -20,16 +20,12 @@ flag :gems, "--gems=NAMES" do |f|
   f.accept Array
   f.desc "Update only the given gems (comma-delimited)."
 end
-flag :update_googleapis do
-  desc "Update the googleapis subremote first before compiling"
-end
 
 include :exec, e: true
 include :terminal, styled: true
 
 def run
   Dir.chdir context_directory
-  exec ["git", "submodule", "update", "--remote", "googleapis"] if update_googleapis
   determine_dirs.each do |dir|
     Dir.chdir dir do
       exec_separate_tool ["compile"] + verbosity_flags
