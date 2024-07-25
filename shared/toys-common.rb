@@ -45,30 +45,42 @@ template "common-proto-tools" do
 
       flag :clean, "--[no-]clean", default: true
 
-      static :proto_globs, template.proto_globs.map { |glob| "../googleapis/#{glob}" }
+      static :proto_globs, template.proto_globs
       static :additions_dir, template.additions_dir
       static :include_proto_comments, template.include_proto_comments
       static :include_ruby_plugin, template.include_ruby_plugin
       static :include_grpc_plugin, template.include_grpc_plugin
 
-      include :fileutils
       include :exec, e: true
+      include :fileutils
       include :gems
+      include :git_cache
 
       def run
+        setup
+        compile_protos
+        process_additions if additions_dir
+        process_proto_comments if include_proto_comments
+      end
+
+      def setup
         cd context_directory
         # Pin grpc-tools to 1.62 because 1.63 updates libprotoc to v26 which
         # has breaking changes.
         gem "grpc-tools", "~> 1.62.0"
+        @googleapis_dir = git_cache.get "https://github.com/googleapis/googleapis.git", update: true
+      end
+
+      def compile_protos
         Dir.glob("lib/**/*_pb.rb") { |path| rm path } if clean
-        cmd = ["grpc_tools_ruby_protoc"]
-        cmd += ["--ruby_out=lib"] if include_ruby_plugin
-        cmd += ["--grpc_out=lib"] if include_grpc_plugin
-        cmd += ["-I", "../googleapis"]
-        cmd += proto_globs.flat_map { |glob| Dir.glob glob }
-        exec cmd
-        process_additions if additions_dir
-        process_proto_comments if include_proto_comments
+        cd @googleapis_dir do
+          cmd = ["grpc_tools_ruby_protoc"]
+          cmd += ["--ruby_out=#{context_directory}/lib"] if include_ruby_plugin
+          cmd += ["--grpc_out=#{context_directory}/lib"] if include_grpc_plugin
+          cmd += ["-I", "."]
+          cmd += proto_globs.flat_map { |glob| Dir.glob glob }
+          exec cmd
+        end
       end
 
       def process_additions
@@ -84,7 +96,7 @@ template "common-proto-tools" do
       def process_proto_comments
         Dir.glob "**/*_pb.rb", base: "lib" do |ruby_path|
           proto_path = ruby_path.sub "_pb.rb", ".proto"
-          proto_full_path = "../googleapis/#{proto_path}"
+          proto_full_path = "#{@googleapis_dir}/#{proto_path}"
           ruby_full_path = "lib/#{ruby_path}"
           next unless File.file? proto_full_path
           proto_content = File.read proto_full_path
