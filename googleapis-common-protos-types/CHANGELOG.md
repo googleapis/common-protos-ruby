@@ -1,5 +1,14 @@
 # Release History
 
+### 1.16.0 (2024-09-11)
+
+#### Features
+
+* Added referenced types to Google::Api::FieldInfo 
+#### Documentation
+
+* Various improvements to reference documentation 
+
 ### 1.15.0 (2024-06-11)
 
 #### Features
