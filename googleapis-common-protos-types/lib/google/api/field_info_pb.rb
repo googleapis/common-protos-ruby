@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/descriptor_pb'
 
 
-descriptor_data = "\n\x1bgoogle/api/field_info.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"\x8c\x01\n\tFieldInfo\x12,\n\x06\x66ormat\x18\x01 \x01(\x0e\x32\x1c.google.api.FieldInfo.Format\"Q\n\x06\x46ormat\x12\x16\n\x12\x46ORMAT_UNSPECIFIED\x10\x00\x12\t\n\x05UUID4\x10\x01\x12\x08\n\x04IPV4\x10\x02\x12\x08\n\x04IPV6\x10\x03\x12\x10\n\x0cIPV4_OR_IPV6\x10\x04:L\n\nfield_info\x12\x1d.google.protobuf.FieldOptions\x18\xcc\xf1\xf9\x8a\x01 \x01(\x0b\x32\x15.google.api.FieldInfoBl\n\x0e\x63om.google.apiB\x0e\x46ieldInfoProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x1bgoogle/api/field_info.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"\xc1\x01\n\tFieldInfo\x12,\n\x06\x66ormat\x18\x01 \x01(\x0e\x32\x1c.google.api.FieldInfo.Format\x12\x33\n\x10referenced_types\x18\x02 \x03(\x0b\x32\x19.google.api.TypeReference\"Q\n\x06\x46ormat\x12\x16\n\x12\x46ORMAT_UNSPECIFIED\x10\x00\x12\t\n\x05UUID4\x10\x01\x12\x08\n\x04IPV4\x10\x02\x12\x08\n\x04IPV6\x10\x03\x12\x10\n\x0cIPV4_OR_IPV6\x10\x04\"\"\n\rTypeReference\x12\x11\n\ttype_name\x18\x01 \x01(\t:L\n\nfield_info\x12\x1d.google.protobuf.FieldOptions\x18\xcc\xf1\xf9\x8a\x01 \x01(\x0b\x32\x15.google.api.FieldInfoBl\n\x0e\x63om.google.apiB\x0e\x46ieldInfoProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -37,6 +37,7 @@ module Google
   module Api
     FieldInfo = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.FieldInfo").msgclass
     FieldInfo::Format = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.FieldInfo.Format").enummodule
+    TypeReference = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.TypeReference").msgclass
   end
 end
 
@@ -73,12 +74,19 @@ end
 #   //
 #   // Examples:
 #   //
-#   //   string request_id = 1 [(google.api.field_info).format = UUID4];
-#   //   string old_ip_address = 2 [(google.api.field_info).format = IPV4];
-#   //   string new_ip_address = 3 [(google.api.field_info).format = IPV6];
-#   //   string actual_ip_address = 4 [
-#   //     (google.api.field_info).format = IPV4_OR_IPV6
-#   //   ];
+#   //     string request_id = 1 [(google.api.field_info).format = UUID4];
+#   //     string old_ip_address = 2 [(google.api.field_info).format = IPV4];
+#   //     string new_ip_address = 3 [(google.api.field_info).format = IPV6];
+#   //     string actual_ip_address = 4 [
+#   //       (google.api.field_info).format = IPV4_OR_IPV6
+#   //     ];
+#   //     google.protobuf.Any generic_field = 5 [
+#   //       (google.api.field_info).referenced_types = {type_name: "ActualType"},
+#   //       (google.api.field_info).referenced_types = {type_name: "OtherType"},
+#   //     ];
+#   //     google.protobuf.Any generic_user_input = 5 [
+#   //       (google.api.field_info).referenced_types = {type_name: "*"},
+#   //     ];
 #   google.api.FieldInfo field_info = 291403980;
 # }
 #
@@ -120,4 +128,24 @@ end
 #   // any API consumer, just documents the API's format for the field it is
 #   // applied to.
 #   Format format = 1;
+#
+#   // The type(s) that the annotated, generic field may represent.
+#   //
+#   // Currently, this must only be used on fields of type `google.protobuf.Any`.
+#   // Supporting other generic types may be considered in the future.
+#   repeated TypeReference referenced_types = 2;
+# }
+#
+# // A reference to a message type, for use in [FieldInfo][google.api.FieldInfo].
+# message TypeReference {
+#   // The name of the type that the annotated, generic field may represent.
+#   // If the type is in the same protobuf package, the value can be the simple
+#   // message name e.g., `"MyMessage"`. Otherwise, the value must be the
+#   // fully-qualified message name e.g., `"google.library.v1.Book"`.
+#   //
+#   // If the type(s) are unknown to the service (e.g. the field accepts generic
+#   // user input), use the wildcard `"*"` to denote this behavior.
+#   //
+#   // See [AIP-202](https://google.aip.dev/202#type-references) for more details.
+#   string type_name = 1;
 # }

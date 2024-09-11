@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x19google/api/endpoint.proto\x12\ngoogle.api\"Q\n\x08\x45ndpoint\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x13\n\x07\x61liases\x18\x02 \x03(\tB\x02\x18\x01\x12\x0e\n\x06target\x18\x65 \x01(\t\x12\x12\n\nallow_cors\x18\x05 \x01(\x08\x42o\n\x0e\x63om.google.apiB\rEndpointProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x19google/api/endpoint.proto\x12\ngoogle.api\"M\n\x08\x45ndpoint\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0f\n\x07\x61liases\x18\x02 \x03(\t\x12\x0e\n\x06target\x18\x65 \x01(\t\x12\x12\n\nallow_cors\x18\x05 \x01(\x08\x42o\n\x0e\x63om.google.apiB\rEndpointProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -88,14 +88,10 @@ end
 #   // The canonical name of this endpoint.
 #   string name = 1;
 #
-#   // Unimplemented. Dot not use.
-#   //
-#   // DEPRECATED: This field is no longer supported. Instead of using aliases,
-#   // please specify multiple [google.api.Endpoint][google.api.Endpoint] for each
-#   // of the intended aliases.
-#   //
-#   // Additional names that this endpoint will be hosted on.
-#   repeated string aliases = 2 [deprecated = true];
+#   // Aliases for this endpoint, these will be served by the same UrlMap as the
+#   // parent endpoint, and will be provisioned in the GCP stack for the Regional
+#   // Endpoints.
+#   repeated string aliases = 2;
 #
 #   // The specification of an Internet routable address of API frontend that will
 #   // handle requests to this [API
