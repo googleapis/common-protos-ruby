@@ -13,7 +13,7 @@ require 'google/iam/v1/policy_pb'
 require 'google/protobuf/field_mask_pb'
 
 
-descriptor_data = "\n\x1egoogle/iam/v1/iam_policy.proto\x12\rgoogle.iam.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1bgoogle/iam/v1/options.proto\x1a\x1agoogle/iam/v1/policy.proto\x1a google/protobuf/field_mask.proto\"\x8f\x01\n\x13SetIamPolicyRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12*\n\x06policy\x18\x02 \x01(\x0b\x32\x15.google.iam.v1.PolicyB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"d\n\x13GetIamPolicyRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12\x30\n\x07options\x18\x02 \x01(\x0b\x32\x1f.google.iam.v1.GetPolicyOptions\"R\n\x19TestIamPermissionsRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12\x18\n\x0bpermissions\x18\x02 \x03(\tB\x03\xe0\x41\x02\"1\n\x1aTestIamPermissionsResponse\x12\x13\n\x0bpermissions\x18\x01 \x03(\t2\xb4\x03\n\tIAMPolicy\x12t\n\x0cSetIamPolicy\x12\".google.iam.v1.SetIamPolicyRequest\x1a\x15.google.iam.v1.Policy\")\x82\xd3\xe4\x93\x02#\"\x1e/v1/{resource=**}:setIamPolicy:\x01*\x12t\n\x0cGetIamPolicy\x12\".google.iam.v1.GetIamPolicyRequest\x1a\x15.google.iam.v1.Policy\")\x82\xd3\xe4\x93\x02#\"\x1e/v1/{resource=**}:getIamPolicy:\x01*\x12\x9a\x01\n\x12TestIamPermissions\x12(.google.iam.v1.TestIamPermissionsRequest\x1a).google.iam.v1.TestIamPermissionsResponse\"/\x82\xd3\xe4\x93\x02)\"$/v1/{resource=**}:testIamPermissions:\x01*\x1a\x1e\xca\x41\x1biam-meta-api.googleapis.comB\x7f\n\x11\x63om.google.iam.v1B\x0eIamPolicyProtoP\x01Z)cloud.google.com/go/iam/apiv1/iampb;iampb\xf8\x01\x01\xaa\x02\x13Google.Cloud.Iam.V1\xca\x02\x13Google\\Cloud\\Iam\\V1b\x06proto3"
+descriptor_data = "\n\x1egoogle/iam/v1/iam_policy.proto\x12\rgoogle.iam.v1\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x1fgoogle/api/field_behavior.proto\x1a\x19google/api/resource.proto\x1a\x1bgoogle/iam/v1/options.proto\x1a\x1agoogle/iam/v1/policy.proto\x1a google/protobuf/field_mask.proto\"\x8f\x01\n\x13SetIamPolicyRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12*\n\x06policy\x18\x02 \x01(\x0b\x32\x15.google.iam.v1.PolicyB\x03\xe0\x41\x02\x12/\n\x0bupdate_mask\x18\x03 \x01(\x0b\x32\x1a.google.protobuf.FieldMask\"d\n\x13GetIamPolicyRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12\x30\n\x07options\x18\x02 \x01(\x0b\x32\x1f.google.iam.v1.GetPolicyOptions\"R\n\x19TestIamPermissionsRequest\x12\x1b\n\x08resource\x18\x01 \x01(\tB\t\xe0\x41\x02\xfa\x41\x03\n\x01*\x12\x18\n\x0bpermissions\x18\x02 \x03(\tB\x03\xe0\x41\x02\"1\n\x1aTestIamPermissionsResponse\x12\x13\n\x0bpermissions\x18\x01 \x03(\t2\xb4\x03\n\tIAMPolicy\x12t\n\x0cSetIamPolicy\x12\".google.iam.v1.SetIamPolicyRequest\x1a\x15.google.iam.v1.Policy\")\x82\xd3\xe4\x93\x02#\"\x1e/v1/{resource=**}:setIamPolicy:\x01*\x12t\n\x0cGetIamPolicy\x12\".google.iam.v1.GetIamPolicyRequest\x1a\x15.google.iam.v1.Policy\")\x82\xd3\xe4\x93\x02#\"\x1e/v1/{resource=**}:getIamPolicy:\x01*\x12\x9a\x01\n\x12TestIamPermissions\x12(.google.iam.v1.TestIamPermissionsRequest\x1a).google.iam.v1.TestIamPermissionsResponse\"/\x82\xd3\xe4\x93\x02)\"$/v1/{resource=**}:testIamPermissions:\x01*\x1a\x1e\xca\x41\x1biam-meta-api.googleapis.comB|\n\x11\x63om.google.iam.v1B\x0eIamPolicyProtoP\x01Z)cloud.google.com/go/iam/apiv1/iampb;iampb\xaa\x02\x13Google.Cloud.Iam.V1\xca\x02\x13Google\\Cloud\\Iam\\V1b\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -81,7 +81,6 @@ end
 # import "google/iam/v1/policy.proto";
 # import "google/protobuf/field_mask.proto";
 #
-# option cc_enable_arenas = true;
 # option csharp_namespace = "Google.Cloud.Iam.V1";
 # option go_package = "cloud.google.com/go/iam/apiv1/iampb;iampb";
 # option java_multiple_files = true;
@@ -90,7 +89,6 @@ end
 # option php_namespace = "Google\\Cloud\\Iam\\V1";
 #
 # // API Overview
-# //
 # //
 # // Manages Identity and Access Management (IAM) policies.
 # //
@@ -146,7 +144,8 @@ end
 #   // Note: This operation is designed to be used for building permission-aware
 #   // UIs and command-line tools, not for authorization checking. This operation
 #   // may "fail open" without warning.
-#   rpc TestIamPermissions(TestIamPermissionsRequest) returns (TestIamPermissionsResponse) {
+#   rpc TestIamPermissions(TestIamPermissionsRequest)
+#       returns (TestIamPermissionsResponse) {
 #     option (google.api.http) = {
 #       post: "/v1/{resource=**}:testIamPermissions"
 #       body: "*"
@@ -160,7 +159,8 @@ end
 #   // See the operation documentation for the appropriate value for this field.
 #   string resource = 1 [
 #     (google.api.field_behavior) = REQUIRED,
-#     (google.api.resource_reference).type = "*"];
+#     (google.api.resource_reference).type = "*"
+#   ];
 #
 #   // REQUIRED: The complete policy to be applied to the `resource`. The size of
 #   // the policy is limited to a few 10s of KB. An empty policy is a
@@ -182,7 +182,8 @@ end
 #   // See the operation documentation for the appropriate value for this field.
 #   string resource = 1 [
 #     (google.api.field_behavior) = REQUIRED,
-#     (google.api.resource_reference).type = "*"];
+#     (google.api.resource_reference).type = "*"
+#   ];
 #
 #   // OPTIONAL: A `GetPolicyOptions` object for specifying options to
 #   // `GetIamPolicy`.
@@ -193,9 +194,10 @@ end
 # message TestIamPermissionsRequest {
 #   // REQUIRED: The resource for which the policy detail is being requested.
 #   // See the operation documentation for the appropriate value for this field.
-#   string resource = 1[
+#   string resource = 1 [
 #     (google.api.field_behavior) = REQUIRED,
-#     (google.api.resource_reference).type = "*"];
+#     (google.api.resource_reference).type = "*"
+#   ];
 #
 #   // The set of permissions to check for the `resource`. Permissions with
 #   // wildcards (such as '*' or 'storage.*') are not allowed. For more
