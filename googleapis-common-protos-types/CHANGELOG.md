@@ -1,5 +1,11 @@
 # Release History
 
+### 1.17.0 (2025-01-09)
+
+#### Features
+
+* Added PythonSettings#experimental_features ([#336](https://github.com/googleapis/common-protos-ruby/issues/336)) 
+
 ### 1.16.0 (2024-09-11)
 
 #### Features
