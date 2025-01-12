@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x1dgoogle/api/error_reason.proto\x12\ngoogle.api*\x8a\x07\n\x0b\x45rrorReason\x12\x1c\n\x18\x45RROR_REASON_UNSPECIFIED\x10\x00\x12\x14\n\x10SERVICE_DISABLED\x10\x01\x12\x14\n\x10\x42ILLING_DISABLED\x10\x02\x12\x13\n\x0f\x41PI_KEY_INVALID\x10\x03\x12\x1b\n\x17\x41PI_KEY_SERVICE_BLOCKED\x10\x04\x12!\n\x1d\x41PI_KEY_HTTP_REFERRER_BLOCKED\x10\x07\x12\x1e\n\x1a\x41PI_KEY_IP_ADDRESS_BLOCKED\x10\x08\x12\x1f\n\x1b\x41PI_KEY_ANDROID_APP_BLOCKED\x10\t\x12\x1b\n\x17\x41PI_KEY_IOS_APP_BLOCKED\x10\r\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x1b\n\x17RESOURCE_QUOTA_EXCEEDED\x10\x06\x12 \n\x1cLOCATION_TAX_POLICY_VIOLATED\x10\n\x12\x17\n\x13USER_PROJECT_DENIED\x10\x0b\x12\x16\n\x12\x43ONSUMER_SUSPENDED\x10\x0c\x12\x14\n\x10\x43ONSUMER_INVALID\x10\x0e\x12\x1c\n\x18SECURITY_POLICY_VIOLATED\x10\x0f\x12\x18\n\x14\x41\x43\x43\x45SS_TOKEN_EXPIRED\x10\x10\x12#\n\x1f\x41\x43\x43\x45SS_TOKEN_SCOPE_INSUFFICIENT\x10\x11\x12\x19\n\x15\x41\x43\x43OUNT_STATE_INVALID\x10\x12\x12!\n\x1d\x41\x43\x43\x45SS_TOKEN_TYPE_UNSUPPORTED\x10\x13\x12\x17\n\x13\x43REDENTIALS_MISSING\x10\x14\x12\x1c\n\x18RESOURCE_PROJECT_INVALID\x10\x15\x12\x1a\n\x16SESSION_COOKIE_INVALID\x10\x17\x12\x19\n\x15USER_BLOCKED_BY_ADMIN\x10\x18\x12\'\n#RESOURCE_USAGE_RESTRICTION_VIOLATED\x10\x19\x12 \n\x1cSYSTEM_PARAMETER_UNSUPPORTED\x10\x1a\x12\x1d\n\x19ORG_RESTRICTION_VIOLATION\x10\x1b\x12\"\n\x1eORG_RESTRICTION_HEADER_INVALID\x10\x1c\x12\x17\n\x13SERVICE_NOT_VISIBLE\x10\x1d\x12\x11\n\rGCP_SUSPENDED\x10\x1e\x12\x1c\n\x18LOCATION_POLICY_VIOLATED\x10\x1f\x42p\n\x0e\x63om.google.apiB\x10\x45rrorReasonProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/error_reason;error_reason\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x1dgoogle/api/error_reason.proto\x12\ngoogle.api*\xba\x07\n\x0b\x45rrorReason\x12\x1c\n\x18\x45RROR_REASON_UNSPECIFIED\x10\x00\x12\x14\n\x10SERVICE_DISABLED\x10\x01\x12\x14\n\x10\x42ILLING_DISABLED\x10\x02\x12\x13\n\x0f\x41PI_KEY_INVALID\x10\x03\x12\x1b\n\x17\x41PI_KEY_SERVICE_BLOCKED\x10\x04\x12!\n\x1d\x41PI_KEY_HTTP_REFERRER_BLOCKED\x10\x07\x12\x1e\n\x1a\x41PI_KEY_IP_ADDRESS_BLOCKED\x10\x08\x12\x1f\n\x1b\x41PI_KEY_ANDROID_APP_BLOCKED\x10\t\x12\x1b\n\x17\x41PI_KEY_IOS_APP_BLOCKED\x10\r\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x1b\n\x17RESOURCE_QUOTA_EXCEEDED\x10\x06\x12 \n\x1cLOCATION_TAX_POLICY_VIOLATED\x10\n\x12\x17\n\x13USER_PROJECT_DENIED\x10\x0b\x12\x16\n\x12\x43ONSUMER_SUSPENDED\x10\x0c\x12\x14\n\x10\x43ONSUMER_INVALID\x10\x0e\x12\x1c\n\x18SECURITY_POLICY_VIOLATED\x10\x0f\x12\x18\n\x14\x41\x43\x43\x45SS_TOKEN_EXPIRED\x10\x10\x12#\n\x1f\x41\x43\x43\x45SS_TOKEN_SCOPE_INSUFFICIENT\x10\x11\x12\x19\n\x15\x41\x43\x43OUNT_STATE_INVALID\x10\x12\x12!\n\x1d\x41\x43\x43\x45SS_TOKEN_TYPE_UNSUPPORTED\x10\x13\x12\x17\n\x13\x43REDENTIALS_MISSING\x10\x14\x12\x1c\n\x18RESOURCE_PROJECT_INVALID\x10\x15\x12\x1a\n\x16SESSION_COOKIE_INVALID\x10\x17\x12\x19\n\x15USER_BLOCKED_BY_ADMIN\x10\x18\x12\'\n#RESOURCE_USAGE_RESTRICTION_VIOLATED\x10\x19\x12 \n\x1cSYSTEM_PARAMETER_UNSUPPORTED\x10\x1a\x12\x1d\n\x19ORG_RESTRICTION_VIOLATION\x10\x1b\x12\"\n\x1eORG_RESTRICTION_HEADER_INVALID\x10\x1c\x12\x17\n\x13SERVICE_NOT_VISIBLE\x10\x1d\x12\x11\n\rGCP_SUSPENDED\x10\x1e\x12\x1c\n\x18LOCATION_POLICY_VIOLATED\x10\x1f\x12\x12\n\x0eMISSING_ORIGIN\x10!\x12\x1a\n\x16OVERLOADED_CREDENTIALS\x10\"Bp\n\x0e\x63om.google.apiB\x10\x45rrorReasonProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/error_reason;error_reason\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -627,4 +627,37 @@ end
 #   // "locations/asia-northeast3" violates at least one location policy.
 #   // The troubleshooting guidance is provided in the Help links.
 #   LOCATION_POLICY_VIOLATED = 31;
+#
+#   // The request is denied because origin request header is missing.
+#   //
+#   // Example of an ErrorInfo when
+#   // accessing "pubsub.googleapis.com" service with an empty "Origin" request
+#   // header.
+#   //
+#   // {
+#   //   reason: "MISSING_ORIGIN"
+#   //   domain: "googleapis.com"
+#   //   metadata {
+#   //     "consumer":"projects/123456"
+#   //     "service": "pubsub.googleapis.com"
+#   //   }
+#   // }
+#   MISSING_ORIGIN = 33;
+#
+#   // The request is denied because the request contains more than one credential
+#   // type that are individually acceptable, but not together. The customer
+#   // should retry their request with only one set of credentials.
+#   //
+#   // Example of an ErrorInfo when
+#   // accessing "pubsub.googleapis.com" service with overloaded credentials.
+#   //
+#   // {
+#   //   reason: "OVERLOADED_CREDENTIALS"
+#   //   domain: "googleapis.com"
+#   //   metadata {
+#   //     "consumer":"projects/123456"
+#   //     "service": "pubsub.googleapis.com"
+#   //   }
+#   // }
+#   OVERLOADED_CREDENTIALS = 34;
 # }
