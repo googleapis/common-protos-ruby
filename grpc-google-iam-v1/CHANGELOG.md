@@ -1,5 +1,11 @@
 # Release History
 
+### 1.9.0 (2025-01-14)
+
+#### Features
+
+* Added ResourcePolicyMember type ([#344](https://github.com/googleapis/common-protos-ruby/issues/344)) 
+
 ### 1.8.0 (2024-06-11)
 
 #### Features
