@@ -1,5 +1,14 @@
 # Release History
 
+### 1.18.0 (2025-01-14)
+
+#### Features
+
+* Added a few additional client generation settings 
+* Added MetricDescriptorMetadata#time_series_resource_hierarchy_level 
+* Added MISSING_ORIGIN and OVERLOADED_CREDENTIALS error reasons 
+* Added reason and localized_message fields to FieldViolation 
+
 ### 1.17.0 (2025-01-09)
 
 #### Features
