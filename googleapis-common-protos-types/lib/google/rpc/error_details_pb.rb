@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/duration_pb'
 
 
-descriptor_data = "\n\x1egoogle/rpc/error_details.proto\x12\ngoogle.rpc\x1a\x1egoogle/protobuf/duration.proto\"\x93\x01\n\tErrorInfo\x12\x0e\n\x06reason\x18\x01 \x01(\t\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x35\n\x08metadata\x18\x03 \x03(\x0b\x32#.google.rpc.ErrorInfo.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\";\n\tRetryInfo\x12.\n\x0bretry_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\"2\n\tDebugInfo\x12\x15\n\rstack_entries\x18\x01 \x03(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\"y\n\x0cQuotaFailure\x12\x36\n\nviolations\x18\x01 \x03(\x0b\x32\".google.rpc.QuotaFailure.Violation\x1a\x31\n\tViolation\x12\x0f\n\x07subject\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x95\x01\n\x13PreconditionFailure\x12=\n\nviolations\x18\x01 \x03(\x0b\x32).google.rpc.PreconditionFailure.Violation\x1a?\n\tViolation\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07subject\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\x83\x01\n\nBadRequest\x12?\n\x10\x66ield_violations\x18\x01 \x03(\x0b\x32%.google.rpc.BadRequest.FieldViolation\x1a\x34\n\x0e\x46ieldViolation\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"7\n\x0bRequestInfo\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x14\n\x0cserving_data\x18\x02 \x01(\t\"`\n\x0cResourceInfo\x12\x15\n\rresource_type\x18\x01 \x01(\t\x12\x15\n\rresource_name\x18\x02 \x01(\t\x12\r\n\x05owner\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"V\n\x04Help\x12$\n\x05links\x18\x01 \x03(\x0b\x32\x15.google.rpc.Help.Link\x1a(\n\x04Link\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"3\n\x10LocalizedMessage\x12\x0e\n\x06locale\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\tBl\n\x0e\x63om.google.rpcB\x11\x45rrorDetailsProtoP\x01Z?google.golang.org/genproto/googleapis/rpc/errdetails;errdetails\xa2\x02\x03RPCb\x06proto3"
+descriptor_data = "\n\x1egoogle/rpc/error_details.proto\x12\ngoogle.rpc\x1a\x1egoogle/protobuf/duration.proto\"\x93\x01\n\tErrorInfo\x12\x0e\n\x06reason\x18\x01 \x01(\t\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x35\n\x08metadata\x18\x03 \x03(\x0b\x32#.google.rpc.ErrorInfo.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\";\n\tRetryInfo\x12.\n\x0bretry_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\"2\n\tDebugInfo\x12\x15\n\rstack_entries\x18\x01 \x03(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\"y\n\x0cQuotaFailure\x12\x36\n\nviolations\x18\x01 \x03(\x0b\x32\".google.rpc.QuotaFailure.Violation\x1a\x31\n\tViolation\x12\x0f\n\x07subject\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x95\x01\n\x13PreconditionFailure\x12=\n\nviolations\x18\x01 \x03(\x0b\x32).google.rpc.PreconditionFailure.Violation\x1a?\n\tViolation\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07subject\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\xcc\x01\n\nBadRequest\x12?\n\x10\x66ield_violations\x18\x01 \x03(\x0b\x32%.google.rpc.BadRequest.FieldViolation\x1a}\n\x0e\x46ieldViolation\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\x37\n\x11localized_message\x18\x04 \x01(\x0b\x32\x1c.google.rpc.LocalizedMessage\"7\n\x0bRequestInfo\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x14\n\x0cserving_data\x18\x02 \x01(\t\"`\n\x0cResourceInfo\x12\x15\n\rresource_type\x18\x01 \x01(\t\x12\x15\n\rresource_name\x18\x02 \x01(\t\x12\r\n\x05owner\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"V\n\x04Help\x12$\n\x05links\x18\x01 \x03(\x0b\x32\x15.google.rpc.Help.Link\x1a(\n\x04Link\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"3\n\x10LocalizedMessage\x12\x0e\n\x06locale\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\tBl\n\x0e\x63om.google.rpcB\x11\x45rrorDetailsProtoP\x01Z?google.golang.org/genproto/googleapis/rpc/errdetails;errdetails\xa2\x02\x03RPCb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -123,11 +123,12 @@ end
 #
 #   // Additional structured details about this error.
 #   //
-#   // Keys should match /[a-zA-Z0-9-_]/ and be limited to 64 characters in
+#   // Keys must match a regular expression of `[a-z][a-zA-Z0-9-_]+` but should
+#   // ideally be lowerCamelCase. Also, they must be limited to 64 characters in
 #   // length. When identifying the current value of an exceeded limit, the units
 #   // should be contained in the key, not the value.  For example, rather than
-#   // {"instanceLimit": "100/request"}, should be returned as,
-#   // {"instanceLimitPerRequest": "100"}, if the client exceeds the number of
+#   // `{"instanceLimit": "100/request"}`, should be returned as,
+#   // `{"instanceLimitPerRequest": "100"}`, if the client exceeds the number of
 #   // instances that can be created in a single (batch) request.
 #   map<string, string> metadata = 3;
 # }
@@ -268,6 +269,18 @@ end
 #
 #     // A description of why the request element is bad.
 #     string description = 2;
+#
+#     // The reason of the field-level error. This is a constant value that
+#     // identifies the proximate cause of the field-level error. It should
+#     // uniquely identify the type of the FieldViolation within the scope of the
+#     // google.rpc.ErrorInfo.domain. This should be at most 63
+#     // characters and match a regular expression of `[A-Z][A-Z0-9_]+[A-Z0-9]`,
+#     // which represents UPPER_SNAKE_CASE.
+#     string reason = 3;
+#
+#     // Provides a localized error message for field-level errors that is safe to
+#     // return to the API consumer.
+#     LocalizedMessage localized_message = 4;
 #   }
 #
 #   // Describes all violations in a client request.

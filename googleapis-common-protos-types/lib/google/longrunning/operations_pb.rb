@@ -7,13 +7,13 @@ require 'google/protobuf'
 require 'google/api/annotations_pb'
 require 'google/api/client_pb'
 require 'google/protobuf/any_pb'
+require 'google/protobuf/descriptor_pb'
 require 'google/protobuf/duration_pb'
 require 'google/protobuf/empty_pb'
 require 'google/rpc/status_pb'
-require 'google/protobuf/descriptor_pb'
 
 
-descriptor_data = "\n#google/longrunning/operations.proto\x12\x12google.longrunning\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x19google/protobuf/any.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x17google/rpc/status.proto\x1a google/protobuf/descriptor.proto\"\xa8\x01\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12&\n\x08metadata\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0c\n\x04\x64one\x18\x03 \x01(\x08\x12#\n\x05\x65rror\x18\x04 \x01(\x0b\x32\x12.google.rpc.StatusH\x00\x12(\n\x08response\x18\x05 \x01(\x0b\x32\x14.google.protobuf.AnyH\x00\x42\x08\n\x06result\"#\n\x13GetOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\\\n\x15ListOperationsRequest\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"d\n\x16ListOperationsResponse\x12\x31\n\noperations\x18\x01 \x03(\x0b\x32\x1d.google.longrunning.Operation\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"&\n\x16\x43\x61ncelOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"&\n\x16\x44\x65leteOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"P\n\x14WaitOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x07timeout\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\"=\n\rOperationInfo\x12\x15\n\rresponse_type\x18\x01 \x01(\t\x12\x15\n\rmetadata_type\x18\x02 \x01(\t2\xaa\x05\n\nOperations\x12\x94\x01\n\x0eListOperations\x12).google.longrunning.ListOperationsRequest\x1a*.google.longrunning.ListOperationsResponse\"+\xda\x41\x0bname,filter\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/{name=operations}\x12\x7f\n\x0cGetOperation\x12\'.google.longrunning.GetOperationRequest\x1a\x1d.google.longrunning.Operation\"\'\xda\x41\x04name\x82\xd3\xe4\x93\x02\x1a\x12\x18/v1/{name=operations/**}\x12~\n\x0f\x44\x65leteOperation\x12*.google.longrunning.DeleteOperationRequest\x1a\x16.google.protobuf.Empty\"\'\xda\x41\x04name\x82\xd3\xe4\x93\x02\x1a*\x18/v1/{name=operations/**}\x12\x88\x01\n\x0f\x43\x61ncelOperation\x12*.google.longrunning.CancelOperationRequest\x1a\x16.google.protobuf.Empty\"1\xda\x41\x04name\x82\xd3\xe4\x93\x02$\"\x1f/v1/{name=operations/**}:cancel:\x01*\x12Z\n\rWaitOperation\x12(.google.longrunning.WaitOperationRequest\x1a\x1d.google.longrunning.Operation\"\x00\x1a\x1d\xca\x41\x1alongrunning.googleapis.com:Z\n\x0eoperation_info\x12\x1e.google.protobuf.MethodOptions\x18\x99\x08 \x01(\x0b\x32!.google.longrunning.OperationInfoB\x9d\x01\n\x16\x63om.google.longrunningB\x0fOperationsProtoP\x01ZCcloud.google.com/go/longrunning/autogen/longrunningpb;longrunningpb\xf8\x01\x01\xaa\x02\x12Google.LongRunning\xca\x02\x12Google\\LongRunningb\x06proto3"
+descriptor_data = "\n#google/longrunning/operations.proto\x12\x12google.longrunning\x1a\x1cgoogle/api/annotations.proto\x1a\x17google/api/client.proto\x1a\x19google/protobuf/any.proto\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1bgoogle/protobuf/empty.proto\x1a\x17google/rpc/status.proto\"\xa8\x01\n\tOperation\x12\x0c\n\x04name\x18\x01 \x01(\t\x12&\n\x08metadata\x18\x02 \x01(\x0b\x32\x14.google.protobuf.Any\x12\x0c\n\x04\x64one\x18\x03 \x01(\x08\x12#\n\x05\x65rror\x18\x04 \x01(\x0b\x32\x12.google.rpc.StatusH\x00\x12(\n\x08response\x18\x05 \x01(\x0b\x32\x14.google.protobuf.AnyH\x00\x42\x08\n\x06result\"#\n\x13GetOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"\\\n\x15ListOperationsRequest\x12\x0c\n\x04name\x18\x04 \x01(\t\x12\x0e\n\x06\x66ilter\x18\x01 \x01(\t\x12\x11\n\tpage_size\x18\x02 \x01(\x05\x12\x12\n\npage_token\x18\x03 \x01(\t\"d\n\x16ListOperationsResponse\x12\x31\n\noperations\x18\x01 \x03(\x0b\x32\x1d.google.longrunning.Operation\x12\x17\n\x0fnext_page_token\x18\x02 \x01(\t\"&\n\x16\x43\x61ncelOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"&\n\x16\x44\x65leteOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\"P\n\x14WaitOperationRequest\x12\x0c\n\x04name\x18\x01 \x01(\t\x12*\n\x07timeout\x18\x02 \x01(\x0b\x32\x19.google.protobuf.Duration\"=\n\rOperationInfo\x12\x15\n\rresponse_type\x18\x01 \x01(\t\x12\x15\n\rmetadata_type\x18\x02 \x01(\t2\xaa\x05\n\nOperations\x12\x94\x01\n\x0eListOperations\x12).google.longrunning.ListOperationsRequest\x1a*.google.longrunning.ListOperationsResponse\"+\xda\x41\x0bname,filter\x82\xd3\xe4\x93\x02\x17\x12\x15/v1/{name=operations}\x12\x7f\n\x0cGetOperation\x12\'.google.longrunning.GetOperationRequest\x1a\x1d.google.longrunning.Operation\"\'\xda\x41\x04name\x82\xd3\xe4\x93\x02\x1a\x12\x18/v1/{name=operations/**}\x12~\n\x0f\x44\x65leteOperation\x12*.google.longrunning.DeleteOperationRequest\x1a\x16.google.protobuf.Empty\"\'\xda\x41\x04name\x82\xd3\xe4\x93\x02\x1a*\x18/v1/{name=operations/**}\x12\x88\x01\n\x0f\x43\x61ncelOperation\x12*.google.longrunning.CancelOperationRequest\x1a\x16.google.protobuf.Empty\"1\xda\x41\x04name\x82\xd3\xe4\x93\x02$\"\x1f/v1/{name=operations/**}:cancel:\x01*\x12Z\n\rWaitOperation\x12(.google.longrunning.WaitOperationRequest\x1a\x1d.google.longrunning.Operation\"\x00\x1a\x1d\xca\x41\x1alongrunning.googleapis.com:Z\n\x0eoperation_info\x12\x1e.google.protobuf.MethodOptions\x18\x99\x08 \x01(\x0b\x32!.google.longrunning.OperationInfoB\xa5\x01\n\x16\x63om.google.longrunningB\x0fOperationsProtoP\x01ZCcloud.google.com/go/longrunning/autogen/longrunningpb;longrunningpb\xf8\x01\x01\xa2\x02\x05GLRUN\xaa\x02\x12Google.LongRunning\xca\x02\x12Google\\LongRunningb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -78,10 +78,10 @@ end
 # import "google/api/annotations.proto";
 # import "google/api/client.proto";
 # import "google/protobuf/any.proto";
+# import "google/protobuf/descriptor.proto";
 # import "google/protobuf/duration.proto";
 # import "google/protobuf/empty.proto";
 # import "google/rpc/status.proto";
-# import "google/protobuf/descriptor.proto";
 #
 # option cc_enable_arenas = true;
 # option csharp_namespace = "Google.LongRunning";
@@ -89,6 +89,7 @@ end
 # option java_multiple_files = true;
 # option java_outer_classname = "OperationsProto";
 # option java_package = "com.google.longrunning";
+# option objc_class_prefix = "GLRUN";
 # option php_namespace = "Google\\LongRunning";
 #
 # extend google.protobuf.MethodOptions {
@@ -104,25 +105,17 @@ end
 # // Manages long-running operations with an API service.
 # //
 # // When an API method normally takes long time to complete, it can be designed
-# // to return [Operation][google.longrunning.Operation] to the client, and the client can use this
-# // interface to receive the real response asynchronously by polling the
-# // operation resource, or pass the operation resource to another API (such as
-# // Google Cloud Pub/Sub API) to receive the response.  Any API service that
-# // returns long-running operations should implement the `Operations` interface
-# // so developers can have a consistent client experience.
+# // to return [Operation][google.longrunning.Operation] to the client, and the
+# // client can use this interface to receive the real response asynchronously by
+# // polling the operation resource, or pass the operation resource to another API
+# // (such as Pub/Sub API) to receive the response.  Any API service that returns
+# // long-running operations should implement the `Operations` interface so
+# // developers can have a consistent client experience.
 # service Operations {
 #   option (google.api.default_host) = "longrunning.googleapis.com";
 #
 #   // Lists operations that match the specified filter in the request. If the
 #   // server doesn't support this method, it returns `UNIMPLEMENTED`.
-#   //
-#   // NOTE: the `name` binding allows API services to override the binding
-#   // to use different resource name schemes, such as `users/*/operations`. To
-#   // override the binding, API services can add a binding such as
-#   // `"/v1/{name=users/*}/operations"` to their service configuration.
-#   // For backwards compatibility, the default name includes the operations
-#   // collection id, however overriding users must ensure the name binding
-#   // is the parent resource, without the operations collection id.
 #   rpc ListOperations(ListOperationsRequest) returns (ListOperationsResponse) {
 #     option (google.api.http) = {
 #       get: "/v1/{name=operations}"
@@ -159,8 +152,9 @@ end
 #   // other methods to check whether the cancellation succeeded or whether the
 #   // operation completed despite cancellation. On successful cancellation,
 #   // the operation is not deleted; instead, it becomes an operation with
-#   // an [Operation.error][google.longrunning.Operation.error] value with a [google.rpc.Status.code][google.rpc.Status.code] of 1,
-#   // corresponding to `Code.CANCELLED`.
+#   // an [Operation.error][google.longrunning.Operation.error] value with a
+#   // [google.rpc.Status.code][google.rpc.Status.code] of `1`, corresponding to
+#   // `Code.CANCELLED`.
 #   rpc CancelOperation(CancelOperationRequest) returns (google.protobuf.Empty) {
 #     option (google.api.http) = {
 #       post: "/v1/{name=operations/**}:cancel"
@@ -178,8 +172,7 @@ end
 #   // Note that this method is on a best-effort basis.  It may return the latest
 #   // state before the specified timeout (including immediately), meaning even an
 #   // immediate response is no guarantee that the operation is done.
-#   rpc WaitOperation(WaitOperationRequest) returns (Operation) {
-#   }
+#   rpc WaitOperation(WaitOperationRequest) returns (Operation) {}
 # }
 #
 # // This resource represents a long-running operation that is the result of a
@@ -203,12 +196,13 @@ end
 #
 #   // The operation result, which can be either an `error` or a valid `response`.
 #   // If `done` == `false`, neither `error` nor `response` is set.
-#   // If `done` == `true`, exactly one of `error` or `response` is set.
+#   // If `done` == `true`, exactly one of `error` or `response` can be set.
+#   // Some services might not provide the result.
 #   oneof result {
 #     // The error result of the operation in case of failure or cancellation.
 #     google.rpc.Status error = 4;
 #
-#     // The normal response of the operation in case of success.  If the original
+#     // The normal, successful response of the operation.  If the original
 #     // method returns no data on success, such as `Delete`, the response is
 #     // `google.protobuf.Empty`.  If the original method is standard
 #     // `Get`/`Create`/`Update`, the response should be the resource.  For other
@@ -220,13 +214,15 @@ end
 #   }
 # }
 #
-# // The request message for [Operations.GetOperation][google.longrunning.Operations.GetOperation].
+# // The request message for
+# // [Operations.GetOperation][google.longrunning.Operations.GetOperation].
 # message GetOperationRequest {
 #   // The name of the operation resource.
 #   string name = 1;
 # }
 #
-# // The request message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+# // The request message for
+# // [Operations.ListOperations][google.longrunning.Operations.ListOperations].
 # message ListOperationsRequest {
 #   // The name of the operation's parent resource.
 #   string name = 4;
@@ -241,7 +237,8 @@ end
 #   string page_token = 3;
 # }
 #
-# // The response message for [Operations.ListOperations][google.longrunning.Operations.ListOperations].
+# // The response message for
+# // [Operations.ListOperations][google.longrunning.Operations.ListOperations].
 # message ListOperationsResponse {
 #   // A list of operations that matches the specified filter in the request.
 #   repeated Operation operations = 1;
@@ -250,19 +247,22 @@ end
 #   string next_page_token = 2;
 # }
 #
-# // The request message for [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
+# // The request message for
+# // [Operations.CancelOperation][google.longrunning.Operations.CancelOperation].
 # message CancelOperationRequest {
 #   // The name of the operation resource to be cancelled.
 #   string name = 1;
 # }
 #
-# // The request message for [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
+# // The request message for
+# // [Operations.DeleteOperation][google.longrunning.Operations.DeleteOperation].
 # message DeleteOperationRequest {
 #   // The name of the operation resource to be deleted.
 #   string name = 1;
 # }
 #
-# // The request message for [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
+# // The request message for
+# // [Operations.WaitOperation][google.longrunning.Operations.WaitOperation].
 # message WaitOperationRequest {
 #   // The name of the operation resource to wait on.
 #   string name = 1;
@@ -277,13 +277,12 @@ end
 # //
 # // Example:
 # //
-# //   rpc LongRunningRecognize(LongRunningRecognizeRequest)
-# //       returns (google.longrunning.Operation) {
-# //     option (google.longrunning.operation_info) = {
-# //       response_type: "LongRunningRecognizeResponse"
-# //       metadata_type: "LongRunningRecognizeMetadata"
-# //     };
-# //   }
+# //     rpc Export(ExportRequest) returns (google.longrunning.Operation) {
+# //       option (google.longrunning.operation_info) = {
+# //         response_type: "ExportResponse"
+# //         metadata_type: "ExportMetadata"
+# //       };
+# //     }
 # message OperationInfo {
 #   // Required. The message name of the primary return type for this
 #   // long-running operation.

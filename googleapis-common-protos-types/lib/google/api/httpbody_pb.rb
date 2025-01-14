@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/any_pb'
 
 
-descriptor_data = "\n\x19google/api/httpbody.proto\x12\ngoogle.api\x1a\x19google/protobuf/any.proto\"X\n\x08HttpBody\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12(\n\nextensions\x18\x03 \x03(\x0b\x32\x14.google.protobuf.AnyBh\n\x0e\x63om.google.apiB\rHttpBodyProtoP\x01Z;google.golang.org/genproto/googleapis/api/httpbody;httpbody\xf8\x01\x01\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x19google/api/httpbody.proto\x12\ngoogle.api\x1a\x19google/protobuf/any.proto\"X\n\x08HttpBody\x12\x14\n\x0c\x63ontent_type\x18\x01 \x01(\t\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12(\n\nextensions\x18\x03 \x03(\x0b\x32\x14.google.protobuf.AnyBe\n\x0e\x63om.google.apiB\rHttpBodyProtoP\x01Z;google.golang.org/genproto/googleapis/api/httpbody;httpbody\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -62,7 +62,6 @@ end
 #
 # import "google/protobuf/any.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/api/httpbody;httpbody";
 # option java_multiple_files = true;
 # option java_outer_classname = "HttpBodyProto";
