@@ -81,7 +81,7 @@ end
 # option php_namespace = "Google\\Apps\\Script\\Type\\Calendar";
 # option ruby_package = "Google::Apps::Script::Type::Calendar";
 #
-# // Manifest section specific to Calendar Add-ons.
+# // Manifest section specific to Calendar add-ons.
 #
 # // Calendar add-on manifest.
 # message CalendarAddOnManifest {

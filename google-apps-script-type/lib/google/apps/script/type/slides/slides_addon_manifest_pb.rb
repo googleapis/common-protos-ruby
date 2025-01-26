@@ -79,7 +79,7 @@ end
 # option php_namespace = "Google\\Apps\\Script\\Type\\Slides";
 # option ruby_package = "Google::Apps::Script::Type::Slides";
 #
-# // Manifest section specific to Slides Add-ons.
+# // Manifest section specific to Slides add-ons.
 #
 # // Slides add-on manifest.
 # message SlidesAddOnManifest {

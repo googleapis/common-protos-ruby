@@ -77,7 +77,7 @@ end
 # option php_namespace = "Google\\Apps\\Script\\Type\\Drive";
 # option ruby_package = "Google::Apps::Script::Type::Drive";
 #
-# // Manifest section specific to Drive Add-ons.
+# // Manifest section specific to Drive add-ons.
 #
 # // Drive add-on manifest.
 # message DriveAddOnManifest {

@@ -79,7 +79,7 @@ end
 # option php_namespace = "Google\\Apps\\Script\\Type\\Docs";
 # option ruby_package = "Google::Apps::Script::Type::Docs";
 #
-# // Manifest section specific to Docs Add-ons.
+# // Manifest section specific to Docs add-ons.
 #
 # // Docs add-on manifest.
 # message DocsAddOnManifest {

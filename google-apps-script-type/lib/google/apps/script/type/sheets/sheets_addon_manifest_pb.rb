@@ -79,7 +79,7 @@ end
 # option php_namespace = "Google\\Apps\\Script\\Type\\Sheets";
 # option ruby_package = "Google::Apps::Script::Type::Sheets";
 #
-# // Manifest section specific to Sheets Add-ons.
+# // Manifest section specific to Sheets add-ons.
 #
 # // Sheets add-on manifest.
 # message SheetsAddOnManifest {
