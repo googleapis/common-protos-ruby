@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.5.1 (2025-01-29)
+
+#### Documentation
+
+* Minor documentation updates ([#348](https://github.com/googleapis/common-protos-ruby/issues/348)) 
+
 ### 1.5.0 (2024-06-11)
 
 #### Features
