@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/descriptor_pb'
 
 
-descriptor_data = "\n\x19google/api/resource.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"\xee\x02\n\x12ResourceDescriptor\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07pattern\x18\x02 \x03(\t\x12\x12\n\nname_field\x18\x03 \x01(\t\x12\x37\n\x07history\x18\x04 \x01(\x0e\x32&.google.api.ResourceDescriptor.History\x12\x0e\n\x06plural\x18\x05 \x01(\t\x12\x10\n\x08singular\x18\x06 \x01(\t\x12\x33\n\x05style\x18\n \x03(\x0e\x32$.google.api.ResourceDescriptor.Style\"[\n\x07History\x12\x17\n\x13HISTORY_UNSPECIFIED\x10\x00\x12\x1d\n\x19ORIGINALLY_SINGLE_PATTERN\x10\x01\x12\x18\n\x14\x46UTURE_MULTI_PATTERN\x10\x02\"8\n\x05Style\x12\x15\n\x11STYLE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x44\x45\x43LARATIVE_FRIENDLY\x10\x01\"5\n\x11ResourceReference\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nchild_type\x18\x02 \x01(\t:Y\n\x12resource_reference\x12\x1d.google.protobuf.FieldOptions\x18\x9f\x08 \x01(\x0b\x32\x1d.google.api.ResourceReference:Z\n\x13resource_definition\x12\x1c.google.protobuf.FileOptions\x18\x9d\x08 \x03(\x0b\x32\x1e.google.api.ResourceDescriptor:R\n\x08resource\x12\x1f.google.protobuf.MessageOptions\x18\x9d\x08 \x01(\x0b\x32\x1e.google.api.ResourceDescriptorBn\n\x0e\x63om.google.apiB\rResourceProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xf8\x01\x01\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x19google/api/resource.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"\xee\x02\n\x12ResourceDescriptor\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07pattern\x18\x02 \x03(\t\x12\x12\n\nname_field\x18\x03 \x01(\t\x12\x37\n\x07history\x18\x04 \x01(\x0e\x32&.google.api.ResourceDescriptor.History\x12\x0e\n\x06plural\x18\x05 \x01(\t\x12\x10\n\x08singular\x18\x06 \x01(\t\x12\x33\n\x05style\x18\n \x03(\x0e\x32$.google.api.ResourceDescriptor.Style\"[\n\x07History\x12\x17\n\x13HISTORY_UNSPECIFIED\x10\x00\x12\x1d\n\x19ORIGINALLY_SINGLE_PATTERN\x10\x01\x12\x18\n\x14\x46UTURE_MULTI_PATTERN\x10\x02\"8\n\x05Style\x12\x15\n\x11STYLE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x44\x45\x43LARATIVE_FRIENDLY\x10\x01\"5\n\x11ResourceReference\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x12\n\nchild_type\x18\x02 \x01(\t:Y\n\x12resource_reference\x12\x1d.google.protobuf.FieldOptions\x18\x9f\x08 \x01(\x0b\x32\x1d.google.api.ResourceReference:Z\n\x13resource_definition\x12\x1c.google.protobuf.FileOptions\x18\x9d\x08 \x03(\x0b\x32\x1e.google.api.ResourceDescriptor:R\n\x08resource\x12\x1f.google.protobuf.MessageOptions\x18\x9d\x08 \x01(\x0b\x32\x1e.google.api.ResourceDescriptorBk\n\x0e\x63om.google.apiB\rResourceProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -44,7 +44,7 @@ end
 
 #### Source proto file: google/api/resource.proto ####
 #
-# // Copyright 2024 Google LLC
+# // Copyright 2025 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -64,7 +64,6 @@ end
 #
 # import "google/protobuf/descriptor.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/api/annotations;annotations";
 # option java_multiple_files = true;
 # option java_outer_classname = "ResourceProto";

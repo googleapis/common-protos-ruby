@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/descriptor_pb'
 
 
-descriptor_data = "\n\x17google/api/policy.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"S\n\x0b\x46ieldPolicy\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x1b\n\x13resource_permission\x18\x02 \x01(\t\x12\x15\n\rresource_type\x18\x03 \x01(\t\"S\n\x0cMethodPolicy\x12\x10\n\x08selector\x18\t \x01(\t\x12\x31\n\x10request_policies\x18\x02 \x03(\x0b\x32\x17.google.api.FieldPolicy:O\n\x0c\x66ield_policy\x12\x1d.google.protobuf.FieldOptions\x18\xe8\xce\xc1K \x01(\x0b\x32\x17.google.api.FieldPolicy:R\n\rmethod_policy\x12\x1e.google.protobuf.MethodOptions\x18\xb5\x97\x99M \x01(\x0b\x32\x18.google.api.MethodPolicyBp\n\x0e\x63om.google.apiB\x0bPolicyProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xf8\x01\x01\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x17google/api/policy.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"S\n\x0b\x46ieldPolicy\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x1b\n\x13resource_permission\x18\x02 \x01(\t\x12\x15\n\rresource_type\x18\x03 \x01(\t\"S\n\x0cMethodPolicy\x12\x10\n\x08selector\x18\t \x01(\t\x12\x31\n\x10request_policies\x18\x02 \x03(\x0b\x32\x17.google.api.FieldPolicy:O\n\x0c\x66ield_policy\x12\x1d.google.protobuf.FieldOptions\x18\xe8\xce\xc1K \x01(\x0b\x32\x17.google.api.FieldPolicy:R\n\rmethod_policy\x12\x1e.google.protobuf.MethodOptions\x18\xb5\x97\x99M \x01(\x0b\x32\x18.google.api.MethodPolicyBm\n\x0e\x63om.google.apiB\x0bPolicyProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -42,7 +42,7 @@ end
 
 #### Source proto file: google/api/policy.proto ####
 #
-# // Copyright 2024 Google LLC
+# // Copyright 2025 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -62,7 +62,6 @@ end
 #
 # import "google/protobuf/descriptor.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig";
 # option java_multiple_files = true;
 # option java_outer_classname = "PolicyProto";

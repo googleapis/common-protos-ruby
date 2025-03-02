@@ -9,7 +9,7 @@ require 'google/api/launch_stage_pb'
 require 'google/protobuf/struct_pb'
 
 
-descriptor_data = "\n#google/api/monitored_resource.proto\x12\ngoogle.api\x1a\x16google/api/label.proto\x1a\x1dgoogle/api/launch_stage.proto\x1a\x1cgoogle/protobuf/struct.proto\"\xc0\x01\n\x1bMonitoredResourceDescriptor\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12+\n\x06labels\x18\x04 \x03(\x0b\x32\x1b.google.api.LabelDescriptor\x12-\n\x0claunch_stage\x18\x07 \x01(\x0e\x32\x17.google.api.LaunchStage\"\x8b\x01\n\x11MonitoredResource\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x39\n\x06labels\x18\x02 \x03(\x0b\x32).google.api.MonitoredResource.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xca\x01\n\x19MonitoredResourceMetadata\x12.\n\rsystem_labels\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12J\n\x0buser_labels\x18\x02 \x03(\x0b\x32\x35.google.api.MonitoredResourceMetadata.UserLabelsEntry\x1a\x31\n\x0fUserLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42y\n\x0e\x63om.google.apiB\x16MonitoredResourceProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/monitoredres;monitoredres\xf8\x01\x01\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n#google/api/monitored_resource.proto\x12\ngoogle.api\x1a\x16google/api/label.proto\x1a\x1dgoogle/api/launch_stage.proto\x1a\x1cgoogle/protobuf/struct.proto\"\xc0\x01\n\x1bMonitoredResourceDescriptor\x12\x0c\n\x04name\x18\x05 \x01(\t\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x14\n\x0c\x64isplay_name\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\x12+\n\x06labels\x18\x04 \x03(\x0b\x32\x1b.google.api.LabelDescriptor\x12-\n\x0claunch_stage\x18\x07 \x01(\x0e\x32\x17.google.api.LaunchStage\"\x8b\x01\n\x11MonitoredResource\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x39\n\x06labels\x18\x02 \x03(\x0b\x32).google.api.MonitoredResource.LabelsEntry\x1a-\n\x0bLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xca\x01\n\x19MonitoredResourceMetadata\x12.\n\rsystem_labels\x18\x01 \x01(\x0b\x32\x17.google.protobuf.Struct\x12J\n\x0buser_labels\x18\x02 \x03(\x0b\x32\x35.google.api.MonitoredResourceMetadata.UserLabelsEntry\x1a\x31\n\x0fUserLabelsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42v\n\x0e\x63om.google.apiB\x16MonitoredResourceProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/monitoredres;monitoredres\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -47,7 +47,7 @@ end
 
 #### Source proto file: google/api/monitored_resource.proto ####
 #
-# // Copyright 2024 Google LLC
+# // Copyright 2025 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -69,7 +69,6 @@ end
 # import "google/api/launch_stage.proto";
 # import "google/protobuf/struct.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/api/monitoredres;monitoredres";
 # option java_multiple_files = true;
 # option java_outer_classname = "MonitoredResourceProto";
