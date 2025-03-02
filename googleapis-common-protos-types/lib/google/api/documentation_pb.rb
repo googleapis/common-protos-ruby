@@ -41,7 +41,7 @@ end
 
 #### Source proto file: google/api/documentation.proto ####
 #
-# // Copyright 2024 Google LLC
+# // Copyright 2025 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -200,9 +200,9 @@ end
 #   // `[Java][Tutorial.Java]`.
 #   string name = 1;
 #
-#   // The Markdown content of the page. You can use <code>&#40;== include {path}
-#   // ==&#41;</code> to include content from a Markdown file. The content can be
-#   // used to produce the documentation page such as HTML format page.
+#   // The Markdown content of the page. You can use ```(== include {path}
+#   // ==)``` to include content from a Markdown file. The content can be used
+#   // to produce the documentation page such as HTML format page.
 #   string content = 2;
 #
 #   // Subpages of this page. The order of subpages specified here will be
