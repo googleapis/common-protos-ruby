@@ -1,5 +1,11 @@
 # Changelog
 
+### 0.5.0 (2025-03-03)
+
+#### Features
+
+* Update minimum required Ruby to 3.0 ([#354](https://github.com/googleapis/common-protos-ruby/issues/354)) 
+
 ### 0.4.0 (2024-06-11)
 
 #### Features
