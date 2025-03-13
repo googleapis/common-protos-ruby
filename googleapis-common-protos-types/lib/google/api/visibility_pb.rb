@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/descriptor_pb'
 
 
-descriptor_data = "\n\x1bgoogle/api/visibility.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"7\n\nVisibility\x12)\n\x05rules\x18\x01 \x03(\x0b\x32\x1a.google.api.VisibilityRule\"7\n\x0eVisibilityRule\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x13\n\x0brestriction\x18\x02 \x01(\t:T\n\x0f\x65num_visibility\x12\x1c.google.protobuf.EnumOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:Z\n\x10value_visibility\x12!.google.protobuf.EnumValueOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:V\n\x10\x66ield_visibility\x12\x1d.google.protobuf.FieldOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:Z\n\x12message_visibility\x12\x1f.google.protobuf.MessageOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:X\n\x11method_visibility\x12\x1e.google.protobuf.MethodOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:V\n\x0e\x61pi_visibility\x12\x1f.google.protobuf.ServiceOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRuleBn\n\x0e\x63om.google.apiB\x0fVisibilityProtoP\x01Z?google.golang.org/genproto/googleapis/api/visibility;visibility\xf8\x01\x01\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x1bgoogle/api/visibility.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"7\n\nVisibility\x12)\n\x05rules\x18\x01 \x03(\x0b\x32\x1a.google.api.VisibilityRule\"7\n\x0eVisibilityRule\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x13\n\x0brestriction\x18\x02 \x01(\t:T\n\x0f\x65num_visibility\x12\x1c.google.protobuf.EnumOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:Z\n\x10value_visibility\x12!.google.protobuf.EnumValueOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:V\n\x10\x66ield_visibility\x12\x1d.google.protobuf.FieldOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:Z\n\x12message_visibility\x12\x1f.google.protobuf.MessageOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:X\n\x11method_visibility\x12\x1e.google.protobuf.MethodOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRule:V\n\x0e\x61pi_visibility\x12\x1f.google.protobuf.ServiceOptions\x18\xaf\xca\xbc\" \x01(\x0b\x32\x1a.google.api.VisibilityRuleBk\n\x0e\x63om.google.apiB\x0fVisibilityProtoP\x01Z?google.golang.org/genproto/googleapis/api/visibility;visibility\xa2\x02\x04GAPIb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -42,7 +42,7 @@ end
 
 #### Source proto file: google/api/visibility.proto ####
 #
-# // Copyright 2024 Google LLC
+# // Copyright 2025 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -62,7 +62,6 @@ end
 #
 # import "google/protobuf/descriptor.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/api/visibility;visibility";
 # option java_multiple_files = true;
 # option java_outer_classname = "VisibilityProto";
