@@ -37,3 +37,4 @@
 * Initial generation of google-shopping-type ([#193](https://github.com/googleapis/common-protos-ruby/issues/193)) 
 
 ## Changelog
+
