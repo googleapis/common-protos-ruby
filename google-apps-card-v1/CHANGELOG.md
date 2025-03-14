@@ -25,3 +25,4 @@
 * Initial generation of google-apps-card-v1 ([#262](https://github.com/googleapis/common-protos-ruby/issues/262)) 
 
 ## Changelog
+
