@@ -4,3 +4,4 @@ manifest: true
 monorepoTags: true
 primaryBranch: main
 releaseType: ruby-yoshi
+tagPullRequestNumber: true
