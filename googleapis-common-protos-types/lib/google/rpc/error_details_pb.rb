@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/duration_pb'
 
 
-descriptor_data = "\n\x1egoogle/rpc/error_details.proto\x12\ngoogle.rpc\x1a\x1egoogle/protobuf/duration.proto\"\x93\x01\n\tErrorInfo\x12\x0e\n\x06reason\x18\x01 \x01(\t\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x35\n\x08metadata\x18\x03 \x03(\x0b\x32#.google.rpc.ErrorInfo.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\";\n\tRetryInfo\x12.\n\x0bretry_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\"2\n\tDebugInfo\x12\x15\n\rstack_entries\x18\x01 \x03(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\"y\n\x0cQuotaFailure\x12\x36\n\nviolations\x18\x01 \x03(\x0b\x32\".google.rpc.QuotaFailure.Violation\x1a\x31\n\tViolation\x12\x0f\n\x07subject\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\"\x95\x01\n\x13PreconditionFailure\x12=\n\nviolations\x18\x01 \x03(\x0b\x32).google.rpc.PreconditionFailure.Violation\x1a?\n\tViolation\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07subject\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\xcc\x01\n\nBadRequest\x12?\n\x10\x66ield_violations\x18\x01 \x03(\x0b\x32%.google.rpc.BadRequest.FieldViolation\x1a}\n\x0e\x46ieldViolation\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\x37\n\x11localized_message\x18\x04 \x01(\x0b\x32\x1c.google.rpc.LocalizedMessage\"7\n\x0bRequestInfo\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x14\n\x0cserving_data\x18\x02 \x01(\t\"`\n\x0cResourceInfo\x12\x15\n\rresource_type\x18\x01 \x01(\t\x12\x15\n\rresource_name\x18\x02 \x01(\t\x12\r\n\x05owner\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"V\n\x04Help\x12$\n\x05links\x18\x01 \x03(\x0b\x32\x15.google.rpc.Help.Link\x1a(\n\x04Link\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"3\n\x10LocalizedMessage\x12\x0e\n\x06locale\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\tBl\n\x0e\x63om.google.rpcB\x11\x45rrorDetailsProtoP\x01Z?google.golang.org/genproto/googleapis/rpc/errdetails;errdetails\xa2\x02\x03RPCb\x06proto3"
+descriptor_data = "\n\x1egoogle/rpc/error_details.proto\x12\ngoogle.rpc\x1a\x1egoogle/protobuf/duration.proto\"\x93\x01\n\tErrorInfo\x12\x0e\n\x06reason\x18\x01 \x01(\t\x12\x0e\n\x06\x64omain\x18\x02 \x01(\t\x12\x35\n\x08metadata\x18\x03 \x03(\x0b\x32#.google.rpc.ErrorInfo.MetadataEntry\x1a/\n\rMetadataEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\";\n\tRetryInfo\x12.\n\x0bretry_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\"2\n\tDebugInfo\x12\x15\n\rstack_entries\x18\x01 \x03(\t\x12\x0e\n\x06\x64\x65tail\x18\x02 \x01(\t\"\x8f\x03\n\x0cQuotaFailure\x12\x36\n\nviolations\x18\x01 \x03(\x0b\x32\".google.rpc.QuotaFailure.Violation\x1a\xc6\x02\n\tViolation\x12\x0f\n\x07subject\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x13\n\x0b\x61pi_service\x18\x03 \x01(\t\x12\x14\n\x0cquota_metric\x18\x04 \x01(\t\x12\x10\n\x08quota_id\x18\x05 \x01(\t\x12Q\n\x10quota_dimensions\x18\x06 \x03(\x0b\x32\x37.google.rpc.QuotaFailure.Violation.QuotaDimensionsEntry\x12\x13\n\x0bquota_value\x18\x07 \x01(\x03\x12\x1f\n\x12\x66uture_quota_value\x18\x08 \x01(\x03H\x00\x88\x01\x01\x1a\x36\n\x14QuotaDimensionsEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x42\x15\n\x13_future_quota_value\"\x95\x01\n\x13PreconditionFailure\x12=\n\nviolations\x18\x01 \x03(\x0b\x32).google.rpc.PreconditionFailure.Violation\x1a?\n\tViolation\x12\x0c\n\x04type\x18\x01 \x01(\t\x12\x0f\n\x07subject\x18\x02 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x03 \x01(\t\"\xcc\x01\n\nBadRequest\x12?\n\x10\x66ield_violations\x18\x01 \x03(\x0b\x32%.google.rpc.BadRequest.FieldViolation\x1a}\n\x0e\x46ieldViolation\x12\r\n\x05\x66ield\x18\x01 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x02 \x01(\t\x12\x0e\n\x06reason\x18\x03 \x01(\t\x12\x37\n\x11localized_message\x18\x04 \x01(\x0b\x32\x1c.google.rpc.LocalizedMessage\"7\n\x0bRequestInfo\x12\x12\n\nrequest_id\x18\x01 \x01(\t\x12\x14\n\x0cserving_data\x18\x02 \x01(\t\"`\n\x0cResourceInfo\x12\x15\n\rresource_type\x18\x01 \x01(\t\x12\x15\n\rresource_name\x18\x02 \x01(\t\x12\r\n\x05owner\x18\x03 \x01(\t\x12\x13\n\x0b\x64\x65scription\x18\x04 \x01(\t\"V\n\x04Help\x12$\n\x05links\x18\x01 \x03(\x0b\x32\x15.google.rpc.Help.Link\x1a(\n\x04Link\x12\x13\n\x0b\x64\x65scription\x18\x01 \x01(\t\x12\x0b\n\x03url\x18\x02 \x01(\t\"3\n\x10LocalizedMessage\x12\x0e\n\x06locale\x18\x01 \x01(\t\x12\x0f\n\x07message\x18\x02 \x01(\tBl\n\x0e\x63om.google.rpcB\x11\x45rrorDetailsProtoP\x01Z?google.golang.org/genproto/googleapis/rpc/errdetails;errdetails\xa2\x02\x03RPCb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -188,6 +188,71 @@ end
 #     // For example: "Service disabled" or "Daily Limit for read operations
 #     // exceeded".
 #     string description = 2;
+#
+#     // The API Service from which the `QuotaFailure.Violation` orginates. In
+#     // some cases, Quota issues originate from an API Service other than the one
+#     // that was called. In other words, a dependency of the called API Service
+#     // could be the cause of the `QuotaFailure`, and this field would have the
+#     // dependency API service name.
+#     //
+#     // For example, if the called API is Kubernetes Engine API
+#     // (container.googleapis.com), and a quota violation occurs in the
+#     // Kubernetes Engine API itself, this field would be
+#     // "container.googleapis.com". On the other hand, if the quota violation
+#     // occurs when the Kubernetes Engine API creates VMs in the Compute Engine
+#     // API (compute.googleapis.com), this field would be
+#     // "compute.googleapis.com".
+#     string api_service = 3;
+#
+#     // The metric of the violated quota. A quota metric is a named counter to
+#     // measure usage, such as API requests or CPUs. When an activity occurs in a
+#     // service, such as Virtual Machine allocation, one or more quota metrics
+#     // may be affected.
+#     //
+#     // For example, "compute.googleapis.com/cpus_per_vm_family",
+#     // "storage.googleapis.com/internet_egress_bandwidth".
+#     string quota_metric = 4;
+#
+#     // The id of the violated quota. Also know as "limit name", this is the
+#     // unique identifier of a quota in the context of an API service.
+#     //
+#     // For example, "CPUS-PER-VM-FAMILY-per-project-region".
+#     string quota_id = 5;
+#
+#     // The dimensions of the violated quota. Every non-global quota is enforced
+#     // on a set of dimensions. While quota metric defines what to count, the
+#     // dimensions specify for what aspects the counter should be increased.
+#     //
+#     // For example, the quota "CPUs per region per VM family" enforces a limit
+#     // on the metric "compute.googleapis.com/cpus_per_vm_family" on dimensions
+#     // "region" and "vm_family". And if the violation occurred in region
+#     // "us-central1" and for VM family "n1", the quota_dimensions would be,
+#     //
+#     // {
+#     //   "region": "us-central1",
+#     //   "vm_family": "n1",
+#     // }
+#     //
+#     // When a quota is enforced globally, the quota_dimensions would always be
+#     // empty.
+#     map<string, string> quota_dimensions = 6;
+#
+#     // The enforced quota value at the time of the `QuotaFailure`.
+#     //
+#     // For example, if the enforced quota value at the time of the
+#     // `QuotaFailure` on the number of CPUs is "10", then the value of this
+#     // field would reflect this quantity.
+#     int64 quota_value = 7;
+#
+#     // The new quota value being rolled out at the time of the violation. At the
+#     // completion of the rollout, this value will be enforced in place of
+#     // quota_value. If no rollout is in progress at the time of the violation,
+#     // this field is not set.
+#     //
+#     // For example, if at the time of the violation a rollout is in progress
+#     // changing the number of CPUs quota from 10 to 20, 20 would be the value of
+#     // this field.
+#     optional int64 future_quota_value = 8;
 #   }
 #
 #   // Describes all quota violations.
