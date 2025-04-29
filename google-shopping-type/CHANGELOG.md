@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.1.0 (2025-04-29)
+
+#### Features
+
+* drop ruby 3.0 from CI and update baseline types gems to 3.1 ([#375](https://github.com/googleapis/common-protos-ruby/issues/375)) 
+
 ### 1.0.0 (2025-03-14)
 
 #### Features
