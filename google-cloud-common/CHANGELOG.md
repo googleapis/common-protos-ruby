@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.9.0 (2025-04-30)
+
+#### Features
+
+* update ruby, common protos versions ([#378](https://github.com/googleapis/common-protos-ruby/issues/378)) 
+
 ### 1.8.0 (2025-03-14)
 
 #### Features
