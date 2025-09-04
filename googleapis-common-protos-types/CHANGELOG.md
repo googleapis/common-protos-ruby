@@ -1,5 +1,11 @@
 # Release History
 
+### 1.21.0 (2025-09-04)
+
+#### Features
+
+* update minimum google-protobuf version to 4.26 ([#388](https://github.com/googleapis/common-protos-ruby/issues/388)) 
+
 ### 1.20.0 (2025-04-29)
 
 #### Features
