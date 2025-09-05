@@ -1,5 +1,11 @@
 # Release History
 
+### 1.9.0 (2025-09-04)
+
+#### Features
+
+* update protobuf dependency to 4.26 ([#391](https://github.com/googleapis/common-protos-ruby/issues/391)) 
+
 ### 1.8.0 (2025-04-30)
 
 #### Features
