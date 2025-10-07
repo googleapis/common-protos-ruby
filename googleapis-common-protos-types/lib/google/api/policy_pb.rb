@@ -9,29 +9,8 @@ require 'google/protobuf/descriptor_pb'
 
 descriptor_data = "\n\x17google/api/policy.proto\x12\ngoogle.api\x1a google/protobuf/descriptor.proto\"S\n\x0b\x46ieldPolicy\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x1b\n\x13resource_permission\x18\x02 \x01(\t\x12\x15\n\rresource_type\x18\x03 \x01(\t\"S\n\x0cMethodPolicy\x12\x10\n\x08selector\x18\t \x01(\t\x12\x31\n\x10request_policies\x18\x02 \x03(\x0b\x32\x17.google.api.FieldPolicy:O\n\x0c\x66ield_policy\x12\x1d.google.protobuf.FieldOptions\x18\xe8\xce\xc1K \x01(\x0b\x32\x17.google.api.FieldPolicy:R\n\rmethod_policy\x12\x1e.google.protobuf.MethodOptions\x18\xb5\x97\x99M \x01(\x0b\x32\x18.google.api.MethodPolicyBm\n\x0e\x63om.google.apiB\x0bPolicyProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
-
-begin
-  pool.add_serialized_file(descriptor_data)
-rescue TypeError
-  # Compatibility code: will be removed in the next major version.
-  require 'google/protobuf/descriptor_pb'
-  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
-  parsed.clear_dependency
-  serialized = parsed.class.encode(parsed)
-  file = pool.add_serialized_file(serialized)
-  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
-  imports = [
-  ]
-  imports.each do |type_name, expected_filename|
-    import_file = pool.lookup(type_name).file_descriptor
-    if import_file.name != expected_filename
-      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
-    end
-  end
-  warn "Each proto file must use a consistent fully-qualified name."
-  warn "This will become an error in the next major version."
-end
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
+pool.add_serialized_file(descriptor_data)
 
 module Google
   module Api
