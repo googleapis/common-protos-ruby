@@ -1,5 +1,11 @@
 # Release History
 
+### 1.22.0 (2025-10-08)
+
+#### Features
+
+* Support partial success and unreachable resources in ListOperations ([#393](https://github.com/googleapis/common-protos-ruby/issues/393)) 
+
 ### 1.21.0 (2025-09-04)
 
 #### Features
