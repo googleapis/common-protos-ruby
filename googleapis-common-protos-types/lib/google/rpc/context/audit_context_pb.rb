@@ -9,30 +9,8 @@ require 'google/protobuf/struct_pb'
 
 descriptor_data = "\n&google/rpc/context/audit_context.proto\x12\x12google.rpc.context\x1a\x1cgoogle/protobuf/struct.proto\"\xc7\x01\n\x0c\x41uditContext\x12\x11\n\taudit_log\x18\x01 \x01(\x0c\x12\x31\n\x10scrubbed_request\x18\x02 \x01(\x0b\x32\x17.google.protobuf.Struct\x12\x32\n\x11scrubbed_response\x18\x03 \x01(\x0b\x32\x17.google.protobuf.Struct\x12$\n\x1cscrubbed_response_item_count\x18\x04 \x01(\x05\x12\x17\n\x0ftarget_resource\x18\x05 \x01(\tBh\n\x16\x63om.google.rpc.contextB\x11\x41uditContextProtoP\x01Z9google.golang.org/genproto/googleapis/rpc/context;contextb\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
-
-begin
-  pool.add_serialized_file(descriptor_data)
-rescue TypeError
-  # Compatibility code: will be removed in the next major version.
-  require 'google/protobuf/descriptor_pb'
-  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
-  parsed.clear_dependency
-  serialized = parsed.class.encode(parsed)
-  file = pool.add_serialized_file(serialized)
-  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
-  imports = [
-    ["google.protobuf.Struct", "google/protobuf/struct.proto"],
-  ]
-  imports.each do |type_name, expected_filename|
-    import_file = pool.lookup(type_name).file_descriptor
-    if import_file.name != expected_filename
-      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
-    end
-  end
-  warn "Each proto file must use a consistent fully-qualified name."
-  warn "This will become an error in the next major version."
-end
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
+pool.add_serialized_file(descriptor_data)
 
 module Google
   module Rpc
