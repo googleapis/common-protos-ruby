@@ -10,30 +10,8 @@ require 'google/apps/script/type/extension_point_pb'
 
 descriptor_data = "\n8google/apps/script/type/gmail/gmail_addon_manifest.proto\x12\x1dgoogle.apps.script.type.gmail\x1a.google/apps/script/type/addon_widget_set.proto\x1a-google/apps/script/type/extension_point.proto\"\xe7\x02\n\x12GmailAddOnManifest\x12I\n\x10homepage_trigger\x18\x0e \x01(\x0b\x32/.google.apps.script.type.HomepageExtensionPoint\x12M\n\x13\x63ontextual_triggers\x18\x03 \x03(\x0b\x32\x30.google.apps.script.type.gmail.ContextualTrigger\x12I\n\x11universal_actions\x18\x04 \x03(\x0b\x32..google.apps.script.type.gmail.UniversalAction\x12\x46\n\x0f\x63ompose_trigger\x18\x0c \x01(\x0b\x32-.google.apps.script.type.gmail.ComposeTrigger\x12$\n\x1c\x61uthorization_check_function\x18\x07 \x01(\t\"[\n\x0fUniversalAction\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x13\n\topen_link\x18\x02 \x01(\tH\x00\x12\x16\n\x0crun_function\x18\x03 \x01(\tH\x00\x42\r\n\x0b\x61\x63tion_type\"\xdb\x01\n\x0e\x43omposeTrigger\x12@\n\x07\x61\x63tions\x18\x05 \x03(\x0b\x32/.google.apps.script.type.MenuItemExtensionPoint\x12O\n\x0c\x64raft_access\x18\x04 \x01(\x0e\x32\x39.google.apps.script.type.gmail.ComposeTrigger.DraftAccess\"6\n\x0b\x44raftAccess\x12\x0f\n\x0bUNSPECIFIED\x10\x00\x12\x08\n\x04NONE\x10\x01\x12\x0c\n\x08METADATA\x10\x02\"\x89\x01\n\x11\x43ontextualTrigger\x12L\n\runconditional\x18\x01 \x01(\x0b\x32\x33.google.apps.script.type.gmail.UnconditionalTriggerH\x00\x12\x1b\n\x13on_trigger_function\x18\x04 \x01(\tB\t\n\x07trigger\"\x16\n\x14UnconditionalTriggerB\xe0\x01\n!com.google.apps.script.type.gmailB\x17GmailAddOnManifestProtoP\x01Z<google.golang.org/genproto/googleapis/apps/script/type/gmail\xaa\x02\x1dGoogle.Apps.Script.Type.Gmail\xca\x02\x1dGoogle\\Apps\\Script\\Type\\Gmail\xea\x02!Google::Apps::Script::Type::Gmailb\x06proto3"
 
-pool = Google::Protobuf::DescriptorPool.generated_pool
-
-begin
-  pool.add_serialized_file(descriptor_data)
-rescue TypeError
-  # Compatibility code: will be removed in the next major version.
-  require 'google/protobuf/descriptor_pb'
-  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
-  parsed.clear_dependency
-  serialized = parsed.class.encode(parsed)
-  file = pool.add_serialized_file(serialized)
-  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
-  imports = [
-    ["google.apps.script.type.HomepageExtensionPoint", "google/apps/script/type/extension_point.proto"],
-  ]
-  imports.each do |type_name, expected_filename|
-    import_file = pool.lookup(type_name).file_descriptor
-    if import_file.name != expected_filename
-      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
-    end
-  end
-  warn "Each proto file must use a consistent fully-qualified name."
-  warn "This will become an error in the next major version."
-end
+pool = ::Google::Protobuf::DescriptorPool.generated_pool
+pool.add_serialized_file(descriptor_data)
 
 module Google
   module Apps
