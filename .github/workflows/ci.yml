@@ -35,7 +35,7 @@ jobs:
         with:
           ruby-version: "${{ matrix.ruby }}"
       - name: Checkout repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
       - name: Checkout submodules
         run: |
           git submodule update --init
