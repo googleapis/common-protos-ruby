@@ -1,5 +1,11 @@
 # Release History
 
+### 1.12.0 (2026-02-13)
+
+#### Features
+
+* Update googleapis-common-protos dependency to 1.9.0 ([#396](https://github.com/googleapis/common-protos-ruby/issues/396)) 
+
 ### 1.11.0 (2025-04-30)
 
 #### Features
