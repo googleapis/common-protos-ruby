@@ -25,4 +25,6 @@ jobs:
         run: "gem install --no-document toys grpc-tools:1.62.0"
       - name: execute
         run: |
-          toys update-gems-pr -v --fork ${{ github.event.inputs.args }}
+          toys update-gems-pr -v --fork ${GITHUB_EVENT_INPUTS_ARGS}
+        env:
+          GITHUB_EVENT_INPUTS_ARGS: ${{ github.event.inputs.args }}
