@@ -47,6 +47,7 @@ def run
     mkdir_p gem_name
     cd gem_name do
       write_base_files
+      # The "compile" task is defined in the shared template under shared/toys-common.rb
       exec_separate_tool ["compile"] + verbosity_flags
     end
     create_release_please_configs

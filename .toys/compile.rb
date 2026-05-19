@@ -28,6 +28,7 @@ def run
   Dir.chdir context_directory
   determine_dirs.each do |dir|
     Dir.chdir dir do
+      # The "compile" task is defined in the shared template under shared/toys-common.rb
       exec_separate_tool ["compile"] + verbosity_flags
     end
   end
