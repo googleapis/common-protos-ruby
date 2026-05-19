@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x18google/type/latlng.proto\x12\x0bgoogle.type\"-\n\x06LatLng\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x42\x63\n\x0f\x63om.google.typeB\x0bLatLngProtoP\x01Z8google.golang.org/genproto/googleapis/type/latlng;latlng\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x18google/type/latlng.proto\x12\x0bgoogle.type\"-\n\x06LatLng\x12\x10\n\x08latitude\x18\x01 \x01(\x01\x12\x11\n\tlongitude\x18\x02 \x01(\x01\x42`\n\x0f\x63om.google.typeB\x0bLatLngProtoP\x01Z8google.golang.org/genproto/googleapis/type/latlng;latlng\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -18,7 +18,7 @@ end
 
 #### Source proto file: google/type/latlng.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -36,7 +36,6 @@ end
 #
 # package google.type;
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/latlng;latlng";
 # option java_multiple_files = true;
 # option java_outer_classname = "LatLngProto";
@@ -45,9 +44,9 @@ end
 #
 # // An object that represents a latitude/longitude pair. This is expressed as a
 # // pair of doubles to represent degrees latitude and degrees longitude. Unless
-# // specified otherwise, this must conform to the
-# // <a href="http://www.unoosa.org/pdf/icg/2012/template/WGS_84.pdf">WGS84
-# // standard</a>. Values must be within normalized ranges.
+# // specified otherwise, this object must conform to the
+# // <a href="https://en.wikipedia.org/wiki/World_Geodetic_System#1984_version">
+# // WGS84 standard</a>. Values must be within normalized ranges.
 # message LatLng {
 #   // The latitude in degrees. It must be in the range [-90.0, +90.0].
 #   double latitude = 1;

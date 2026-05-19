@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n google/type/localized_text.proto\x12\x0bgoogle.type\"4\n\rLocalizedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x15\n\rlanguage_code\x18\x02 \x01(\tBz\n\x0f\x63om.google.typeB\x12LocalizedTextProtoP\x01ZHgoogle.golang.org/genproto/googleapis/type/localized_text;localized_text\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n google/type/localized_text.proto\x12\x0bgoogle.type\"4\n\rLocalizedText\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x15\n\rlanguage_code\x18\x02 \x01(\tBw\n\x0f\x63om.google.typeB\x12LocalizedTextProtoP\x01ZHgoogle.golang.org/genproto/googleapis/type/localized_text;localized_text\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -18,7 +18,7 @@ end
 
 #### Source proto file: google/type/localized_text.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -36,7 +36,6 @@ end
 #
 # package google.type;
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/localized_text;localized_text";
 # option java_multiple_files = true;
 # option java_outer_classname = "LocalizedTextProto";
@@ -45,7 +44,8 @@ end
 #
 # // Localized variant of a text in a particular language.
 # message LocalizedText {
-#   // Localized string in the language corresponding to `language_code' below.
+#   // Localized string in the language corresponding to
+#   // [language_code][google.type.LocalizedText.language_code] below.
 #   string text = 1;
 #
 #   // The text's BCP-47 language code, such as "en-US" or "sr-Latn".

@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x1dgoogle/api/error_reason.proto\x12\ngoogle.api*\xba\x07\n\x0b\x45rrorReason\x12\x1c\n\x18\x45RROR_REASON_UNSPECIFIED\x10\x00\x12\x14\n\x10SERVICE_DISABLED\x10\x01\x12\x14\n\x10\x42ILLING_DISABLED\x10\x02\x12\x13\n\x0f\x41PI_KEY_INVALID\x10\x03\x12\x1b\n\x17\x41PI_KEY_SERVICE_BLOCKED\x10\x04\x12!\n\x1d\x41PI_KEY_HTTP_REFERRER_BLOCKED\x10\x07\x12\x1e\n\x1a\x41PI_KEY_IP_ADDRESS_BLOCKED\x10\x08\x12\x1f\n\x1b\x41PI_KEY_ANDROID_APP_BLOCKED\x10\t\x12\x1b\n\x17\x41PI_KEY_IOS_APP_BLOCKED\x10\r\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x1b\n\x17RESOURCE_QUOTA_EXCEEDED\x10\x06\x12 \n\x1cLOCATION_TAX_POLICY_VIOLATED\x10\n\x12\x17\n\x13USER_PROJECT_DENIED\x10\x0b\x12\x16\n\x12\x43ONSUMER_SUSPENDED\x10\x0c\x12\x14\n\x10\x43ONSUMER_INVALID\x10\x0e\x12\x1c\n\x18SECURITY_POLICY_VIOLATED\x10\x0f\x12\x18\n\x14\x41\x43\x43\x45SS_TOKEN_EXPIRED\x10\x10\x12#\n\x1f\x41\x43\x43\x45SS_TOKEN_SCOPE_INSUFFICIENT\x10\x11\x12\x19\n\x15\x41\x43\x43OUNT_STATE_INVALID\x10\x12\x12!\n\x1d\x41\x43\x43\x45SS_TOKEN_TYPE_UNSUPPORTED\x10\x13\x12\x17\n\x13\x43REDENTIALS_MISSING\x10\x14\x12\x1c\n\x18RESOURCE_PROJECT_INVALID\x10\x15\x12\x1a\n\x16SESSION_COOKIE_INVALID\x10\x17\x12\x19\n\x15USER_BLOCKED_BY_ADMIN\x10\x18\x12\'\n#RESOURCE_USAGE_RESTRICTION_VIOLATED\x10\x19\x12 \n\x1cSYSTEM_PARAMETER_UNSUPPORTED\x10\x1a\x12\x1d\n\x19ORG_RESTRICTION_VIOLATION\x10\x1b\x12\"\n\x1eORG_RESTRICTION_HEADER_INVALID\x10\x1c\x12\x17\n\x13SERVICE_NOT_VISIBLE\x10\x1d\x12\x11\n\rGCP_SUSPENDED\x10\x1e\x12\x1c\n\x18LOCATION_POLICY_VIOLATED\x10\x1f\x12\x12\n\x0eMISSING_ORIGIN\x10!\x12\x1a\n\x16OVERLOADED_CREDENTIALS\x10\"Bp\n\x0e\x63om.google.apiB\x10\x45rrorReasonProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/error_reason;error_reason\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x1dgoogle/api/error_reason.proto\x12\ngoogle.api*\x92\n\n\x0b\x45rrorReason\x12\x1c\n\x18\x45RROR_REASON_UNSPECIFIED\x10\x00\x12\x14\n\x10SERVICE_DISABLED\x10\x01\x12\x14\n\x10\x42ILLING_DISABLED\x10\x02\x12\x13\n\x0f\x41PI_KEY_INVALID\x10\x03\x12\x1b\n\x17\x41PI_KEY_SERVICE_BLOCKED\x10\x04\x12!\n\x1d\x41PI_KEY_HTTP_REFERRER_BLOCKED\x10\x07\x12\x1e\n\x1a\x41PI_KEY_IP_ADDRESS_BLOCKED\x10\x08\x12\x1f\n\x1b\x41PI_KEY_ANDROID_APP_BLOCKED\x10\t\x12\x1b\n\x17\x41PI_KEY_IOS_APP_BLOCKED\x10\r\x12\x17\n\x13RATE_LIMIT_EXCEEDED\x10\x05\x12\x1b\n\x17RESOURCE_QUOTA_EXCEEDED\x10\x06\x12 \n\x1cLOCATION_TAX_POLICY_VIOLATED\x10\n\x12\x17\n\x13USER_PROJECT_DENIED\x10\x0b\x12\x16\n\x12\x43ONSUMER_SUSPENDED\x10\x0c\x12\x14\n\x10\x43ONSUMER_INVALID\x10\x0e\x12\x1c\n\x18SECURITY_POLICY_VIOLATED\x10\x0f\x12\x18\n\x14\x41\x43\x43\x45SS_TOKEN_EXPIRED\x10\x10\x12#\n\x1f\x41\x43\x43\x45SS_TOKEN_SCOPE_INSUFFICIENT\x10\x11\x12\x19\n\x15\x41\x43\x43OUNT_STATE_INVALID\x10\x12\x12!\n\x1d\x41\x43\x43\x45SS_TOKEN_TYPE_UNSUPPORTED\x10\x13\x12\x17\n\x13\x43REDENTIALS_MISSING\x10\x14\x12\x1c\n\x18RESOURCE_PROJECT_INVALID\x10\x15\x12\x1a\n\x16SESSION_COOKIE_INVALID\x10\x17\x12\x19\n\x15USER_BLOCKED_BY_ADMIN\x10\x18\x12\'\n#RESOURCE_USAGE_RESTRICTION_VIOLATED\x10\x19\x12 \n\x1cSYSTEM_PARAMETER_UNSUPPORTED\x10\x1a\x12\x1d\n\x19ORG_RESTRICTION_VIOLATION\x10\x1b\x12\"\n\x1eORG_RESTRICTION_HEADER_INVALID\x10\x1c\x12\x17\n\x13SERVICE_NOT_VISIBLE\x10\x1d\x12\x11\n\rGCP_SUSPENDED\x10\x1e\x12\x1c\n\x18LOCATION_POLICY_VIOLATED\x10\x1f\x12\x12\n\x0eMISSING_ORIGIN\x10!\x12\x1a\n\x16OVERLOADED_CREDENTIALS\x10\"\x12 \n\x1cLOCATION_ORG_POLICY_VIOLATED\x10#\x12\x1b\n\x17TLS_ORG_POLICY_VIOLATED\x10$\x12\x1b\n\x17\x45MULATOR_QUOTA_EXCEEDED\x10&\x12\"\n\x1e\x43REDENTIAL_ANDROID_APP_INVALID\x10\'\x12\x19\n\x15IAM_PERMISSION_DENIED\x10)\x12\x15\n\x11JWT_TOKEN_INVALID\x10*\x12\x1f\n\x1b\x43REDENTIAL_TYPE_UNSUPPORTED\x10+\x12\x1c\n\x18\x41\x43\x43OUNT_TYPE_UNSUPPORTED\x10,\x12\'\n#ENDPOINT_USAGE_RESTRICTION_VIOLATED\x10-\x12#\n\x1fTLS_CIPHER_RESTRICTION_VIOLATED\x10.\x12\x17\n\x13MCP_SERVER_DISABLED\x10/Bp\n\x0e\x63om.google.apiB\x10\x45rrorReasonProtoP\x01ZCgoogle.golang.org/genproto/googleapis/api/error_reason;error_reason\xa2\x02\x04GAPIb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -18,7 +18,7 @@ end
 
 #### Source proto file: google/api/error_reason.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -639,4 +639,189 @@ end
 #   //   }
 #   // }
 #   OVERLOADED_CREDENTIALS = 34;
+#
+#   // The request whose associated location violates the location org policy
+#   // restrictions when creating resources in the restricted region.
+#   //
+#   // Example of an ErrorInfo when creating the Cloud Storage Bucket in the
+#   // container "projects/123" under a restricted region
+#   // "locations/asia-northeast3":
+#   //
+#   //     {
+#   //       "reason": "LOCATION_ORG_POLICY_VIOLATED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //         "resource": "projects/123",
+#   //         "location": "locations/asia-northeast3"
+#   //       }
+#   //     }
+#   //
+#   // This response indicates creating the Cloud Storage Bucket in
+#   // "locations/asia-northeast3" violates the location org policy restriction.
+#   LOCATION_ORG_POLICY_VIOLATED = 35;
+#
+#   // The request is denied because it access data of regulated customers using
+#   // TLS 1.0 and 1.1.
+#   //
+#   // Example of an ErrorInfo when accessing a GCP resource "projects/123" that
+#   // is restricted by TLS Version Restriction for "pubsub.googleapis.com"
+#   // service.
+#   //
+#   //     {
+#   //       "reason": "TLS_ORG_POLICY_VIOLATED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //         "service": "pubsub.googleapis.com"
+#   //         "resource": "projects/123",
+#   //         "policyName": "constraints/gcp.restrictTLSVersion",
+#   //         "tlsVersion": "TLS_VERSION_1"
+#   //       }
+#   //     }
+#   TLS_ORG_POLICY_VIOLATED = 36;
+#
+#   // The request is denied because the associated project has exceeded the
+#   // emulator quota limit.
+#   //
+#   // Example of an ErrorInfo when the associated "projects/123" has exceeded the
+#   // emulator quota limit.
+#   //
+#   //     {
+#   //       "reason": "EMULATOR_QUOTA_EXCEEDED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "service": "pubsub.googleapis.com"
+#   //           "consumer": "projects/123"
+#   //        }
+#   //     }
+#   EMULATOR_QUOTA_EXCEEDED = 38;
+#
+#   // The request is denied because the associated application credential header
+#   // is invalid for an Android applications.
+#   //
+#   // Example of an ErrorInfo when the request from an Android application to the
+#   // "pubsub.googleapis.com" with an invalid application credential header.
+#   //
+#   //     {
+#   //       "reason": "CREDENTIAL_ANDROID_APP_INVALID",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "service": "pubsub.googleapis.com"
+#   //        }
+#   //     }
+#   CREDENTIAL_ANDROID_APP_INVALID = 39;
+#
+#   // The request is denied because IAM permission on resource is denied.
+#   //
+#   // Example of an ErrorInfo when the IAM permission `aiplatform.datasets.list`
+#   // is denied on resource `projects/123`.
+#   //
+#   //     {
+#   //       "reason": "IAM_PERMISSION_DENIED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "resource": "projects/123"
+#   //           "permission": "aiplatform.datasets.list"
+#   //        }
+#   //     }
+#   IAM_PERMISSION_DENIED = 41;
+#
+#   // The request is denied because it contains the invalid JWT token.
+#   //
+#   // Example of an ErrorInfo when the request contains an invalid JWT token for
+#   // service `storage.googleapis.com`.
+#   //
+#   //     {
+#   //       "reason": "JWT_TOKEN_INVALID",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "service": "storage.googleapis.com"
+#   //        }
+#   //     }
+#   JWT_TOKEN_INVALID = 42;
+#
+#   // The request is denied because it contains credential with type that is
+#   // unsupported.
+#   //
+#   // Example of an ErrorInfo when the request contains an unsupported credential
+#   // type for service `storage.googleapis.com`.
+#   //
+#   //     {
+#   //       "reason": "CREDENTIAL_TYPE_UNSUPPORTED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "service": "storage.googleapis.com"
+#   //        }
+#   //     }
+#   CREDENTIAL_TYPE_UNSUPPORTED = 43;
+#
+#   // The request is denied because it contains unsupported account type.
+#   //
+#   // Example of an ErrorInfo when the request contains an unsupported account
+#   // type for service `storage.googleapis.com`.
+#   //
+#   //     {
+#   //       "reason": "ACCOUNT_TYPE_UNSUPPORTED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //           "service": "storage.googleapis.com"
+#   //        }
+#   //     }
+#   ACCOUNT_TYPE_UNSUPPORTED = 44;
+#
+#   // The request is denied because the API endpoint is restricted by
+#   // administrators according to the organization policy constraint.
+#   // For more information see
+#   // https://cloud.google.com/assured-workloads/docs/restrict-endpoint-usage.
+#   //
+#   // Example of an ErrorInfo when access to Google Cloud Storage service is
+#   // restricted by Restrict Endpoint Usage policy:
+#   //
+#   //     {
+#   //       "reason": "ENDPOINT_USAGE_RESTRICTION_VIOLATED",
+#   //       "domain": "googleapis.com/policies/endpointUsageRestriction",
+#   //       "metadata": {
+#   //         "policy_name": "constraints/gcp.restrictEndpointUsage",
+#   //         "checked_value": "storage.googleapis.com"
+#   //         "consumer": "organization/123"
+#   //         "service": "storage.googleapis.com"
+#   //        }
+#   //     }
+#   ENDPOINT_USAGE_RESTRICTION_VIOLATED = 45;
+#
+#   // The request is denied because the TLS Cipher Suite is restricted by
+#   // administrators according to the organization policy constraint.
+#   // For more information see
+#   // https://cloud.google.com/assured-workloads/docs/restrict-tls-cipher-suites
+#   //
+#   // Example of an ErrorInfo when access to Google Cloud BigQuery service is
+#   // restricted by Restrict TLS Cipher Suites policy:
+#   //
+#   //     {
+#   //       "reason": "TLS_CIPHER_RESTRICTION_VIOLATED",
+#   //       "domain": "googleapis.com/policies/tlsCipherRestriction",
+#   //       "metadata": {
+#   //         "policy_name": "constraints/gcp.restrictTLSCipherSuites",
+#   //         "checked_value": "TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+#   //         "consumer": "organization/123"
+#   //         "service": "bigquery.googleapis.com"
+#   //        }
+#   //     }
+#   TLS_CIPHER_RESTRICTION_VIOLATED = 46;
+#
+#   // The request is denied because the MCP activation check fails.
+#   //
+#   // Example of an ErrorInfo when the container "projects/123" contacting
+#   // "pubsub.googleapis.com" service which is disabled by MCP:
+#   //
+#   //     { "reason": "MCP_SERVER_DISABLED",
+#   //       "domain": "googleapis.com",
+#   //       "metadata": {
+#   //         "consumer": "projects/123",
+#   //         "service": "pubsub.googleapis.com"
+#   //       }
+#   //     }
+#   //
+#   // This response indicates the "pubsub.googleapis.com" has been disabled in
+#   // "projects/123" for MCP.
+#   MCP_SERVER_DISABLED = 47;
 # }

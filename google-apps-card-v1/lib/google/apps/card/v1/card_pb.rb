@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/type/color_pb'
 
 
-descriptor_data = "\n\x1egoogle/apps/card/v1/card.proto\x12\x13google.apps.card.v1\x1a\x17google/type/color.proto\"\xc7\x08\n\x04\x43\x61rd\x12\x34\n\x06header\x18\x01 \x01(\x0b\x32$.google.apps.card.v1.Card.CardHeader\x12\x33\n\x08sections\x18\x02 \x03(\x0b\x32!.google.apps.card.v1.Card.Section\x12\x45\n\x15section_divider_style\x18\t \x01(\x0e\x32&.google.apps.card.v1.Card.DividerStyle\x12:\n\x0c\x63\x61rd_actions\x18\x03 \x03(\x0b\x32$.google.apps.card.v1.Card.CardAction\x12\x0c\n\x04name\x18\x04 \x01(\t\x12?\n\x0c\x66ixed_footer\x18\x05 \x01(\x0b\x32).google.apps.card.v1.Card.CardFixedFooter\x12=\n\rdisplay_style\x18\x06 \x01(\x0e\x32&.google.apps.card.v1.Card.DisplayStyle\x12>\n\x10peek_card_header\x18\x07 \x01(\x0b\x32$.google.apps.card.v1.Card.CardHeader\x1a\x93\x01\n\nCardHeader\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x39\n\nimage_type\x18\x03 \x01(\x0e\x32%.google.apps.card.v1.Widget.ImageType\x12\x11\n\timage_url\x18\x04 \x01(\t\x12\x16\n\x0eimage_alt_text\x18\x05 \x01(\t\x1a\x81\x01\n\x07Section\x12\x0e\n\x06header\x18\x01 \x01(\t\x12,\n\x07widgets\x18\x02 \x03(\x0b\x32\x1b.google.apps.card.v1.Widget\x12\x13\n\x0b\x63ollapsible\x18\x05 \x01(\x08\x12#\n\x1buncollapsible_widgets_count\x18\x06 \x01(\x05\x1aR\n\nCardAction\x12\x14\n\x0c\x61\x63tion_label\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x1a}\n\x0f\x43\x61rdFixedFooter\x12\x33\n\x0eprimary_button\x18\x01 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\x12\x35\n\x10secondary_button\x18\x02 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\"P\n\x0c\x44ividerStyle\x12\x1d\n\x19\x44IVIDER_STYLE_UNSPECIFIED\x10\x00\x12\x11\n\rSOLID_DIVIDER\x10\x01\x12\x0e\n\nNO_DIVIDER\x10\x02\"D\n\x0c\x44isplayStyle\x12\x1d\n\x19\x44ISPLAY_STYLE_UNSPECIFIED\x10\x00\x12\x08\n\x04PEEK\x10\x01\x12\x0b\n\x07REPLACE\x10\x02\"\x86\x06\n\x06Widget\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b\x32\".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b\x32\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0e\x64\x65\x63orated_text\x18\x03 \x01(\x0b\x32\".google.apps.card.v1.DecoratedTextH\x00\x12\x36\n\x0b\x62utton_list\x18\x04 \x01(\x0b\x32\x1f.google.apps.card.v1.ButtonListH\x00\x12\x34\n\ntext_input\x18\x05 \x01(\x0b\x32\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b\x32#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10\x64\x61te_time_picker\x18\x07 \x01(\x0b\x32#.google.apps.card.v1.DateTimePickerH\x00\x12/\n\x07\x64ivider\x18\t \x01(\x0b\x32\x1c.google.apps.card.v1.DividerH\x00\x12)\n\x04grid\x18\n \x01(\x0b\x32\x19.google.apps.card.v1.GridH\x00\x12/\n\x07\x63olumns\x18\x0b \x01(\x0b\x32\x1c.google.apps.card.v1.ColumnsH\x00\x12M\n\x14horizontal_alignment\x18\x08 \x01(\x0e\x32/.google.apps.card.v1.Widget.HorizontalAlignment\"#\n\tImageType\x12\n\n\x06SQUARE\x10\x00\x12\n\n\x06\x43IRCLE\x10\x01\"[\n\x13HorizontalAlignment\x12$\n HORIZONTAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\t\n\x05START\x10\x01\x12\n\n\x06\x43\x45NTER\x10\x02\x12\x07\n\x03\x45ND\x10\x03\x42\x06\n\x04\x64\x61ta\"\x1d\n\rTextParagraph\x12\x0c\n\x04text\x18\x01 \x01(\t\"\\\n\x05Image\x12\x11\n\timage_url\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08\x61lt_text\x18\x03 \x01(\t\"\t\n\x07\x44ivider\"\x9e\x05\n\rDecoratedText\x12+\n\x04icon\x18\x01 \x01(\x0b\x32\x19.google.apps.card.v1.IconB\x02\x18\x01\x12-\n\nstart_icon\x18\x0c \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12\x11\n\ttop_label\x18\x03 \x01(\t\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x11\n\twrap_text\x18\x05 \x01(\x08\x12\x14\n\x0c\x62ottom_label\x18\x06 \x01(\t\x12.\n\x08on_click\x18\x07 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12-\n\x06\x62utton\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.ButtonH\x00\x12J\n\x0eswitch_control\x18\t \x01(\x0b\x32\x30.google.apps.card.v1.DecoratedText.SwitchControlH\x00\x12-\n\x08\x65nd_icon\x18\x0b \x01(\x0b\x32\x19.google.apps.card.v1.IconH\x00\x1a\x81\x02\n\rSwitchControl\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x12\x35\n\x10on_change_action\x18\x04 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12R\n\x0c\x63ontrol_type\x18\x05 \x01(\x0e\x32<.google.apps.card.v1.DecoratedText.SwitchControl.ControlType\"6\n\x0b\x43ontrolType\x12\n\n\x06SWITCH\x10\x00\x12\x0c\n\x08\x43HECKBOX\x10\x01\x12\r\n\tCHECK_BOX\x10\x02\x42\t\n\x07\x63ontrol\"\xf4\x02\n\tTextInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x11\n\thint_text\x18\x03 \x01(\t\x12\r\n\x05value\x18\x04 \x01(\t\x12\x31\n\x04type\x18\x05 \x01(\x0e\x32#.google.apps.card.v1.TextInput.Type\x12\x35\n\x10on_change_action\x18\x06 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12=\n\x13initial_suggestions\x18\x07 \x01(\x0b\x32 .google.apps.card.v1.Suggestions\x12\x39\n\x14\x61uto_complete_action\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12\x18\n\x10placeholder_text\x18\x0c \x01(\t\"*\n\x04Type\x12\x0f\n\x0bSINGLE_LINE\x10\x00\x12\x11\n\rMULTIPLE_LINE\x10\x01\"z\n\x0bSuggestions\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.google.apps.card.v1.Suggestions.SuggestionItem\x1a+\n\x0eSuggestionItem\x12\x0e\n\x04text\x18\x01 \x01(\tH\x00\x42\t\n\x07\x63ontent\":\n\nButtonList\x12,\n\x07\x62uttons\x18\x01 \x03(\x0b\x32\x1b.google.apps.card.v1.Button\"\xeb\x06\n\x0eSelectionInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12?\n\x04type\x18\x03 \x01(\x0e\x32\x31.google.apps.card.v1.SelectionInput.SelectionType\x12@\n\x05items\x18\x04 \x03(\x0b\x32\x31.google.apps.card.v1.SelectionInput.SelectionItem\x12\x35\n\x10on_change_action\x18\x05 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12\'\n\x1fmulti_select_max_selected_items\x18\x06 \x01(\x05\x12%\n\x1dmulti_select_min_query_length\x18\x07 \x01(\x05\x12;\n\x14\x65xternal_data_source\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12V\n\x14platform_data_source\x18\t \x01(\x0b\x32\x36.google.apps.card.v1.SelectionInput.PlatformDataSourceH\x00\x1ak\n\rSelectionItem\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x12\x16\n\x0estart_icon_uri\x18\x04 \x01(\t\x12\x13\n\x0b\x62ottom_text\x18\x05 \x01(\t\x1a\xb5\x01\n\x12PlatformDataSource\x12\x65\n\x12\x63ommon_data_source\x18\x01 \x01(\x0e\x32G.google.apps.card.v1.SelectionInput.PlatformDataSource.CommonDataSourceH\x00\")\n\x10\x43ommonDataSource\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04USER\x10\x01\x42\r\n\x0b\x64\x61ta_source\"\\\n\rSelectionType\x12\r\n\tCHECK_BOX\x10\x00\x12\x10\n\x0cRADIO_BUTTON\x10\x01\x12\n\n\x06SWITCH\x10\x02\x12\x0c\n\x08\x44ROPDOWN\x10\x03\x12\x10\n\x0cMULTI_SELECT\x10\x04\x42\x1a\n\x18multi_select_data_source\"\xa7\x02\n\x0e\x44\x61teTimePicker\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x44\n\x04type\x18\x03 \x01(\x0e\x32\x36.google.apps.card.v1.DateTimePicker.DateTimePickerType\x12\x16\n\x0evalue_ms_epoch\x18\x04 \x01(\x03\x12\x1c\n\x14timezone_offset_date\x18\x05 \x01(\x05\x12\x35\n\x10on_change_action\x18\x06 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\"E\n\x12\x44\x61teTimePickerType\x12\x11\n\rDATE_AND_TIME\x10\x00\x12\r\n\tDATE_ONLY\x10\x01\x12\r\n\tTIME_ONLY\x10\x02\"\xb6\x01\n\x06\x42utton\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\'\n\x04icon\x18\x02 \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12!\n\x05\x63olor\x18\x03 \x01(\x0b\x32\x12.google.type.Color\x12.\n\x08on_click\x18\x04 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08\x64isabled\x18\x05 \x01(\x08\x12\x10\n\x08\x61lt_text\x18\x06 \x01(\t\"\xc2\x01\n\x04Icon\x12\x14\n\nknown_icon\x18\x01 \x01(\tH\x00\x12\x12\n\x08icon_url\x18\x02 \x01(\tH\x00\x12:\n\rmaterial_icon\x18\x05 \x01(\x0b\x32!.google.apps.card.v1.MaterialIconH\x00\x12\x10\n\x08\x61lt_text\x18\x03 \x01(\t\x12\x39\n\nimage_type\x18\x04 \x01(\x0e\x32%.google.apps.card.v1.Widget.ImageTypeB\x07\n\x05icons\"I\n\x0cMaterialIcon\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x66ill\x18\x02 \x01(\x08\x12\x0e\n\x06weight\x18\x03 \x01(\x05\x12\r\n\x05grade\x18\x04 \x01(\x05\"\xda\x01\n\x0eImageCropStyle\x12?\n\x04type\x18\x01 \x01(\x0e\x32\x31.google.apps.card.v1.ImageCropStyle.ImageCropType\x12\x14\n\x0c\x61spect_ratio\x18\x02 \x01(\x01\"q\n\rImageCropType\x12\x1f\n\x1bIMAGE_CROP_TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06SQUARE\x10\x01\x12\n\n\x06\x43IRCLE\x10\x02\x12\x14\n\x10RECTANGLE_CUSTOM\x10\x03\x12\x11\n\rRECTANGLE_4_3\x10\x04\"\xcf\x01\n\x0b\x42orderStyle\x12\x39\n\x04type\x18\x01 \x01(\x0e\x32+.google.apps.card.v1.BorderStyle.BorderType\x12(\n\x0cstroke_color\x18\x02 \x01(\x0b\x32\x12.google.type.Color\x12\x15\n\rcorner_radius\x18\x03 \x01(\x05\"D\n\nBorderType\x12\x1b\n\x17\x42ORDER_TYPE_UNSPECIFIED\x10\x00\x12\r\n\tNO_BORDER\x10\x01\x12\n\n\x06STROKE\x10\x02\"\xa6\x01\n\x0eImageComponent\x12\x11\n\timage_uri\x18\x01 \x01(\t\x12\x10\n\x08\x61lt_text\x18\x02 \x01(\t\x12\x37\n\ncrop_style\x18\x03 \x01(\x0b\x32#.google.apps.card.v1.ImageCropStyle\x12\x36\n\x0c\x62order_style\x18\x04 \x01(\x0b\x32 .google.apps.card.v1.BorderStyle\"\xcb\x03\n\x04Grid\x12\r\n\x05title\x18\x01 \x01(\t\x12\x31\n\x05items\x18\x02 \x03(\x0b\x32\".google.apps.card.v1.Grid.GridItem\x12\x36\n\x0c\x62order_style\x18\x03 \x01(\x0b\x32 .google.apps.card.v1.BorderStyle\x12\x14\n\x0c\x63olumn_count\x18\x04 \x01(\x05\x12.\n\x08on_click\x18\x05 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x1a\x82\x02\n\x08GridItem\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x05image\x18\x02 \x01(\x0b\x32#.google.apps.card.v1.ImageComponent\x12\r\n\x05title\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x04 \x01(\t\x12\x41\n\x06layout\x18\t \x01(\x0e\x32\x31.google.apps.card.v1.Grid.GridItem.GridItemLayout\"R\n\x0eGridItemLayout\x12 \n\x1cGRID_ITEM_LAYOUT_UNSPECIFIED\x10\x00\x12\x0e\n\nTEXT_BELOW\x10\x01\x12\x0e\n\nTEXT_ABOVE\x10\x02\"\xfd\x07\n\x07\x43olumns\x12\x39\n\x0c\x63olumn_items\x18\x02 \x03(\x0b\x32#.google.apps.card.v1.Columns.Column\x1a\xb6\x07\n\x06\x43olumn\x12V\n\x15horizontal_size_style\x18\x01 \x01(\x0e\x32\x37.google.apps.card.v1.Columns.Column.HorizontalSizeStyle\x12M\n\x14horizontal_alignment\x18\x02 \x01(\x0e\x32/.google.apps.card.v1.Widget.HorizontalAlignment\x12Q\n\x12vertical_alignment\x18\x03 \x01(\x0e\x32\x35.google.apps.card.v1.Columns.Column.VerticalAlignment\x12<\n\x07widgets\x18\x04 \x03(\x0b\x32+.google.apps.card.v1.Columns.Column.Widgets\x1a\xa9\x03\n\x07Widgets\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b\x32\".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b\x32\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0e\x64\x65\x63orated_text\x18\x03 \x01(\x0b\x32\".google.apps.card.v1.DecoratedTextH\x00\x12\x36\n\x0b\x62utton_list\x18\x04 \x01(\x0b\x32\x1f.google.apps.card.v1.ButtonListH\x00\x12\x34\n\ntext_input\x18\x05 \x01(\x0b\x32\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b\x32#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10\x64\x61te_time_picker\x18\x07 \x01(\x0b\x32#.google.apps.card.v1.DateTimePickerH\x00\x42\x06\n\x04\x64\x61ta\"n\n\x13HorizontalSizeStyle\x12%\n!HORIZONTAL_SIZE_STYLE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x46ILL_AVAILABLE_SPACE\x10\x01\x12\x16\n\x12\x46ILL_MINIMUM_SPACE\x10\x02\"X\n\x11VerticalAlignment\x12\"\n\x1eVERTICAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\n\n\x06\x43\x45NTER\x10\x01\x12\x07\n\x03TOP\x10\x02\x12\n\n\x06\x42OTTOM\x10\x03\"\xe0\x01\n\x07OnClick\x12-\n\x06\x61\x63tion\x18\x01 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12\x32\n\topen_link\x18\x02 \x01(\x0b\x32\x1d.google.apps.card.v1.OpenLinkH\x00\x12?\n\x18open_dynamic_link_action\x18\x03 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12)\n\x04\x63\x61rd\x18\x04 \x01(\x0b\x32\x19.google.apps.card.v1.CardH\x00\x42\x06\n\x04\x64\x61ta\"\xd1\x01\n\x08OpenLink\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x35\n\x07open_as\x18\x02 \x01(\x0e\x32$.google.apps.card.v1.OpenLink.OpenAs\x12\x37\n\x08on_close\x18\x03 \x01(\x0e\x32%.google.apps.card.v1.OpenLink.OnClose\"$\n\x06OpenAs\x12\r\n\tFULL_SIZE\x10\x00\x12\x0b\n\x07OVERLAY\x10\x01\"\"\n\x07OnClose\x12\x0b\n\x07NOTHING\x10\x00\x12\n\n\x06RELOAD\x10\x01\"\x88\x03\n\x06\x41\x63tion\x12\x10\n\x08\x66unction\x18\x01 \x01(\t\x12?\n\nparameters\x18\x02 \x03(\x0b\x32+.google.apps.card.v1.Action.ActionParameter\x12\x41\n\x0eload_indicator\x18\x03 \x01(\x0e\x32).google.apps.card.v1.Action.LoadIndicator\x12\x16\n\x0epersist_values\x18\x04 \x01(\x08\x12<\n\x0binteraction\x18\x05 \x01(\x0e\x32\'.google.apps.card.v1.Action.Interaction\x1a-\n\x0f\x41\x63tionParameter\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"&\n\rLoadIndicator\x12\x0b\n\x07SPINNER\x10\x00\x12\x08\n\x04NONE\x10\x01\";\n\x0bInteraction\x12\x1b\n\x17INTERACTION_UNSPECIFIED\x10\x00\x12\x0f\n\x0bOPEN_DIALOG\x10\x01\x42\xa4\x01\n\x17\x63om.google.apps.card.v1B\tCardProtoP\x01Z7google.golang.org/genproto/googleapis/apps/card/v1;card\xaa\x02\x13Google.Apps.Card.V1\xca\x02\x13Google\\Apps\\Card\\V1\xea\x02\x16Google::Apps::Card::V1b\x06proto3"
+descriptor_data = "\n\x1egoogle/apps/card/v1/card.proto\x12\x13google.apps.card.v1\x1a\x17google/type/color.proto\"\xc3\n\n\x04\x43\x61rd\x12\x34\n\x06header\x18\x01 \x01(\x0b\x32$.google.apps.card.v1.Card.CardHeader\x12\x33\n\x08sections\x18\x02 \x03(\x0b\x32!.google.apps.card.v1.Card.Section\x12\x45\n\x15section_divider_style\x18\t \x01(\x0e\x32&.google.apps.card.v1.Card.DividerStyle\x12:\n\x0c\x63\x61rd_actions\x18\x03 \x03(\x0b\x32$.google.apps.card.v1.Card.CardAction\x12\x0c\n\x04name\x18\x04 \x01(\t\x12?\n\x0c\x66ixed_footer\x18\x05 \x01(\x0b\x32).google.apps.card.v1.Card.CardFixedFooter\x12=\n\rdisplay_style\x18\x06 \x01(\x0e\x32&.google.apps.card.v1.Card.DisplayStyle\x12>\n\x10peek_card_header\x18\x07 \x01(\x0b\x32$.google.apps.card.v1.Card.CardHeader\x1a\x93\x01\n\nCardHeader\x12\r\n\x05title\x18\x01 \x01(\t\x12\x10\n\x08subtitle\x18\x02 \x01(\t\x12\x39\n\nimage_type\x18\x03 \x01(\x0e\x32%.google.apps.card.v1.Widget.ImageType\x12\x11\n\timage_url\x18\x04 \x01(\t\x12\x16\n\x0eimage_alt_text\x18\x05 \x01(\t\x1a\xc1\x01\n\x07Section\x12\x0e\n\x06header\x18\x01 \x01(\t\x12,\n\x07widgets\x18\x02 \x03(\x0b\x32\x1b.google.apps.card.v1.Widget\x12\x13\n\x0b\x63ollapsible\x18\x05 \x01(\x08\x12#\n\x1buncollapsible_widgets_count\x18\x06 \x01(\x05\x12>\n\x10\x63ollapse_control\x18\x08 \x01(\x0b\x32$.google.apps.card.v1.CollapseControl\x1aR\n\nCardAction\x12\x14\n\x0c\x61\x63tion_label\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x1a\xb9\x01\n\x0cNestedWidget\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b\x32\".google.apps.card.v1.TextParagraphH\x00\x12\x36\n\x0b\x62utton_list\x18\x03 \x01(\x0b\x32\x1f.google.apps.card.v1.ButtonListH\x00\x12+\n\x05image\x18\n \x01(\x0b\x32\x1a.google.apps.card.v1.ImageH\x00\x42\x06\n\x04\x64\x61ta\x1a}\n\x0f\x43\x61rdFixedFooter\x12\x33\n\x0eprimary_button\x18\x01 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\x12\x35\n\x10secondary_button\x18\x02 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\"P\n\x0c\x44ividerStyle\x12\x1d\n\x19\x44IVIDER_STYLE_UNSPECIFIED\x10\x00\x12\x11\n\rSOLID_DIVIDER\x10\x01\x12\x0e\n\nNO_DIVIDER\x10\x02\"D\n\x0c\x44isplayStyle\x12\x1d\n\x19\x44ISPLAY_STYLE_UNSPECIFIED\x10\x00\x12\x08\n\x04PEEK\x10\x01\x12\x0b\n\x07REPLACE\x10\x02\"\xc7\x07\n\x06Widget\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b\x32\".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b\x32\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0e\x64\x65\x63orated_text\x18\x03 \x01(\x0b\x32\".google.apps.card.v1.DecoratedTextH\x00\x12\x36\n\x0b\x62utton_list\x18\x04 \x01(\x0b\x32\x1f.google.apps.card.v1.ButtonListH\x00\x12\x34\n\ntext_input\x18\x05 \x01(\x0b\x32\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b\x32#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10\x64\x61te_time_picker\x18\x07 \x01(\x0b\x32#.google.apps.card.v1.DateTimePickerH\x00\x12/\n\x07\x64ivider\x18\t \x01(\x0b\x32\x1c.google.apps.card.v1.DividerH\x00\x12)\n\x04grid\x18\n \x01(\x0b\x32\x19.google.apps.card.v1.GridH\x00\x12/\n\x07\x63olumns\x18\x0b \x01(\x0b\x32\x1c.google.apps.card.v1.ColumnsH\x00\x12\x31\n\x08\x63\x61rousel\x18\r \x01(\x0b\x32\x1d.google.apps.card.v1.CarouselH\x00\x12\x32\n\tchip_list\x18\x0e \x01(\x0b\x32\x1d.google.apps.card.v1.ChipListH\x00\x12M\n\x14horizontal_alignment\x18\x08 \x01(\x0e\x32/.google.apps.card.v1.Widget.HorizontalAlignment\"#\n\tImageType\x12\n\n\x06SQUARE\x10\x00\x12\n\n\x06\x43IRCLE\x10\x01\"[\n\x13HorizontalAlignment\x12$\n HORIZONTAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\t\n\x05START\x10\x01\x12\n\n\x06\x43\x45NTER\x10\x02\x12\x07\n\x03\x45ND\x10\x03\"X\n\x11VerticalAlignment\x12\"\n\x1eVERTICAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\x07\n\x03TOP\x10\x01\x12\n\n\x06MIDDLE\x10\x02\x12\n\n\x06\x42OTTOM\x10\x03\x42\x06\n\x04\x64\x61ta\"\xb7\x01\n\rTextParagraph\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\x11\n\tmax_lines\x18\x02 \x01(\x05\x12\x42\n\x0btext_syntax\x18\x04 \x01(\x0e\x32-.google.apps.card.v1.TextParagraph.TextSyntax\"A\n\nTextSyntax\x12\x1b\n\x17TEXT_SYNTAX_UNSPECIFIED\x10\x00\x12\x08\n\x04HTML\x10\x01\x12\x0c\n\x08MARKDOWN\x10\x02\"\\\n\x05Image\x12\x11\n\timage_url\x18\x01 \x01(\t\x12.\n\x08on_click\x18\x02 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08\x61lt_text\x18\x03 \x01(\t\"\t\n\x07\x44ivider\"\xa9\x07\n\rDecoratedText\x12+\n\x04icon\x18\x01 \x01(\x0b\x32\x19.google.apps.card.v1.IconB\x02\x18\x01\x12-\n\nstart_icon\x18\x0c \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12T\n\x1dstart_icon_vertical_alignment\x18\r \x01(\x0e\x32-.google.apps.card.v1.Widget.VerticalAlignment\x12\x11\n\ttop_label\x18\x03 \x01(\t\x12:\n\x0etop_label_text\x18\x11 \x01(\x0b\x32\".google.apps.card.v1.TextParagraph\x12\x0c\n\x04text\x18\x04 \x01(\t\x12\x38\n\x0c\x63ontent_text\x18\x12 \x01(\x0b\x32\".google.apps.card.v1.TextParagraph\x12\x11\n\twrap_text\x18\x05 \x01(\x08\x12\x14\n\x0c\x62ottom_label\x18\x06 \x01(\t\x12=\n\x11\x62ottom_label_text\x18\x13 \x01(\x0b\x32\".google.apps.card.v1.TextParagraph\x12.\n\x08on_click\x18\x07 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12-\n\x06\x62utton\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.ButtonH\x00\x12J\n\x0eswitch_control\x18\t \x01(\x0b\x32\x30.google.apps.card.v1.DecoratedText.SwitchControlH\x00\x12-\n\x08\x65nd_icon\x18\x0b \x01(\x0b\x32\x19.google.apps.card.v1.IconH\x00\x1a\x81\x02\n\rSwitchControl\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x12\x35\n\x10on_change_action\x18\x04 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12R\n\x0c\x63ontrol_type\x18\x05 \x01(\x0e\x32<.google.apps.card.v1.DecoratedText.SwitchControl.ControlType\"6\n\x0b\x43ontrolType\x12\n\n\x06SWITCH\x10\x00\x12\x0c\n\x08\x43HECKBOX\x10\x01\x12\r\n\tCHECK_BOX\x10\x02\x42\t\n\x07\x63ontrol\"\xa9\x03\n\tTextInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x11\n\thint_text\x18\x03 \x01(\t\x12\r\n\x05value\x18\x04 \x01(\t\x12\x31\n\x04type\x18\x05 \x01(\x0e\x32#.google.apps.card.v1.TextInput.Type\x12\x35\n\x10on_change_action\x18\x06 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12=\n\x13initial_suggestions\x18\x07 \x01(\x0b\x32 .google.apps.card.v1.Suggestions\x12\x39\n\x14\x61uto_complete_action\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12\x33\n\nvalidation\x18\x0b \x01(\x0b\x32\x1f.google.apps.card.v1.Validation\x12\x18\n\x10placeholder_text\x18\x0c \x01(\t\"*\n\x04Type\x12\x0f\n\x0bSINGLE_LINE\x10\x00\x12\x11\n\rMULTIPLE_LINE\x10\x01\"z\n\x0bSuggestions\x12>\n\x05items\x18\x01 \x03(\x0b\x32/.google.apps.card.v1.Suggestions.SuggestionItem\x1a+\n\x0eSuggestionItem\x12\x0e\n\x04text\x18\x01 \x01(\tH\x00\x42\t\n\x07\x63ontent\":\n\nButtonList\x12,\n\x07\x62uttons\x18\x01 \x03(\x0b\x32\x1b.google.apps.card.v1.Button\"\xa4\x07\n\x0eSelectionInput\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12?\n\x04type\x18\x03 \x01(\x0e\x32\x31.google.apps.card.v1.SelectionInput.SelectionType\x12@\n\x05items\x18\x04 \x03(\x0b\x32\x31.google.apps.card.v1.SelectionInput.SelectionItem\x12\x35\n\x10on_change_action\x18\x05 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\x12,\n\x1fmulti_select_max_selected_items\x18\x06 \x01(\x05H\x01\x88\x01\x01\x12%\n\x1dmulti_select_min_query_length\x18\x07 \x01(\x05\x12;\n\x14\x65xternal_data_source\x18\x08 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12V\n\x14platform_data_source\x18\t \x01(\x0b\x32\x36.google.apps.card.v1.SelectionInput.PlatformDataSourceH\x00\x1a{\n\rSelectionItem\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\x12\x10\n\x08selected\x18\x03 \x01(\x08\x12\x18\n\x0estart_icon_uri\x18\x04 \x01(\tH\x00\x12\x13\n\x0b\x62ottom_text\x18\x05 \x01(\tB\x0c\n\nstart_icon\x1a\xb5\x01\n\x12PlatformDataSource\x12\x65\n\x12\x63ommon_data_source\x18\x01 \x01(\x0e\x32G.google.apps.card.v1.SelectionInput.PlatformDataSource.CommonDataSourceH\x00\")\n\x10\x43ommonDataSource\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x08\n\x04USER\x10\x01\x42\r\n\x0b\x64\x61ta_source\"\\\n\rSelectionType\x12\r\n\tCHECK_BOX\x10\x00\x12\x10\n\x0cRADIO_BUTTON\x10\x01\x12\n\n\x06SWITCH\x10\x02\x12\x0c\n\x08\x44ROPDOWN\x10\x03\x12\x10\n\x0cMULTI_SELECT\x10\x04\x42\x1a\n\x18multi_select_data_sourceB\"\n _multi_select_max_selected_items\"\xbf\x02\n\x0e\x44\x61teTimePicker\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x44\n\x04type\x18\x03 \x01(\x0e\x32\x36.google.apps.card.v1.DateTimePicker.DateTimePickerType\x12\x1b\n\x0evalue_ms_epoch\x18\x04 \x01(\x03H\x00\x88\x01\x01\x12\x1c\n\x14timezone_offset_date\x18\x05 \x01(\x05\x12\x35\n\x10on_change_action\x18\x06 \x01(\x0b\x32\x1b.google.apps.card.v1.Action\"E\n\x12\x44\x61teTimePickerType\x12\x11\n\rDATE_AND_TIME\x10\x00\x12\r\n\tDATE_ONLY\x10\x01\x12\r\n\tTIME_ONLY\x10\x02\x42\x11\n\x0f_value_ms_epoch\"\xe5\x01\n\x0cOverflowMenu\x12\x41\n\x05items\x18\x01 \x03(\x0b\x32\x32.google.apps.card.v1.OverflowMenu.OverflowMenuItem\x1a\x91\x01\n\x10OverflowMenuItem\x12-\n\nstart_icon\x18\x01 \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12\x0c\n\x04text\x18\x02 \x01(\t\x12.\n\x08on_click\x18\x03 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08\x64isabled\x18\x04 \x01(\x08\"\xc0\x02\n\x06\x42utton\x12\x0c\n\x04text\x18\x01 \x01(\t\x12\'\n\x04icon\x18\x02 \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12!\n\x05\x63olor\x18\x03 \x01(\x0b\x32\x12.google.type.Color\x12.\n\x08on_click\x18\x04 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x10\n\x08\x64isabled\x18\x05 \x01(\x08\x12\x10\n\x08\x61lt_text\x18\x06 \x01(\t\x12.\n\x04type\x18\x07 \x01(\x0e\x32 .google.apps.card.v1.Button.Type\"X\n\x04Type\x12\x14\n\x10TYPE_UNSPECIFIED\x10\x00\x12\x0c\n\x08OUTLINED\x10\x01\x12\n\n\x06\x46ILLED\x10\x02\x12\x10\n\x0c\x46ILLED_TONAL\x10\x03\x12\x0e\n\nBORDERLESS\x10\x04\"\xc2\x01\n\x04Icon\x12\x14\n\nknown_icon\x18\x01 \x01(\tH\x00\x12\x12\n\x08icon_url\x18\x02 \x01(\tH\x00\x12:\n\rmaterial_icon\x18\x05 \x01(\x0b\x32!.google.apps.card.v1.MaterialIconH\x00\x12\x10\n\x08\x61lt_text\x18\x03 \x01(\t\x12\x39\n\nimage_type\x18\x04 \x01(\x0e\x32%.google.apps.card.v1.Widget.ImageTypeB\x07\n\x05icons\"I\n\x0cMaterialIcon\x12\x0c\n\x04name\x18\x01 \x01(\t\x12\x0c\n\x04\x66ill\x18\x02 \x01(\x08\x12\x0e\n\x06weight\x18\x03 \x01(\x05\x12\r\n\x05grade\x18\x04 \x01(\x05\"\xda\x01\n\x0eImageCropStyle\x12?\n\x04type\x18\x01 \x01(\x0e\x32\x31.google.apps.card.v1.ImageCropStyle.ImageCropType\x12\x14\n\x0c\x61spect_ratio\x18\x02 \x01(\x01\"q\n\rImageCropType\x12\x1f\n\x1bIMAGE_CROP_TYPE_UNSPECIFIED\x10\x00\x12\n\n\x06SQUARE\x10\x01\x12\n\n\x06\x43IRCLE\x10\x02\x12\x14\n\x10RECTANGLE_CUSTOM\x10\x03\x12\x11\n\rRECTANGLE_4_3\x10\x04\"\xcf\x01\n\x0b\x42orderStyle\x12\x39\n\x04type\x18\x01 \x01(\x0e\x32+.google.apps.card.v1.BorderStyle.BorderType\x12(\n\x0cstroke_color\x18\x02 \x01(\x0b\x32\x12.google.type.Color\x12\x15\n\rcorner_radius\x18\x03 \x01(\x05\"D\n\nBorderType\x12\x1b\n\x17\x42ORDER_TYPE_UNSPECIFIED\x10\x00\x12\r\n\tNO_BORDER\x10\x01\x12\n\n\x06STROKE\x10\x02\"\xa6\x01\n\x0eImageComponent\x12\x11\n\timage_uri\x18\x01 \x01(\t\x12\x10\n\x08\x61lt_text\x18\x02 \x01(\t\x12\x37\n\ncrop_style\x18\x03 \x01(\x0b\x32#.google.apps.card.v1.ImageCropStyle\x12\x36\n\x0c\x62order_style\x18\x04 \x01(\x0b\x32 .google.apps.card.v1.BorderStyle\"\xcb\x03\n\x04Grid\x12\r\n\x05title\x18\x01 \x01(\t\x12\x31\n\x05items\x18\x02 \x03(\x0b\x32\".google.apps.card.v1.Grid.GridItem\x12\x36\n\x0c\x62order_style\x18\x03 \x01(\x0b\x32 .google.apps.card.v1.BorderStyle\x12\x14\n\x0c\x63olumn_count\x18\x04 \x01(\x05\x12.\n\x08on_click\x18\x05 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x1a\x82\x02\n\x08GridItem\x12\n\n\x02id\x18\x01 \x01(\t\x12\x32\n\x05image\x18\x02 \x01(\x0b\x32#.google.apps.card.v1.ImageComponent\x12\r\n\x05title\x18\x03 \x01(\t\x12\x10\n\x08subtitle\x18\x04 \x01(\t\x12\x41\n\x06layout\x18\t \x01(\x0e\x32\x31.google.apps.card.v1.Grid.GridItem.GridItemLayout\"R\n\x0eGridItemLayout\x12 \n\x1cGRID_ITEM_LAYOUT_UNSPECIFIED\x10\x00\x12\x0e\n\nTEXT_BELOW\x10\x01\x12\x0e\n\nTEXT_ABOVE\x10\x02\"\xb1\x08\n\x07\x43olumns\x12\x39\n\x0c\x63olumn_items\x18\x02 \x03(\x0b\x32#.google.apps.card.v1.Columns.Column\x1a\xea\x07\n\x06\x43olumn\x12V\n\x15horizontal_size_style\x18\x01 \x01(\x0e\x32\x37.google.apps.card.v1.Columns.Column.HorizontalSizeStyle\x12M\n\x14horizontal_alignment\x18\x02 \x01(\x0e\x32/.google.apps.card.v1.Widget.HorizontalAlignment\x12Q\n\x12vertical_alignment\x18\x03 \x01(\x0e\x32\x35.google.apps.card.v1.Columns.Column.VerticalAlignment\x12<\n\x07widgets\x18\x04 \x03(\x0b\x32+.google.apps.card.v1.Columns.Column.Widgets\x1a\xdd\x03\n\x07Widgets\x12<\n\x0etext_paragraph\x18\x01 \x01(\x0b\x32\".google.apps.card.v1.TextParagraphH\x00\x12+\n\x05image\x18\x02 \x01(\x0b\x32\x1a.google.apps.card.v1.ImageH\x00\x12<\n\x0e\x64\x65\x63orated_text\x18\x03 \x01(\x0b\x32\".google.apps.card.v1.DecoratedTextH\x00\x12\x36\n\x0b\x62utton_list\x18\x04 \x01(\x0b\x32\x1f.google.apps.card.v1.ButtonListH\x00\x12\x34\n\ntext_input\x18\x05 \x01(\x0b\x32\x1e.google.apps.card.v1.TextInputH\x00\x12>\n\x0fselection_input\x18\x06 \x01(\x0b\x32#.google.apps.card.v1.SelectionInputH\x00\x12?\n\x10\x64\x61te_time_picker\x18\x07 \x01(\x0b\x32#.google.apps.card.v1.DateTimePickerH\x00\x12\x32\n\tchip_list\x18\x08 \x01(\x0b\x32\x1d.google.apps.card.v1.ChipListH\x00\x42\x06\n\x04\x64\x61ta\"n\n\x13HorizontalSizeStyle\x12%\n!HORIZONTAL_SIZE_STYLE_UNSPECIFIED\x10\x00\x12\x18\n\x14\x46ILL_AVAILABLE_SPACE\x10\x01\x12\x16\n\x12\x46ILL_MINIMUM_SPACE\x10\x02\"X\n\x11VerticalAlignment\x12\"\n\x1eVERTICAL_ALIGNMENT_UNSPECIFIED\x10\x00\x12\n\n\x06\x43\x45NTER\x10\x01\x12\x07\n\x03TOP\x10\x02\x12\n\n\x06\x42OTTOM\x10\x03\"\xd8\x01\n\x08\x43\x61rousel\x12\x42\n\x0e\x63\x61rousel_cards\x18\x04 \x03(\x0b\x32*.google.apps.card.v1.Carousel.CarouselCard\x1a\x87\x01\n\x0c\x43\x61rouselCard\x12\x37\n\x07widgets\x18\x01 \x03(\x0b\x32&.google.apps.card.v1.Card.NestedWidget\x12>\n\x0e\x66ooter_widgets\x18\x02 \x03(\x0b\x32&.google.apps.card.v1.Card.NestedWidget\"\xca\x01\n\x0f\x43ollapseControl\x12M\n\x14horizontal_alignment\x18\x01 \x01(\x0e\x32/.google.apps.card.v1.Widget.HorizontalAlignment\x12\x32\n\rexpand_button\x18\x02 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\x12\x34\n\x0f\x63ollapse_button\x18\x03 \x01(\x0b\x32\x1b.google.apps.card.v1.Button\"\x9c\x02\n\x07OnClick\x12-\n\x06\x61\x63tion\x18\x01 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12\x32\n\topen_link\x18\x02 \x01(\x0b\x32\x1d.google.apps.card.v1.OpenLinkH\x00\x12?\n\x18open_dynamic_link_action\x18\x03 \x01(\x0b\x32\x1b.google.apps.card.v1.ActionH\x00\x12)\n\x04\x63\x61rd\x18\x04 \x01(\x0b\x32\x19.google.apps.card.v1.CardH\x00\x12:\n\roverflow_menu\x18\x08 \x01(\x0b\x32!.google.apps.card.v1.OverflowMenuH\x00\x42\x06\n\x04\x64\x61ta\"\xd1\x01\n\x08OpenLink\x12\x0b\n\x03url\x18\x01 \x01(\t\x12\x35\n\x07open_as\x18\x02 \x01(\x0e\x32$.google.apps.card.v1.OpenLink.OpenAs\x12\x37\n\x08on_close\x18\x03 \x01(\x0e\x32%.google.apps.card.v1.OpenLink.OnClose\"$\n\x06OpenAs\x12\r\n\tFULL_SIZE\x10\x00\x12\x0b\n\x07OVERLAY\x10\x01\"\"\n\x07OnClose\x12\x0b\n\x07NOTHING\x10\x00\x12\n\n\x06RELOAD\x10\x01\"\xc4\x03\n\x06\x41\x63tion\x12\x10\n\x08\x66unction\x18\x01 \x01(\t\x12?\n\nparameters\x18\x02 \x03(\x0b\x32+.google.apps.card.v1.Action.ActionParameter\x12\x41\n\x0eload_indicator\x18\x03 \x01(\x0e\x32).google.apps.card.v1.Action.LoadIndicator\x12\x16\n\x0epersist_values\x18\x04 \x01(\x08\x12<\n\x0binteraction\x18\x05 \x01(\x0e\x32\'.google.apps.card.v1.Action.Interaction\x12\x18\n\x10required_widgets\x18\x06 \x03(\t\x12 \n\x18\x61ll_widgets_are_required\x18\x07 \x01(\x08\x1a-\n\x0f\x41\x63tionParameter\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"&\n\rLoadIndicator\x12\x0b\n\x07SPINNER\x10\x00\x12\x08\n\x04NONE\x10\x01\";\n\x0bInteraction\x12\x1b\n\x17INTERACTION_UNSPECIFIED\x10\x00\x12\x0f\n\x0bOPEN_DIALOG\x10\x01\"\xcc\x01\n\nValidation\x12\x17\n\x0f\x63haracter_limit\x18\x01 \x01(\x05\x12=\n\ninput_type\x18\x02 \x01(\x0e\x32).google.apps.card.v1.Validation.InputType\"f\n\tInputType\x12\x1a\n\x16INPUT_TYPE_UNSPECIFIED\x10\x00\x12\x08\n\x04TEXT\x10\x01\x12\x0b\n\x07INTEGER\x10\x02\x12\t\n\x05\x46LOAT\x10\x03\x12\t\n\x05\x45MAIL\x10\x04\x12\x10\n\x0c\x45MOJI_PICKER\x10\x05\"\xb4\x01\n\x08\x43hipList\x12\x34\n\x06layout\x18\x01 \x01(\x0e\x32$.google.apps.card.v1.ChipList.Layout\x12(\n\x05\x63hips\x18\x02 \x03(\x0b\x32\x19.google.apps.card.v1.Chip\"H\n\x06Layout\x12\x16\n\x12LAYOUT_UNSPECIFIED\x10\x00\x12\x0b\n\x07WRAPPED\x10\x01\x12\x19\n\x15HORIZONTAL_SCROLLABLE\x10\x02\"\xa7\x01\n\x04\x43hip\x12\'\n\x04icon\x18\x01 \x01(\x0b\x32\x19.google.apps.card.v1.Icon\x12\r\n\x05label\x18\x02 \x01(\t\x12.\n\x08on_click\x18\x03 \x01(\x0b\x32\x1c.google.apps.card.v1.OnClick\x12\x13\n\x07\x65nabled\x18\x04 \x01(\x08\x42\x02\x18\x01\x12\x10\n\x08\x64isabled\x18\x06 \x01(\x08\x12\x10\n\x08\x61lt_text\x18\x05 \x01(\tB\xa4\x01\n\x17\x63om.google.apps.card.v1B\tCardProtoP\x01Z7google.golang.org/genproto/googleapis/apps/card/v1;card\xaa\x02\x13Google.Apps.Card.V1\xca\x02\x13Google\\Apps\\Card\\V1\xea\x02\x16Google::Apps::Card::V1b\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -20,13 +20,16 @@ module Google
         Card::CardHeader = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.CardHeader").msgclass
         Card::Section = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.Section").msgclass
         Card::CardAction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.CardAction").msgclass
+        Card::NestedWidget = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.NestedWidget").msgclass
         Card::CardFixedFooter = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.CardFixedFooter").msgclass
         Card::DividerStyle = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.DividerStyle").enummodule
         Card::DisplayStyle = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Card.DisplayStyle").enummodule
         Widget = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Widget").msgclass
         Widget::ImageType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Widget.ImageType").enummodule
         Widget::HorizontalAlignment = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Widget.HorizontalAlignment").enummodule
+        Widget::VerticalAlignment = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Widget.VerticalAlignment").enummodule
         TextParagraph = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.TextParagraph").msgclass
+        TextParagraph::TextSyntax = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.TextParagraph.TextSyntax").enummodule
         Image = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Image").msgclass
         Divider = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Divider").msgclass
         DecoratedText = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.DecoratedText").msgclass
@@ -44,7 +47,10 @@ module Google
         SelectionInput::SelectionType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.SelectionInput.SelectionType").enummodule
         DateTimePicker = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.DateTimePicker").msgclass
         DateTimePicker::DateTimePickerType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.DateTimePicker.DateTimePickerType").enummodule
+        OverflowMenu = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.OverflowMenu").msgclass
+        OverflowMenu::OverflowMenuItem = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.OverflowMenu.OverflowMenuItem").msgclass
         Button = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Button").msgclass
+        Button::Type = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Button.Type").enummodule
         Icon = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Icon").msgclass
         MaterialIcon = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.MaterialIcon").msgclass
         ImageCropStyle = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.ImageCropStyle").msgclass
@@ -60,6 +66,9 @@ module Google
         Columns::Column::Widgets = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Columns.Column.Widgets").msgclass
         Columns::Column::HorizontalSizeStyle = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Columns.Column.HorizontalSizeStyle").enummodule
         Columns::Column::VerticalAlignment = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Columns.Column.VerticalAlignment").enummodule
+        Carousel = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Carousel").msgclass
+        Carousel::CarouselCard = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Carousel.CarouselCard").msgclass
+        CollapseControl = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.CollapseControl").msgclass
         OnClick = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.OnClick").msgclass
         OpenLink = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.OpenLink").msgclass
         OpenLink::OpenAs = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.OpenLink.OpenAs").enummodule
@@ -68,6 +77,11 @@ module Google
         Action::ActionParameter = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Action.ActionParameter").msgclass
         Action::LoadIndicator = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Action.LoadIndicator").enummodule
         Action::Interaction = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Action.Interaction").enummodule
+        Validation = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Validation").msgclass
+        Validation::InputType = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Validation.InputType").enummodule
+        ChipList = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.ChipList").msgclass
+        ChipList::Layout = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.ChipList.Layout").enummodule
+        Chip = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.apps.card.v1.Chip").msgclass
       end
     end
   end
@@ -75,7 +89,7 @@ end
 
 #### Source proto file: google/apps/card/v1/card.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -104,7 +118,7 @@ end
 # option ruby_package = "Google::Apps::Card::V1";
 #
 # // A card interface displayed in a Google Chat message or Google Workspace
-# // Add-on.
+# // add-on.
 # //
 # // Cards support a defined layout, interactive UI elements like buttons, and
 # // rich media like images. Use cards to present detailed information,
@@ -117,8 +131,12 @@ end
 # //
 # // * For Google Chat apps, see [Design the components of a card or
 # //   dialog](https://developers.google.com/workspace/chat/design-components-card-dialog).
-# // * For Google Workspace Add-ons, see [Card-based
+# // * For Google Workspace add-ons, see [Card-based
 # // interfaces](https://developers.google.com/apps-script/add-ons/concepts/cards).
+# //
+# // Note: You can add up to 100 widgets per card. Any widgets beyond this
+# // limit are ignored. This limit applies to both card messages and dialogs
+# // in Google Chat apps, and to cards in Google Workspace add-ons.
 # //
 # // **Example: Card message for a Google Chat app**
 # //
@@ -211,7 +229,7 @@ end
 #   // Represents a card header. For an example in Google Chat apps, see [Add a
 #   // header](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_header).
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message CardHeader {
 #     // Required. The title of the card header.
@@ -226,7 +244,7 @@ end
 #
 #     // The shape used to crop the image.
 #     //
-#     // [Google Workspace Add-ons and Chat
+#     // [Google Workspace add-ons and Chat
 #     // apps](https://developers.google.com/workspace/extend):
 #     Widget.ImageType image_type = 3;
 #
@@ -240,7 +258,7 @@ end
 #   // A section contains a collection of widgets that are rendered
 #   // vertically in the order that they're specified.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message Section {
 #     // Text that appears at the top of a section.
@@ -251,7 +269,7 @@ end
 #     // and
 #     // [Formatting
 #     // text in Google Workspace
-#     // Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+#     // add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
 #     string header = 1;
 #
 #     // All the widgets in the section.
@@ -277,21 +295,27 @@ end
 #     // by default. The `uncollapsibleWidgetsCount` is taken into account only
 #     // when `collapsible` is `true`.
 #     int32 uncollapsible_widgets_count = 6;
+#
+#     // Optional. Define the expand and collapse button of the section.
+#     // This button will be shown only if the section is collapsible.
+#     // If this field isn't set, the default button is used.
+#     CollapseControl collapse_control = 8;
 #   }
 #
 #   // The divider style of a card. Currently only used for dividers betweens card
 #   // sections.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum DividerStyle {
 #     // Don't use. Unspecified.
 #     DIVIDER_STYLE_UNSPECIFIED = 0;
 #
-#     // Default option. Render a solid divider between sections.
+#     // Default option. Render a solid divider.
 #     SOLID_DIVIDER = 1;
 #
-#     // If set, no divider is rendered between sections.
+#     // If set, no divider is rendered. This style completely removes the divider
+#     // from the layout. The result is equivalent to not adding a divider at all.
 #     NO_DIVIDER = 2;
 #   }
 #
@@ -300,13 +324,29 @@ end
 #   // invoice, or open the invoice in a browser.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   message CardAction {
 #     // The label that displays as the action menu item.
 #     string action_label = 1;
 #
 #     // The `onClick` action for this action item.
 #     OnClick on_click = 2;
+#   }
+#
+#   // A list of widgets that can be displayed in a containing layout, such
+#   // as a `CarouselCard`.
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   message NestedWidget {
+#     oneof data {
+#       // A text paragraph widget.
+#       TextParagraph text_paragraph = 1;
+#
+#       // A button list widget.
+#       ButtonList button_list = 3;
+#
+#       // An image widget.
+#       Image image = 10;
+#     }
 #   }
 #
 #   // A persistent (sticky) footer that that appears at the bottom of the card.
@@ -321,7 +361,7 @@ end
 #   // For an example in Google Chat apps, see [Add a persistent
 #   // footer](https://developers.google.com/workspace/chat/design-components-card-dialog#add_a_persistent_footer).
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message CardFixedFooter {
 #     // The primary button of the fixed footer. The button must be a text button
@@ -334,11 +374,11 @@ end
 #     Button secondary_button = 2;
 #   }
 #
-#   // In Google Workspace Add-ons,
+#   // In Google Workspace add-ons,
 #   // determines how a card is displayed.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   enum DisplayStyle {
 #     // Don't use. Unspecified.
 #     DISPLAY_STYLE_UNSPECIFIED = 0;
@@ -364,13 +404,13 @@ end
 #   // card](https://developers.google.com/workspace/chat/design-components-card-dialog#define_a_section_of_a_card).
 #   repeated Section sections = 2;
 #
-#   // The divider style between sections.
+#   // The divider style between the header, sections and footer.
 #   DividerStyle section_divider_style = 9;
 #
 #   // The card's actions. Actions are added to the card's toolbar menu.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   //
 #   // For example, the following JSON constructs a card action menu with
 #   // `Settings` and `Send Feedback` options:
@@ -407,7 +447,7 @@ end
 #   // Name of the card. Used as a card identifier in card navigation.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   string name = 4;
 #
 #   // The fixed footer shown at the bottom of this card.
@@ -419,15 +459,15 @@ end
 #   // [card
 #   // messages](https://developers.google.com/workspace/chat/create-messages#create).
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   CardFixedFooter fixed_footer = 5;
 #
-#   // In Google Workspace Add-ons, sets the display properties of the
+#   // In Google Workspace add-ons, sets the display properties of the
 #   // `peekCardHeader`.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   DisplayStyle display_style = 6;
 #
 #   // When displaying contextual content, the peek card header acts as a
@@ -435,7 +475,7 @@ end
 #   // cards and the contextual cards.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   CardHeader peek_card_header = 7;
 # }
 #
@@ -446,7 +486,7 @@ end
 # message Widget {
 #   // The shape used to crop the image.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum ImageType {
 #     // Default value. Applies a square mask to the image. For example, a 4x3
@@ -479,6 +519,21 @@ end
 #     END = 3;
 #   }
 #
+#   // Represents vertical alignment attribute.
+#   enum VerticalAlignment {
+#     // Unspecified type. Do not use.
+#     VERTICAL_ALIGNMENT_UNSPECIFIED = 0;
+#
+#     // Alignment to the top position.
+#     TOP = 1;
+#
+#     // Alignment to the middle position.
+#     MIDDLE = 2;
+#
+#     // Alignment to the bottom position.
+#     BOTTOM = 3;
+#   }
+#
 #   // A widget can only have one of the following items. You can use multiple
 #   // widget fields to display more items.
 #   oneof data {
@@ -489,7 +544,7 @@ end
 #     // and
 #     // [Formatting
 #     // text in Google Workspace
-#     // Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+#     // add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
 #     //
 #     // For example, the following JSON creates a bolded text:
 #     // ```
@@ -547,7 +602,6 @@ end
 #     //         "red": 0,
 #     //         "green": 0,
 #     //         "blue": 1,
-#     //         "alpha": 1
 #     //       },
 #     //       "disabled": true,
 #     //     },
@@ -653,7 +707,7 @@ end
 #     //   "name": "appointment_time",
 #     //   "label": "Book your appointment at:",
 #     //   "type": "DATE_AND_TIME",
-#     //   "valueMsEpoch": "796435200000"
+#     //   "valueMsEpoch": 796435200000
 #     // }
 #     // ```
 #     DateTimePicker date_time_picker = 7;
@@ -674,7 +728,7 @@ end
 #     // of columns. A grid with 10 items and 2 columns has 5 rows. A grid with 11
 #     // items and 2 columns has 6 rows.
 #     //
-#     // [Google Workspace Add-ons and
+#     // [Google Workspace add-ons and
 #     // Chat apps](https://developers.google.com/workspace/extend):
 #     //
 #     // For example, the following JSON creates a 2 column grid with a single
@@ -750,6 +804,56 @@ end
 #     // }
 #     // ```
 #     Columns columns = 11;
+#
+#     // A carousel contains a collection of nested widgets.
+#     // For example, this is a JSON representation of a carousel that contains
+#     // two text paragraphs.
+#     //
+#     // ```
+#     // {
+#     //   "widgets": [
+#     //     {
+#     //       "textParagraph": {
+#     //         "text": "First text paragraph in the carousel."
+#     //       }
+#     //     },
+#     //     {
+#     //       "textParagraph": {
+#     //         "text": "Second text paragraph in the carousel."
+#     //       }
+#     //     }
+#     //   ]
+#     // }
+#     // ```
+#     Carousel carousel = 13;
+#
+#     // A list of chips.
+#     //
+#     // For example, the following JSON creates two chips. The first
+#     // is a text chip and the second is an icon chip that opens a
+#     // link:
+#     // ```
+#     // "chipList": {
+#     //   "chips": [
+#     //     {
+#     //       "text": "Edit",
+#     //       "disabled": true,
+#     //     },
+#     //     {
+#     //       "icon": {
+#     //         "knownIcon": "INVITE",
+#     //         "altText": "check calendar"
+#     //       },
+#     //       "onClick": {
+#     //         "openLink": {
+#     //           "url": "https://example.com/calendar"
+#     //         }
+#     //       }
+#     //     }
+#     //   ]
+#     // }
+#     // ```
+#     ChipList chip_list = 14;
 #   }
 #
 #   // Specifies whether widgets align to the left, right, or center of a column.
@@ -766,20 +870,49 @@ end
 # // and
 # // [Formatting
 # // text in Google Workspace
-# // Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+# // add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
 # //
-# // [Google Workspace Add-ons and
+# // [Google Workspace add-ons and
 # // Chat apps](https://developers.google.com/workspace/extend):
 # message TextParagraph {
+#   // Syntax to use for formatting text.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   enum TextSyntax {
+#     // The text is rendered as HTML if unspecified.
+#     TEXT_SYNTAX_UNSPECIFIED = 0;
+#
+#     // The text is rendered as HTML. This is the default value.
+#     HTML = 1;
+#
+#     // The text is rendered as Markdown.
+#     MARKDOWN = 2;
+#   }
+#
 #   // The text that's shown in the widget.
 #   string text = 1;
+#
+#   // The maximum number of lines of text that are displayed in the widget. If
+#   // the text exceeds the specified maximum number of lines, the excess
+#   // content is concealed behind a **show more** button. If the text is equal or
+#   // shorter than the specified maximum number of lines, a **show more** button
+#   // isn't displayed.
+#   //
+#   // The default value is 0, in which case
+#   // all context is displayed. Negative values are ignored.
+#   int32 max_lines = 2;
+#
+#   // The syntax of the text. If not set, the text is rendered as HTML.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   TextSyntax text_syntax = 4;
 # }
 #
 # // An image that is specified by a URL and can have an `onClick` action. For an
 # // example, see [Add an
 # // image](https://developers.google.com/workspace/chat/add-text-image-card-dialog#add_an_image).
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message Image {
 #   // The HTTPS URL that hosts the image.
@@ -803,7 +936,7 @@ end
 # // [Add a horizontal divider between
 # // widgets](https://developers.google.com/workspace/chat/format-structure-card-dialog#add_a_horizontal_divider_between_widgets).
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # //
 # // For example, the following JSON creates a divider:
@@ -819,19 +952,19 @@ end
 # // Google Chat apps, see [Display text with decorative
 # // text](https://developers.google.com/workspace/chat/add-text-image-card-dialog#display_text_with_decorative_elements).
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message DecoratedText {
 #   // Either a toggle-style switch or a checkbox inside a `decoratedText` widget.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   //
 #   // Only supported in the `decoratedText` widget.
 #   message SwitchControl {
 #     // How the switch appears in the user interface.
 #     //
-#     // [Google Workspace Add-ons
+#     // [Google Workspace add-ons
 #     // and Chat apps](https://developers.google.com/workspace/extend):
 #     enum ControlType {
 #       // A toggle-style switch.
@@ -865,7 +998,7 @@ end
 #
 #     // How the switch appears in the user interface.
 #     //
-#     // [Google Workspace Add-ons
+#     // [Google Workspace add-ons
 #     // and Chat apps](https://developers.google.com/workspace/extend):
 #     ControlType control_type = 5;
 #   }
@@ -876,8 +1009,20 @@ end
 #   // The icon displayed in front of the text.
 #   Icon start_icon = 12;
 #
+#   // Optional. Vertical alignment of the start icon. If not set, the icon
+#   // will be vertically centered.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   Widget.VerticalAlignment start_icon_vertical_alignment = 13;
+#
 #   // The text that appears above `text`. Always truncates.
 #   string top_label = 3;
+#
+#   // `TextParagraph` equivalent of `top_label`. Always truncates. Allows for
+#   // more complex formatting than `top_label`.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   TextParagraph top_label_text = 17;
 #
 #   // Required. The primary text.
 #   //
@@ -888,8 +1033,14 @@ end
 #   // and
 #   // [Formatting
 #   // text in Google Workspace
-#   // Add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
+#   // add-ons](https://developers.google.com/apps-script/add-ons/concepts/widgets#text_formatting).
 #   string text = 4;
+#
+#   // `TextParagraph` equivalent of `text`. Allows for more complex formatting
+#   // than `text`.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   TextParagraph content_text = 18;
 #
 #   // The wrap text setting. If `true`, the text wraps and displays on
 #   // multiple lines. Otherwise, the text is truncated.
@@ -899,6 +1050,12 @@ end
 #
 #   // The text that appears below `text`. Always wraps.
 #   string bottom_label = 6;
+#
+#   // `TextParagraph` equivalent of `bottom_label`. Always wraps. Allows for
+#   // more complex formatting than `bottom_label`.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   TextParagraph bottom_label_text = 19;
 #
 #   // This action is triggered when users click `topLabel` or `bottomLabel`.
 #   OnClick on_click = 7;
@@ -925,8 +1082,11 @@ end
 # }
 #
 # // A field in which users can enter text. Supports suggestions and on-change
-# // actions. For an example in Google Chat apps, see [Add a field in which a user
-# // can enter
+# // actions.
+# // Supports form submission validation. When `Action.all_widgets_are_required`
+# // is set to `true` or this widget is specified in `Action.required_widgets`,
+# // the submission action is blocked unless a value is entered. For an example in
+# // Google Chat apps, see [Add a field in which a user can enter
 # // text](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_field_in_which_a_user_can_enter_text).
 # //
 # // Chat apps receive and can process the value of entered text during form input
@@ -937,7 +1097,7 @@ end
 # // use a text input. To collect defined or enumerated data from users, use the
 # // [SelectionInput][google.apps.card.v1.SelectionInput] widget.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message TextInput {
 #   // How a text input field appears in the user interface. For example,
@@ -945,7 +1105,7 @@ end
 #   // `initialSuggestions` is specified, `type` is always `SINGLE_LINE`,
 #   // even if it's set to `MULTIPLE_LINE`.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum Type {
 #     // The text input field has a fixed height of one line.
@@ -1011,7 +1171,7 @@ end
 #   // to `MULTIPLE_LINE`.
 #   //
 #   // [Google Workspace
-#   // Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+#   // add-ons and Chat apps](https://developers.google.com/workspace/extend):
 #   Suggestions initial_suggestions = 7;
 #
 #   // Optional. Specify what action to take when the text input field provides
@@ -1024,8 +1184,14 @@ end
 #   // a custom function.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   Action auto_complete_action = 8;
+#
+#   // Specify the input format validation necessary for this text field.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   Validation validation = 11;
 #
 #   // Text that appears in the text input field when the field is empty.
 #   // Use this text to prompt users to enter a value. For example, `Enter a
@@ -1052,11 +1218,11 @@ end
 # // to `MULTIPLE_LINE`.
 # //
 # // [Google Workspace
-# // Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+# // add-ons and Chat apps](https://developers.google.com/workspace/extend):
 # message Suggestions {
 #   // One suggested value that users can enter in a text input field.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message SuggestionItem {
 #     oneof content {
@@ -1076,7 +1242,7 @@ end
 # // [Add a
 # // button](https://developers.google.com/workspace/chat/design-interactive-card-dialog#add_a_button).
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message ButtonList {
 #   // An array of buttons.
@@ -1084,9 +1250,12 @@ end
 # }
 #
 # // A widget that creates one or more UI items that users can select.
-# // For example, a dropdown menu or checkboxes. You can use this widget to
-# // collect data that can be predicted or enumerated. For an example in Google
-# // Chat apps, see [Add selectable UI
+# // Supports form submission validation for `dropdown` and `multiselect` menus
+# // only. When `Action.all_widgets_are_required` is set to `true` or this widget
+# // is specified in `Action.required_widgets`, the submission action is blocked
+# // unless a value is selected. For example, a dropdown menu or checkboxes. You
+# // can use this widget to collect data that can be predicted or enumerated. For
+# // an example in Google Chat apps, see [Add selectable UI
 # // elements](/workspace/chat/design-interactive-card-dialog#add_selectable_ui_elements).
 # //
 # // Chat apps can process the value of items that users select or input. For
@@ -1096,7 +1265,7 @@ end
 # // To collect undefined or abstract data from users, use
 # // the [TextInput][google.apps.card.v1.TextInput] widget.
 # //
-# // [Google Workspace Add-ons
+# // [Google Workspace add-ons
 # // and Chat apps](https://developers.google.com/workspace/extend):
 # message SelectionInput {
 #   // The format for the items that users can select. Different options support
@@ -1106,7 +1275,7 @@ end
 #   // Each selection input supports one type of selection. Mixing checkboxes
 #   // and switches, for example, isn't supported.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum SelectionType {
 #     // A set of checkboxes. Users can select one or more checkboxes.
@@ -1119,38 +1288,56 @@ end
 #     SWITCH = 2;
 #
 #     // A dropdown menu. Users can select one item from the menu.
-#     DROPDOWN = 3;
-#
-#     // A multiselect menu for static or dynamic data. From the menu bar,
-#     // users select one or more items. Users can also input values to populate
-#     // dynamic data. For example, users can start typing the name of a Google
-#     // Chat space and the widget autosuggests the space.
 #     //
-#     // To populate items for a multiselect menu, you can use one of the
-#     // following types of data sources:
+#     // For Google Chat apps, you can populate items using a dynamic data source
+#     // and autosuggest items as users type in the menu. For example, users can
+#     // start typing the name of a Google Chat space and the widget autosuggests
+#     // the space. To dynamically populate items for a dropdown menu, use one of
+#     // the following types of data sources:
 #     //
-#     //  * Static data: Items are specified as `SelectionItem` objects in the
-#     //    widget. Up to 100 items.
 #     //  * Google Workspace data: Items are populated using data from Google
 #     //    Workspace, such as Google Workspace users or Google Chat spaces.
 #     //  * External data: Items are populated from an external data
 #     //    source outside of Google Workspace.
 #     //
-#     // For examples of how to implement multiselect menus, see
+#     // For examples of how to implement dropdown menus for Chat apps, see
+#     // [Add a dropdown
+#     // menu](https://developers.google.com/workspace/chat/design-interactive-card-dialog#dropdown-menu)
+#     // and [Dynamically populate drop-down
+#     // menus](https://developers.google.com/workspace/chat/design-interactive-card-dialog#dynamic-dropdown-menu).
+#     //
+#     // [Google Workspace add-ons and Chat
+#     // apps](https://developers.google.com/workspace/extend):
+#     DROPDOWN = 3;
+#
+#     // A menu with a text box. Users can type and select one or more items.
+#     // For Google Workspace add-ons, you must populate items using a static
+#     // array of `SelectionItem` objects.
+#     //
+#     // For Google Chat apps, you can also populate items using a dynamic data
+#     // source and autosuggest items as users type in the menu. For example,
+#     // users can start typing the name of a Google Chat space and the widget
+#     // autosuggests the space. To dynamically populate items for a multiselect
+#     // menu, use one of the following types of data sources:
+#     //
+#     //  * Google Workspace data: Items are populated using data from Google
+#     //    Workspace, such as Google Workspace users or Google Chat spaces.
+#     //  * External data: Items are populated from an external data
+#     //    source outside of Google Workspace.
+#     //
+#     // For examples of how to implement multiselect menus for Chat apps, see
 #     // [Add a multiselect
 #     // menu](https://developers.google.com/workspace/chat/design-interactive-card-dialog#multiselect-menu).
 #     //
-#     // [Google Workspace Add-ons and Chat
+#     // [Google Workspace add-ons and Chat
 #     // apps](https://developers.google.com/workspace/extend):
-#     // Multiselect for Google Workspace Add-ons are in
-#     // Developer Preview.
 #     MULTI_SELECT = 4;
 #   }
 #
 #   // An item that users can select in a selection input, such as a checkbox
-#   // or switch.
+#   // or switch. Supports up to 100 items.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message SelectionItem {
 #     // The text that identifies or describes the item to users.
@@ -1172,7 +1359,9 @@ end
 #     // the item's `text` field. Supports PNG and JPEG files. Must be an `HTTPS`
 #     // URL. For example,
 #     // `https://developers.google.com/workspace/chat/images/quickstart-app-avatar.png`.
-#     string start_icon_uri = 4;
+#     oneof start_icon {
+#       string start_icon_uri = 4;
+#     }
 #
 #     // For multiselect menus, a text description or label that's
 #     // displayed below the item's `text` field.
@@ -1208,7 +1397,8 @@ end
 #     }
 #   }
 #
-#   // The name that identifies the selection input in a form input event.
+#   // Required. The name that identifies the selection input in a form input
+#   // event.
 #   //
 #   // For details about working with form inputs, see [Receive form
 #   // data](https://developers.google.com/workspace/chat/read-form-data).
@@ -1241,22 +1431,26 @@ end
 #
 #   // For multiselect menus, the maximum number of items that a user can select.
 #   // Minimum value is 1 item. If unspecified, defaults to 3 items.
-#   int32 multi_select_max_selected_items = 6;
+#   optional int32 multi_select_max_selected_items = 6;
 #
 #   // For multiselect menus, the number of text characters that a user inputs
-#   // before the app queries autocomplete and displays suggested items
-#   // in the menu.
+#   // before the menu returns suggested selection items.
 #   //
-#   // If unspecified, defaults to 0 characters for static data sources and 3
-#   // characters for external data sources.
+#   // If unset, the multiselect menu uses the following default values:
+#   //
+#   // * If the menu uses a static array of `SelectionInput` items, defaults to
+#   //   0 characters and immediately populates items from the array.
+#   // * If the menu uses a dynamic data source (`multi_select_data_source`),
+#   //  defaults to 3 characters before querying the data source to return
+#   //  suggested items.
 #   int32 multi_select_min_query_length = 7;
 #
-#   // For a multiselect menu, the data source that populates
+#   // For a multiselect menu, a data source that dynamically populates
 #   // selection items.
 #   //
 #   // [Google Chat apps](https://developers.google.com/workspace/chat):
 #   oneof multi_select_data_source {
-#     // An external data source, such as a relational data base.
+#     // An external data source, such as a relational database.
 #     Action external_data_source = 8;
 #
 #     // A data source from Google Workspace.
@@ -1264,8 +1458,11 @@ end
 #   }
 # }
 #
-# // Lets users input a date, a time, or both a date and a time. For an example in
-# // Google Chat apps, see [Let a user pick a date and
+# // Lets users input a date, a time, or both a date and a time.
+# // Supports form submission validation. When `Action.all_widgets_are_required`
+# // is set to `true` or this widget is specified in `Action.required_widgets`,
+# // the submission action is blocked unless a value is selected. For an example
+# // in Google Chat apps, see [Let a user pick a date and
 # // time](https://developers.google.com/workspace/chat/design-interactive-card-dialog#let_a_user_pick_a_date_and_time).
 # //
 # // Users can input text or use the picker to select dates and times. If users
@@ -1273,12 +1470,12 @@ end
 # // to input the information correctly.
 # //
 # // [Google Workspace
-# // Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+# // add-ons and Chat apps](https://developers.google.com/workspace/extend):
 # message DateTimePicker {
 #   // The format for the date and time in the `DateTimePicker` widget.
 #   // Determines whether users can input a date, a time, or both a date and time.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum DateTimePickerType {
 #     // Users input a date and time.
@@ -1305,8 +1502,8 @@ end
 #   // Whether the widget supports inputting a date, a time, or the date and time.
 #   DateTimePickerType type = 3;
 #
-#   // The default value displayed in the widget, in milliseconds since [Unix
-#   // epoch time](https://en.wikipedia.org/wiki/Unix_time).
+#   // Optional. The default value displayed in the widget, in milliseconds since
+#   // [Unix epoch time](https://en.wikipedia.org/wiki/Unix_time).
 #   //
 #   // Specify the value based on the type of picker (`DateTimePickerType`):
 #   //
@@ -1316,7 +1513,7 @@ end
 #   //   January 1, 2023, use `1672531200000`.
 #   // * `TIME_ONLY`: a time in UTC. For example, to represent 12:00 PM, use
 #   //   `43200000` (or `12 * 60 * 60 * 1000`).
-#   int64 value_ms_epoch = 4;
+#   optional int64 value_ms_epoch = 4;
 #
 #   // The number representing the time zone offset from UTC, in minutes.
 #   // If set, the `value_ms_epoch` is displayed in the specified time zone.
@@ -1326,6 +1523,40 @@ end
 #   // Triggered when the user clicks **Save** or **Clear** from the
 #   // `DateTimePicker` interface.
 #   Action on_change_action = 6;
+# }
+#
+# // A widget that presents a pop-up menu with one or more actions that users can
+# // invoke. For example, showing non-primary actions in a card. You can use this
+# // widget when actions don't fit in the available space. To use, specify this
+# // widget in the `OnClick` action of widgets that support it. For example, in a
+# // `Button`.
+# //
+# // [Google Workspace add-ons and Chat
+# // apps](https://developers.google.com/workspace/extend):
+# message OverflowMenu {
+#   // An option that users can invoke in an overflow menu.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   message OverflowMenuItem {
+#     // The icon displayed in front of the text.
+#     Icon start_icon = 1;
+#
+#     // Required. The text that identifies or describes the item to users.
+#     string text = 2;
+#
+#     // Required. The action invoked when a menu option is selected.
+#     // This `OnClick` cannot contain an `OverflowMenu`, any specified
+#     // `OverflowMenu` is dropped and the menu item disabled.
+#     OnClick on_click = 3;
+#
+#     // Whether the menu option is disabled.
+#     // Defaults to false.
+#     bool disabled = 4;
+#   }
+#
+#   // Required. The list of menu options.
+#   repeated OverflowMenuItem items = 1;
 # }
 #
 # // A text, icon, or text and icon button that users can click. For an example in
@@ -1339,47 +1570,68 @@ end
 # // `onClick` action.
 # //
 # // [Google Workspace
-# // Add-ons and Chat apps](https://developers.google.com/workspace/extend):
+# // add-ons and Chat apps](https://developers.google.com/workspace/extend):
 # message Button {
+#   // Optional. The
+#   // [type](https://m3.material.io/components/all-buttons#9134ac95-678e-49ae-a50a-e71948011b05)
+#   // of a button. If `color` field is set, the `type` is forced to `FILLED`.
+#   //
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   enum Type {
+#     // Don't use. Unspecified.
+#     TYPE_UNSPECIFIED = 0;
+#
+#     // Outlined buttons are medium-emphasis buttons. They usually contain
+#     // actions that are important, but aren’t the primary action in a Chat app
+#     // or an add-on.
+#     OUTLINED = 1;
+#
+#     // A filled button has a container with a solid color. It has the most
+#     // visual impact and is recommended for the important and primary action in
+#     // a Chat app or an add-on.
+#     FILLED = 2;
+#
+#     // A filled tonal button is an alternative middle ground between filled and
+#     // outlined buttons. They’re useful in contexts where a lower-priority
+#     // button requires slightly more emphasis than an outline button would give.
+#     FILLED_TONAL = 3;
+#
+#     // A button does not have an invisible container in its default state. It is
+#     // often used for the lowest priority actions, especially when presenting
+#     // multiple options.
+#     BORDERLESS = 4;
+#   }
+#
 #   // The text displayed inside the button.
 #   string text = 1;
 #
-#   // The icon image. If both `icon` and `text` are set, then the icon appears
-#   // before the text.
+#   // An icon displayed inside the button. If both `icon` and `text` are set,
+#   // then the icon appears before the text.
 #   Icon icon = 2;
 #
-#   // If set, the button is filled with a solid background color and the font
-#   // color changes to maintain contrast with the background color. For example,
-#   // setting a blue background likely results in white text.
+#   // Optional. The color of the button. If set, the button `type` is set to
+#   // `FILLED` and the color of `text` and `icon` fields are set to a
+#   // contrasting color for readability. For example, if the button color is
+#   // set to blue, any text or icons in the button are set to white.
 #   //
-#   // If unset, the image background is white and the font color is blue.
+#   // To set the button color, specify a value for the `red`, `green`, and `blue`
+#   // fields.
+#   // The value must be a float number between 0 and 1 based on the RGB color
+#   // value, where `0` (0/255) represents the absence of color  and `1` (255/255)
+#   // represents the maximum intensity of the color.
 #   //
-#   // For red, green, and blue, the value of each field is a `float` number that
-#   // you can express in either of two ways: as a number between 0 and 255
-#   // divided by 255 (153/255), or as a value between 0 and 1 (0.6). 0 represents
-#   // the absence of a color and 1 or 255/255 represent the full presence of that
-#   // color on the RGB scale.
-#   //
-#   // Optionally set `alpha`, which sets a level of transparency using this
-#   // equation:
-#   //
-#   // ```
-#   // pixel color = alpha * (this color) + (1.0 - alpha) * (background color)
-#   // ```
-#   //
-#   // For `alpha`, a value of `1` corresponds with a solid color, and a value of
-#   // `0` corresponds with a completely transparent color.
-#   //
-#   // For example, the following color represents a half transparent red:
+#   // For example, the following sets the color to red at its maximum intensity:
 #   //
 #   // ```
 #   // "color": {
 #   //    "red": 1,
 #   //    "green": 0,
 #   //    "blue": 0,
-#   //    "alpha": 0.5
 #   // }
 #   // ```
+#   //
+#   // The `alpha` field is unavailable for button color. If specified, this field
+#   // is ignored.
 #   google.type.Color color = 3;
 #
 #   // Required. The action to perform when a user clicks the button, such as
@@ -1397,6 +1649,11 @@ end
 #   // browser tab and navigates to the Google Chat developer documentation at
 #   // https://developers.google.com/workspace/chat".
 #   string alt_text = 6;
+#
+#   // Optional. The type of a button. If unset, button type defaults to
+#   // `OUTLINED`. If the `color` field is set, the button type is forced to
+#   // `FILLED` and any value set for this field is ignored.
+#   Type type = 7;
 # }
 #
 # // An icon displayed in a widget on a card. For an example in Google Chat apps,
@@ -1409,7 +1666,7 @@ end
 # // [custom](https://developers.google.com/workspace/chat/format-messages#customicons)
 # // icons.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message Icon {
 #   // The icon displayed in the widget on the card.
@@ -1522,7 +1779,7 @@ end
 #
 # // Represents the crop style applied to an image.
 # //
-# // [Google Workspace Add-ons and
+# // [Google Workspace add-ons and
 # // Chat apps](https://developers.google.com/workspace/extend):
 # //
 # // For example, here's how to apply a 16:9 aspect ratio:
@@ -1536,7 +1793,7 @@ end
 # message ImageCropStyle {
 #   // Represents the crop style applied to an image.
 #   //
-#   // [Google Workspace Add-ons
+#   // [Google Workspace add-ons
 #   // and Chat apps](https://developers.google.com/workspace/extend):
 #   enum ImageCropType {
 #     // Don't use. Unspecified.
@@ -1575,21 +1832,21 @@ end
 # // The style options for the border of a card or widget, including the border
 # // type and color.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message BorderStyle {
 #   // Represents the border types applied to widgets.
 #   //
-#   // [Google Workspace Add-ons
+#   // [Google Workspace add-ons
 #   // and Chat apps](https://developers.google.com/workspace/extend):
 #   enum BorderType {
 #     // Don't use. Unspecified.
 #     BORDER_TYPE_UNSPECIFIED = 0;
 #
-#     // Default value. No border.
+#     // No border.
 #     NO_BORDER = 1;
 #
-#     // Outline.
+#     // Default value. Outline.
 #     STROKE = 2;
 #   }
 #
@@ -1597,6 +1854,25 @@ end
 #   BorderType type = 1;
 #
 #   // The colors to use when the type is `BORDER_TYPE_STROKE`.
+#   //
+#   // To set the stroke color, specify a value for the `red`, `green`, and `blue`
+#   // fields.
+#   // The value must be a float number between 0 and 1 based on the RGB color
+#   // value, where `0` (0/255) represents the absence of color  and `1` (255/255)
+#   // represents the maximum intensity of the color.
+#   //
+#   // For example, the following sets the color to red at its maximum intensity:
+#   //
+#   // ```
+#   // "color": {
+#   //    "red": 1,
+#   //    "green": 0,
+#   //    "blue": 0,
+#   // }
+#   // ```
+#   //
+#   // The `alpha` field is unavailable for stroke color. If specified, this field
+#   // is ignored.
 #   google.type.Color stroke_color = 2;
 #
 #   // The corner radius for the border.
@@ -1605,7 +1881,7 @@ end
 #
 # // Represents an image.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message ImageComponent {
 #   // The image URL.
@@ -1632,7 +1908,7 @@ end
 # // 10 items and 2 columns has 5 rows. A grid with 11 items and 2 columns
 # // has 6 rows.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # //
 # // For example, the following JSON creates a 2 column grid with a single
@@ -1672,12 +1948,12 @@ end
 #   // Represents an item in a grid layout. Items can contain text, an image, or
 #   // both text and an image.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message GridItem {
 #     // Represents the various layout options available for a grid item.
 #     //
-#     // [Google Workspace Add-ons and Chat
+#     // [Google Workspace add-ons and Chat
 #     // apps](https://developers.google.com/workspace/extend):
 #     enum GridItemLayout {
 #       // Don't use. Unspecified.
@@ -1750,29 +2026,28 @@ end
 # // * On Android devices, the second column wraps if the screen width is
 # //   less than or equal to 320 dp.
 # //
-# // To include more than 2 columns, or to use rows, use the
+# // To include more than two columns, or to use rows, use the
 # // [`Grid`][google.apps.card.v1.Grid] widget.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
-# // Columns for Google Workspace Add-ons are in
-# // Developer Preview.
+# // The add-on UIs that support columns include:
+# //
+# // * The dialog displayed when users open the add-on from an email draft.
+# // * The dialog displayed when users open the add-on from the
+# // **Add attachment** menu in a Google Calendar event.
 # message Columns {
 #   // A column.
 #   //
-#   // [Google Workspace Add-ons and Chat
-#   // apps](https://developers.google.com/workspace/extend):
-#   // Columns for Google Workspace Add-ons are in
-#   // Developer Preview.
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend)
 #   message Column {
 #     // Specifies how a column fills the width of the card. The width of each
 #     // column depends on both the `HorizontalSizeStyle` and the width of the
 #     // widgets within the column.
 #     //
-#     // [Google Workspace Add-ons and Chat
-#     // apps](https://developers.google.com/workspace/extend):
-#     // Columns for Google Workspace Add-ons are in
-#     // Developer Preview.
+#     // [Google Workspace add-ons and Chat
+#     // apps](https://developers.google.com/workspace/extend)
 #     enum HorizontalSizeStyle {
 #       // Don't use. Unspecified.
 #       HORIZONTAL_SIZE_STYLE_UNSPECIFIED = 0;
@@ -1790,10 +2065,8 @@ end
 #     // Specifies whether widgets align to the top, bottom, or center of a
 #     // column.
 #     //
-#     // [Google Workspace Add-ons and Chat
-#     // apps](https://developers.google.com/workspace/extend):
-#     // Columns for Google Workspace Add-ons are in
-#     // Developer Preview.
+#     // [Google Workspace add-ons and Chat
+#     // apps](https://developers.google.com/workspace/extend)
 #     enum VerticalAlignment {
 #       // Don't use. Unspecified.
 #       VERTICAL_ALIGNMENT_UNSPECIFIED = 0;
@@ -1810,10 +2083,8 @@ end
 #
 #     // The supported widgets that you can include in a column.
 #     //
-#     // [Google Workspace Add-ons and Chat
-#     // apps](https://developers.google.com/workspace/extend):
-#     // Columns for Google Workspace Add-ons are in
-#     // Developer Preview.
+#     // [Google Workspace add-ons and Chat
+#     // apps](https://developers.google.com/workspace/extend)
 #     message Widgets {
 #       oneof data {
 #         // [TextParagraph][google.apps.card.v1.TextParagraph] widget.
@@ -1836,6 +2107,9 @@ end
 #
 #         // [DateTimePicker][google.apps.card.v1.DateTimePicker] widget.
 #         DateTimePicker date_time_picker = 7;
+#
+#         // [ChipList][google.apps.card.v1.ChipList] widget.
+#         ChipList chip_list = 8;
 #       }
 #     }
 #
@@ -1859,10 +2133,89 @@ end
 #   repeated Column column_items = 2;
 # }
 #
+# // A carousel, also known as a slider, rotates and displays a list of widgets in
+# // a slideshow format, with buttons navigating to the previous or next widget.
+# //
+# // For example, this is a JSON representation of a carousel that contains three
+# // text paragraph widgets.
+# //
+# // ```
+# // {
+# //   "carouselCards": [
+# //     {
+# //       "widgets": [
+# //         {
+# //           "textParagraph": {
+# //             "text": "First text paragraph in carousel",
+# //           }
+# //         }
+# //       ]
+# //     },
+# //     {
+# //       "widgets": [
+# //         {
+# //           "textParagraph": {
+# //             "text": "Second text paragraph in carousel",
+# //           }
+# //         }
+# //       ]
+# //     },
+# //     {
+# //       "widgets": [
+# //         {
+# //           "textParagraph": {
+# //             "text": "Third text paragraph in carousel",
+# //           }
+# //         }
+# //       ]
+# //     }
+# //   ]
+# // }
+# // ```
+# //
+# // [Google Chat apps](https://developers.google.com/workspace/chat):
+# message Carousel {
+#   // A card that can be displayed as a carousel item.
+#   // [Google Chat apps](https://developers.google.com/workspace/chat):
+#   message CarouselCard {
+#     // A list of widgets displayed in the carousel card. The widgets are
+#     // displayed in the order that they are specified.
+#     repeated Card.NestedWidget widgets = 1;
+#
+#     // A list of widgets displayed at the bottom of the carousel card. The
+#     // widgets are displayed in the order that they are specified.
+#     repeated Card.NestedWidget footer_widgets = 2;
+#   }
+#
+#   // A list of cards included in the carousel.
+#   repeated CarouselCard carousel_cards = 4;
+# }
+#
+# // Represent an expand and collapse control.
+# //
+# // [Google Workspace add-ons and Chat
+# // apps](https://developers.google.com/workspace/extend):
+# message CollapseControl {
+#   // The horizontal alignment of the expand and collapse button.
+#   Widget.HorizontalAlignment horizontal_alignment = 1;
+#
+#   // Optional. Define a customizable button to expand the section.
+#   // Both expand_button and collapse_button field must be set. Only one
+#   // field set will not take into effect.
+#   // If this field isn't set, the default button is used.
+#   Button expand_button = 2;
+#
+#   // Optional. Define a customizable button to collapse the section.
+#   // Both expand_button and collapse_button field must be set. Only one
+#   // field set will not take into effect.
+#   // If this field isn't set, the default button is used.
+#   Button collapse_button = 3;
+# }
+#
 # // Represents how to respond when users click an interactive element on
 # // a card, such as a button.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message OnClick {
 #   oneof data {
@@ -1878,20 +2231,23 @@ end
 #     // web client to do before the open link action response comes back.
 #     //
 #     // [Google Workspace
-#     // Add-ons](https://developers.google.com/workspace/add-ons):
+#     // add-ons](https://developers.google.com/workspace/add-ons):
 #     Action open_dynamic_link_action = 3;
 #
 #     // A new card is pushed to the card stack after clicking if specified.
 #     //
 #     // [Google Workspace
-#     // Add-ons](https://developers.google.com/workspace/add-ons):
+#     // add-ons](https://developers.google.com/workspace/add-ons):
 #     Card card = 4;
+#
+#     // If specified, this `onClick` opens an overflow menu.
+#     OverflowMenu overflow_menu = 8;
 #   }
 # }
 #
 # // Represents an `onClick` event that opens a hyperlink.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message OpenLink {
 #   // When an `OnClick` action opens a link, then the client can either open it
@@ -1901,7 +2257,7 @@ end
 #   // client doesn't support it. `FULL_SIZE` is supported by all clients.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   enum OpenAs {
 #     // The link opens as a full-size window (if that's the frame used by the
 #     // client).
@@ -1920,7 +2276,7 @@ end
 #   // can't support both values, `OnClose` takes precedence.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   enum OnClose {
 #     // Default value. The card doesn't reload; nothing happens.
 #     NOTHING = 0;
@@ -1940,14 +2296,14 @@ end
 #   // How to open a link.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   OpenAs open_as = 2;
 #
 #   // Whether the client forgets about a link after opening it, or observes it
 #   // until the window closes.
 #   //
 #   // [Google Workspace
-#   // Add-ons](https://developers.google.com/workspace/add-ons):
+#   // add-ons](https://developers.google.com/workspace/add-ons):
 #   OnClose on_close = 3;
 # }
 #
@@ -1955,7 +2311,7 @@ end
 # // For example, you can invoke an Apps Script script to handle the form.
 # // If the action is triggered, the form values are sent to the server.
 # //
-# // [Google Workspace Add-ons and Chat
+# // [Google Workspace add-ons and Chat
 # // apps](https://developers.google.com/workspace/extend):
 # message Action {
 #   // List of string parameters to supply when the action method is invoked.
@@ -1966,7 +2322,7 @@ end
 #   // To learn more, see
 #   // [`CommonEventObject`](https://developers.google.com/workspace/chat/api/reference/rest/v1/Event#commoneventobject).
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   message ActionParameter {
 #     // The name of the parameter for the action script.
@@ -1979,7 +2335,7 @@ end
 #   // Specifies the loading indicator that the action displays while
 #   // making the call to the action.
 #   //
-#   // [Google Workspace Add-ons and Chat
+#   // [Google Workspace add-ons and Chat
 #   // apps](https://developers.google.com/workspace/extend):
 #   enum LoadIndicator {
 #     // Displays a spinner to indicate that content is loading.
@@ -2023,7 +2379,7 @@ end
 #   }
 #
 #   // A custom function to invoke when the containing element is
-#   // clicked or othrwise activated.
+#   // clicked or otherwise activated.
 #   //
 #   // For example usage, see [Read form
 #   // data](https://developers.google.com/workspace/chat/read-form-data).
@@ -2074,4 +2430,121 @@ end
 #   //
 #   // [Google Chat apps](https://developers.google.com/workspace/chat):
 #   Interaction interaction = 5;
+#
+#   // Optional. Fill this list with the names of widgets that this Action
+#   // needs for a valid submission.
+#   //
+#   // If the widgets listed here don't have a value when this Action is invoked,
+#   // the form submission is aborted.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   repeated string required_widgets = 6;
+#
+#   // Optional. If this is true, then all widgets are considered required by
+#   // this action.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   bool all_widgets_are_required = 7;
+# }
+#
+# // Represents the necessary data for validating the widget it's attached to.
+# //
+# // [Google Workspace add-ons and Chat
+# // apps](https://developers.google.com/workspace/extend):
+# message Validation {
+#   // The type of the input widget.
+#   enum InputType {
+#     // Unspecified type. Do not use.
+#     INPUT_TYPE_UNSPECIFIED = 0;
+#
+#     // Regular text that accepts all characters.
+#     TEXT = 1;
+#
+#     // An integer value.
+#     INTEGER = 2;
+#
+#     // A float value.
+#     FLOAT = 3;
+#
+#     // An email address.
+#     EMAIL = 4;
+#
+#     // A emoji selected from system-provided emoji picker.
+#     EMOJI_PICKER = 5;
+#   }
+#
+#   // Specify the character limit for text input widgets.  Note that this is
+#   // only used for text input and is ignored for other widgets.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   int32 character_limit = 1;
+#
+#   // Specify the type of the input widgets.
+#   //
+#   // [Google Workspace add-ons and Chat
+#   // apps](https://developers.google.com/workspace/extend):
+#   InputType input_type = 2;
+# }
+#
+# // A list of chips layed out horizontally, which can either scroll horizontally
+# // or wrap to the next line.
+# //
+# // [Google Workspace add-ons and Chat
+# // apps](https://developers.google.com/workspace/extend):
+# message ChipList {
+#   // The chip list layout.
+#   enum Layout {
+#     // Don't use. Unspecified.
+#     LAYOUT_UNSPECIFIED = 0;
+#
+#     // Default value. The chip list wraps to the next line if there isn't enough
+#     // horizontal space.
+#     WRAPPED = 1;
+#
+#     // The chips scroll horizontally if they don't fit in the available space.
+#     HORIZONTAL_SCROLLABLE = 2;
+#   }
+#
+#   // Specified chip list layout.
+#   Layout layout = 1;
+#
+#   // An array of chips.
+#   repeated Chip chips = 2;
+# }
+#
+# // A text, icon, or text and icon chip that users can click.
+# //
+# // [Google Workspace add-ons and Chat
+# // apps](https://developers.google.com/workspace/extend):
+# message Chip {
+#   // The icon image. If both `icon` and `text` are set, then the icon appears
+#   // before the text.
+#   Icon icon = 1;
+#
+#   // The text displayed inside the chip.
+#   string label = 2;
+#
+#   // Optional. The action to perform when a user clicks the chip, such as
+#   // opening a hyperlink or running a custom function.
+#   OnClick on_click = 3;
+#
+#   // Whether the chip is in an active state and responds to user actions.
+#   // Defaults to `true`.
+#   // Deprecated. Use `disabled` instead.
+#   bool enabled = 4 [deprecated = true];
+#
+#   // Whether the chip is in an inactive state and ignores user actions.
+#   // Defaults to `false`.
+#   bool disabled = 6;
+#
+#   // The alternative text that's used for accessibility.
+#   //
+#   // Set descriptive text that lets users know what the chip does. For
+#   // example, if a chip opens a hyperlink, write: "Opens a new
+#   // browser tab and navigates to the Google Chat developer documentation at
+#   // https://developers.google.com/workspace/chat".
+#   string alt_text = 5;
 # }

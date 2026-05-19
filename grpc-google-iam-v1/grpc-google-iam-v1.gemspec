@@ -32,7 +32,7 @@ Gem::Specification.new do |spec|
   spec.files = Dir.glob("lib/**/*.rb") + Dir.glob("*.md")
   spec.require_paths = ["lib"]
 
-  spec.required_ruby_version = ">= 3.1"
+  spec.required_ruby_version = ">= 3.2"
 
   spec.add_dependency "googleapis-common-protos", "~> 1.9.0"
   spec.add_dependency "google-protobuf", ">= 3.18", "< 5.a"

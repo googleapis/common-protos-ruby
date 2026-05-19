@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/duration_pb'
 
 
-descriptor_data = "\n\x1agoogle/type/datetime.proto\x12\x0bgoogle.type\x1a\x1egoogle/protobuf/duration.proto\"\xe0\x01\n\x08\x44\x61teTime\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05\x12\r\n\x05hours\x18\x04 \x01(\x05\x12\x0f\n\x07minutes\x18\x05 \x01(\x05\x12\x0f\n\x07seconds\x18\x06 \x01(\x05\x12\r\n\x05nanos\x18\x07 \x01(\x05\x12/\n\nutc_offset\x18\x08 \x01(\x0b\x32\x19.google.protobuf.DurationH\x00\x12*\n\ttime_zone\x18\t \x01(\x0b\x32\x15.google.type.TimeZoneH\x00\x42\r\n\x0btime_offset\"\'\n\x08TimeZone\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\tBi\n\x0f\x63om.google.typeB\rDateTimeProtoP\x01Z<google.golang.org/genproto/googleapis/type/datetime;datetime\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x1agoogle/type/datetime.proto\x12\x0bgoogle.type\x1a\x1egoogle/protobuf/duration.proto\"\xe0\x01\n\x08\x44\x61teTime\x12\x0c\n\x04year\x18\x01 \x01(\x05\x12\r\n\x05month\x18\x02 \x01(\x05\x12\x0b\n\x03\x64\x61y\x18\x03 \x01(\x05\x12\r\n\x05hours\x18\x04 \x01(\x05\x12\x0f\n\x07minutes\x18\x05 \x01(\x05\x12\x0f\n\x07seconds\x18\x06 \x01(\x05\x12\r\n\x05nanos\x18\x07 \x01(\x05\x12/\n\nutc_offset\x18\x08 \x01(\x0b\x32\x19.google.protobuf.DurationH\x00\x12*\n\ttime_zone\x18\t \x01(\x0b\x32\x15.google.type.TimeZoneH\x00\x42\r\n\x0btime_offset\"\'\n\x08TimeZone\x12\n\n\x02id\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\tBf\n\x0f\x63om.google.typeB\rDateTimeProtoP\x01Z<google.golang.org/genproto/googleapis/type/datetime;datetime\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -21,7 +21,7 @@ end
 
 #### Source proto file: google/type/datetime.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -41,7 +41,6 @@ end
 #
 # import "google/protobuf/duration.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/datetime;datetime";
 # option java_multiple_files = true;
 # option java_outer_classname = "DateTimeProto";
@@ -61,8 +60,8 @@ end
 # //
 # // The date is relative to the Proleptic Gregorian Calendar.
 # //
-# // If year is 0, the DateTime is considered not to have a specific year. month
-# // and day must have valid, non-zero values.
+# // If year, month, or day are 0, the DateTime is considered not to have a
+# // specific year, month, or day respectively.
 # //
 # // This type may also be used to represent a physical time if all the date and
 # // time fields are set and either case of the `time_offset` oneof is set.
@@ -77,27 +76,28 @@ end
 #   // datetime without a year.
 #   int32 year = 1;
 #
-#   // Required. Month of year. Must be from 1 to 12.
+#   // Optional. Month of year. Must be from 1 to 12, or 0 if specifying a
+#   // datetime without a month.
 #   int32 month = 2;
 #
-#   // Required. Day of month. Must be from 1 to 31 and valid for the year and
-#   // month.
+#   // Optional. Day of month. Must be from 1 to 31 and valid for the year and
+#   // month, or 0 if specifying a datetime without a day.
 #   int32 day = 3;
 #
-#   // Required. Hours of day in 24 hour format. Should be from 0 to 23. An API
-#   // may choose to allow the value "24:00:00" for scenarios like business
-#   // closing time.
+#   // Optional. Hours of day in 24 hour format. Should be from 0 to 23, defaults
+#   // to 0 (midnight). An API may choose to allow the value "24:00:00" for
+#   // scenarios like business closing time.
 #   int32 hours = 4;
 #
-#   // Required. Minutes of hour of day. Must be from 0 to 59.
+#   // Optional. Minutes of hour of day. Must be from 0 to 59, defaults to 0.
 #   int32 minutes = 5;
 #
-#   // Required. Seconds of minutes of the time. Must normally be from 0 to 59. An
-#   // API may allow the value 60 if it allows leap-seconds.
+#   // Optional. Seconds of minutes of the time. Must normally be from 0 to 59,
+#   // defaults to 0. An API may allow the value 60 if it allows leap-seconds.
 #   int32 seconds = 6;
 #
-#   // Required. Fractions of seconds in nanoseconds. Must be from 0 to
-#   // 999,999,999.
+#   // Optional. Fractions of seconds in nanoseconds. Must be from 0 to
+#   // 999,999,999, defaults to 0.
 #   int32 nanos = 7;
 #
 #   // Optional. Specifies either the UTC offset or the time zone of the DateTime.
@@ -119,9 +119,9 @@ end
 # // Represents a time zone from the
 # // [IANA Time Zone Database](https://www.iana.org/time-zones).
 # message TimeZone {
-#   // IANA Time Zone Database time zone, e.g. "America/New_York".
+#   // IANA Time Zone Database time zone. For example "America/New_York".
 #   string id = 1;
 #
-#   // Optional. IANA Time Zone Database version number, e.g. "2019a".
+#   // Optional. IANA Time Zone Database version number. For example "2019a".
 #   string version = 2;
 # }

@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x18google/api/backend.proto\x12\ngoogle.api\"1\n\x07\x42\x61\x63kend\x12&\n\x05rules\x18\x01 \x03(\x0b\x32\x17.google.api.BackendRule\"\xb2\x04\n\x0b\x42\x61\x63kendRule\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08\x64\x65\x61\x64line\x18\x03 \x01(\x01\x12\x18\n\x0cmin_deadline\x18\x04 \x01(\x01\x42\x02\x18\x01\x12\x1a\n\x12operation_deadline\x18\x05 \x01(\x01\x12\x41\n\x10path_translation\x18\x06 \x01(\x0e\x32\'.google.api.BackendRule.PathTranslation\x12\x16\n\x0cjwt_audience\x18\x07 \x01(\tH\x00\x12\x16\n\x0c\x64isable_auth\x18\x08 \x01(\x08H\x00\x12\x10\n\x08protocol\x18\t \x01(\t\x12^\n\x1doverrides_by_request_protocol\x18\n \x03(\x0b\x32\x37.google.api.BackendRule.OverridesByRequestProtocolEntry\x1aZ\n\x1fOverridesByRequestProtocolEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.google.api.BackendRule:\x02\x38\x01\"e\n\x0fPathTranslation\x12 \n\x1cPATH_TRANSLATION_UNSPECIFIED\x10\x00\x12\x14\n\x10\x43ONSTANT_ADDRESS\x10\x01\x12\x1a\n\x16\x41PPEND_PATH_TO_ADDRESS\x10\x02\x42\x10\n\x0e\x61uthenticationBn\n\x0e\x63om.google.apiB\x0c\x42\x61\x63kendProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x18google/api/backend.proto\x12\ngoogle.api\"1\n\x07\x42\x61\x63kend\x12&\n\x05rules\x18\x01 \x03(\x0b\x32\x17.google.api.BackendRule\"\xd1\x04\n\x0b\x42\x61\x63kendRule\x12\x10\n\x08selector\x18\x01 \x01(\t\x12\x0f\n\x07\x61\x64\x64ress\x18\x02 \x01(\t\x12\x10\n\x08\x64\x65\x61\x64line\x18\x03 \x01(\x01\x12\x18\n\x0cmin_deadline\x18\x04 \x01(\x01\x42\x02\x18\x01\x12\x1a\n\x12operation_deadline\x18\x05 \x01(\x01\x12\x41\n\x10path_translation\x18\x06 \x01(\x0e\x32\'.google.api.BackendRule.PathTranslation\x12\x16\n\x0cjwt_audience\x18\x07 \x01(\tH\x00\x12\x16\n\x0c\x64isable_auth\x18\x08 \x01(\x08H\x00\x12\x10\n\x08protocol\x18\t \x01(\t\x12^\n\x1doverrides_by_request_protocol\x18\n \x03(\x0b\x32\x37.google.api.BackendRule.OverridesByRequestProtocolEntry\x12\x1d\n\x15load_balancing_policy\x18\x0b \x01(\t\x1aZ\n\x1fOverridesByRequestProtocolEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12&\n\x05value\x18\x02 \x01(\x0b\x32\x17.google.api.BackendRule:\x02\x38\x01\"e\n\x0fPathTranslation\x12 \n\x1cPATH_TRANSLATION_UNSPECIFIED\x10\x00\x12\x14\n\x10\x43ONSTANT_ADDRESS\x10\x01\x12\x1a\n\x16\x41PPEND_PATH_TO_ADDRESS\x10\x02\x42\x10\n\x0e\x61uthenticationBn\n\x0e\x63om.google.apiB\x0c\x42\x61\x63kendProtoP\x01ZEgoogle.golang.org/genproto/googleapis/api/serviceconfig;serviceconfig\xa2\x02\x04GAPIb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -20,7 +20,7 @@ end
 
 #### Source proto file: google/api/backend.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -150,6 +150,10 @@ end
 #   // operation. The default is no deadline.
 #   double operation_deadline = 5;
 #
+#   // Path translation specifies how to combine the backend address with the
+#   // request path in order to produce the appropriate forwarding URL for the
+#   // request. See [PathTranslation][google.api.BackendRule.PathTranslation] for
+#   // more details.
 #   PathTranslation path_translation = 6;
 #
 #   // Authentication settings used by the backend.
@@ -204,4 +208,11 @@ end
 #
 #   // The map between request protocol and the backend address.
 #   map<string, BackendRule> overrides_by_request_protocol = 10;
+#
+#   // The load balancing policy used for connection to the application backend.
+#   //
+#   // Defined as an arbitrary string to accomondate custom load balancing
+#   // policies supported by the underlying channel, but suggest most users use
+#   // one of the standard policies, such as the default, "RoundRobin".
+#   string load_balancing_policy = 11;
 # }

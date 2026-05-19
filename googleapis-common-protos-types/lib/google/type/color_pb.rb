@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/wrappers_pb'
 
 
-descriptor_data = "\n\x17google/type/color.proto\x12\x0bgoogle.type\x1a\x1egoogle/protobuf/wrappers.proto\"]\n\x05\x43olor\x12\x0b\n\x03red\x18\x01 \x01(\x02\x12\r\n\x05green\x18\x02 \x01(\x02\x12\x0c\n\x04\x62lue\x18\x03 \x01(\x02\x12*\n\x05\x61lpha\x18\x04 \x01(\x0b\x32\x1b.google.protobuf.FloatValueB`\n\x0f\x63om.google.typeB\nColorProtoP\x01Z6google.golang.org/genproto/googleapis/type/color;color\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x17google/type/color.proto\x12\x0bgoogle.type\x1a\x1egoogle/protobuf/wrappers.proto\"]\n\x05\x43olor\x12\x0b\n\x03red\x18\x01 \x01(\x02\x12\r\n\x05green\x18\x02 \x01(\x02\x12\x0c\n\x04\x62lue\x18\x03 \x01(\x02\x12*\n\x05\x61lpha\x18\x04 \x01(\x0b\x32\x1b.google.protobuf.FloatValueB]\n\x0f\x63om.google.typeB\nColorProtoP\x01Z6google.golang.org/genproto/googleapis/type/color;color\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -20,7 +20,7 @@ end
 
 #### Source proto file: google/type/color.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -40,7 +40,6 @@ end
 #
 # import "google/protobuf/wrappers.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/color;color";
 # option java_multiple_files = true;
 # option java_outer_classname = "ColorProto";
@@ -48,22 +47,22 @@ end
 # option objc_class_prefix = "GTP";
 #
 # // Represents a color in the RGBA color space. This representation is designed
-# // for simplicity of conversion to/from color representations in various
+# // for simplicity of conversion to and from color representations in various
 # // languages over compactness. For example, the fields of this representation
 # // can be trivially provided to the constructor of `java.awt.Color` in Java; it
 # // can also be trivially provided to UIColor's `+colorWithRed:green:blue:alpha`
 # // method in iOS; and, with just a little work, it can be easily formatted into
 # // a CSS `rgba()` string in JavaScript.
 # //
-# // This reference page doesn't carry information about the absolute color
-# // space
-# // that should be used to interpret the RGB value (e.g. sRGB, Adobe RGB,
-# // DCI-P3, BT.2020, etc.). By default, applications should assume the sRGB color
+# // This reference page doesn't have information about the absolute color
+# // space that should be used to interpret the RGB value—for example, sRGB,
+# // Adobe RGB,
+# // DCI-P3, and BT.2020. By default, applications should assume the sRGB color
 # // space.
 # //
-# // When color equality needs to be decided, implementations, unless
-# // documented otherwise, treat two colors as equal if all their red,
-# // green, blue, and alpha values each differ by at most 1e-5.
+# // When color equality needs to be decided, implementations, unless documented
+# // otherwise, treat two colors as equal if all their red, green, blue, and alpha
+# // values each differ by at most `1e-5`.
 # //
 # // Example (Java):
 # //

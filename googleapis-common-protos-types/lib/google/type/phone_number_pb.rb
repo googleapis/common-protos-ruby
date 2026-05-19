@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x1egoogle/type/phone_number.proto\x12\x0bgoogle.type\"\xab\x01\n\x0bPhoneNumber\x12\x15\n\x0b\x65\x31\x36\x34_number\x18\x01 \x01(\tH\x00\x12\x38\n\nshort_code\x18\x02 \x01(\x0b\x32\".google.type.PhoneNumber.ShortCodeH\x00\x12\x11\n\textension\x18\x03 \x01(\t\x1a\x30\n\tShortCode\x12\x13\n\x0bregion_code\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\tB\x06\n\x04kindBt\n\x0f\x63om.google.typeB\x10PhoneNumberProtoP\x01ZDgoogle.golang.org/genproto/googleapis/type/phone_number;phone_number\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x1egoogle/type/phone_number.proto\x12\x0bgoogle.type\"\xab\x01\n\x0bPhoneNumber\x12\x15\n\x0b\x65\x31\x36\x34_number\x18\x01 \x01(\tH\x00\x12\x38\n\nshort_code\x18\x02 \x01(\x0b\x32\".google.type.PhoneNumber.ShortCodeH\x00\x12\x11\n\textension\x18\x03 \x01(\t\x1a\x30\n\tShortCode\x12\x13\n\x0bregion_code\x18\x01 \x01(\t\x12\x0e\n\x06number\x18\x02 \x01(\tB\x06\n\x04kindBq\n\x0f\x63om.google.typeB\x10PhoneNumberProtoP\x01ZDgoogle.golang.org/genproto/googleapis/type/phone_number;phone_number\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -19,7 +19,7 @@ end
 
 #### Source proto file: google/type/phone_number.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -37,7 +37,6 @@ end
 #
 # package google.type;
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/phone_number;phone_number";
 # option java_multiple_files = true;
 # option java_outer_classname = "PhoneNumberProto";
@@ -60,13 +59,13 @@ end
 # //
 # // For instance, in Java this would be:
 # //
-# //    com.google.type.PhoneNumber wireProto =
-# //        com.google.type.PhoneNumber.newBuilder().build();
-# //    com.google.i18n.phonenumbers.Phonenumber.PhoneNumber phoneNumber =
-# //        PhoneNumberUtil.getInstance().parse(wireProto.getE164Number(), "ZZ");
-# //    if (!wireProto.getExtension().isEmpty()) {
-# //      phoneNumber.setExtension(wireProto.getExtension());
-# //    }
+# //     com.google.type.PhoneNumber wireProto =
+# //         com.google.type.PhoneNumber.newBuilder().build();
+# //     com.google.i18n.phonenumbers.Phonenumber.PhoneNumber phoneNumber =
+# //         PhoneNumberUtil.getInstance().parse(wireProto.getE164Number(), "ZZ");
+# //     if (!wireProto.getExtension().isEmpty()) {
+# //       phoneNumber.setExtension(wireProto.getExtension());
+# //     }
 # //
 # //  Reference(s):
 # //   - https://github.com/google/libphonenumber
@@ -74,12 +73,13 @@ end
 #   // An object representing a short code, which is a phone number that is
 #   // typically much shorter than regular phone numbers and can be used to
 #   // address messages in MMS and SMS systems, as well as for abbreviated dialing
-#   // (e.g. "Text 611 to see how many minutes you have remaining on your plan.").
+#   // (For example "Text 611 to see how many minutes you have remaining on your
+#   // plan.").
 #   //
 #   // Short codes are restricted to a region and are not internationally
 #   // dialable, which means the same short code can exist in different regions,
 #   // with different usage and pricing, even if those regions share the same
-#   // country calling code (e.g. US and CA).
+#   // country calling code (For example: US and CA).
 #   message ShortCode {
 #     // Required. The BCP-47 region code of the location where calls to this
 #     // short code can be made, such as "US" and "BB".
@@ -89,7 +89,7 @@ end
 #     string region_code = 1;
 #
 #     // Required. The short code digits, without a leading plus ('+') or country
-#     // calling code, e.g. "611".
+#     // calling code. For example "611".
 #     string number = 2;
 #   }
 #
@@ -100,24 +100,29 @@ end
 #     // The phone number, represented as a leading plus sign ('+'), followed by a
 #     // phone number that uses a relaxed ITU E.164 format consisting of the
 #     // country calling code (1 to 3 digits) and the subscriber number, with no
-#     // additional spaces or formatting, e.g.:
+#     // additional spaces or formatting. For example:
+#     //
 #     //  - correct: "+15552220123"
-#     //  - incorrect: "+1 (555) 222-01234 x123".
+#     //
+#     //  - incorrect: "+1 (555) 222-01234 x123"
 #     //
 #     // The ITU E.164 format limits the latter to 12 digits, but in practice not
 #     // all countries respect that, so we relax that restriction here.
 #     // National-only numbers are not allowed.
 #     //
 #     // References:
+#     //
 #     //  - https://www.itu.int/rec/T-REC-E.164-201011-I
+#     //
 #     //  - https://en.wikipedia.org/wiki/E.164.
+#     //
 #     //  - https://en.wikipedia.org/wiki/List_of_country_calling_codes
 #     string e164_number = 1;
 #
 #     // A short code.
 #     //
 #     // Reference(s):
-#     //  - https://en.wikipedia.org/wiki/Short_code
+#     //  - https://wikipedia.org/wiki/Short_code
 #     ShortCode short_code = 2;
 #   }
 #

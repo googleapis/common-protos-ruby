@@ -7,7 +7,7 @@ require 'google/protobuf'
 require 'google/protobuf/timestamp_pb'
 
 
-descriptor_data = "\n\x1agoogle/type/interval.proto\x12\x0bgoogle.type\x1a\x1fgoogle/protobuf/timestamp.proto\"h\n\x08Interval\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampBi\n\x0f\x63om.google.typeB\rIntervalProtoP\x01Z<google.golang.org/genproto/googleapis/type/interval;interval\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x1agoogle/type/interval.proto\x12\x0bgoogle.type\x1a\x1fgoogle/protobuf/timestamp.proto\"h\n\x08Interval\x12.\n\nstart_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.Timestamp\x12,\n\x08\x65nd_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampBf\n\x0f\x63om.google.typeB\rIntervalProtoP\x01Z<google.golang.org/genproto/googleapis/type/interval;interval\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -20,7 +20,7 @@ end
 
 #### Source proto file: google/type/interval.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -40,7 +40,6 @@ end
 #
 # import "google/protobuf/timestamp.proto";
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/interval;interval";
 # option java_multiple_files = true;
 # option java_outer_classname = "IntervalProto";

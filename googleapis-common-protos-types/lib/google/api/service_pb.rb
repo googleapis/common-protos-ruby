@@ -40,7 +40,7 @@ end
 
 #### Source proto file: google/api/service.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -201,8 +201,7 @@ end
 #   repeated MetricDescriptor metrics = 24;
 #
 #   // Defines the monitored resources used by this service. This is required
-#   // by the [Service.monitoring][google.api.Service.monitoring] and
-#   // [Service.logging][google.api.Service.logging] configurations.
+#   // by the `Service.monitoring` and `Service.logging` configurations.
 #   repeated MonitoredResourceDescriptor monitored_resources = 25;
 #
 #   // Billing configuration.

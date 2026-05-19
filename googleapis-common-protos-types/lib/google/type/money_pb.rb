@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x17google/type/money.proto\x12\x0bgoogle.type\"<\n\x05Money\x12\x15\n\rcurrency_code\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\x03\x12\r\n\x05nanos\x18\x03 \x01(\x05\x42`\n\x0f\x63om.google.typeB\nMoneyProtoP\x01Z6google.golang.org/genproto/googleapis/type/money;money\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x17google/type/money.proto\x12\x0bgoogle.type\"<\n\x05Money\x12\x15\n\rcurrency_code\x18\x01 \x01(\t\x12\r\n\x05units\x18\x02 \x01(\x03\x12\r\n\x05nanos\x18\x03 \x01(\x05\x42]\n\x0f\x63om.google.typeB\nMoneyProtoP\x01Z6google.golang.org/genproto/googleapis/type/money;money\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -18,7 +18,7 @@ end
 
 #### Source proto file: google/type/money.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -36,7 +36,6 @@ end
 #
 # package google.type;
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/money;money";
 # option java_multiple_files = true;
 # option java_outer_classname = "MoneyProto";

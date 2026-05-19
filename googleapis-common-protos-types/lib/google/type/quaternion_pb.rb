@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x1cgoogle/type/quaternion.proto\x12\x0bgoogle.type\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\x42o\n\x0f\x63om.google.typeB\x0fQuaternionProtoP\x01Z@google.golang.org/genproto/googleapis/type/quaternion;quaternion\xf8\x01\x01\xa2\x02\x03GTPb\x06proto3"
+descriptor_data = "\n\x1cgoogle/type/quaternion.proto\x12\x0bgoogle.type\"8\n\nQuaternion\x12\t\n\x01x\x18\x01 \x01(\x01\x12\t\n\x01y\x18\x02 \x01(\x01\x12\t\n\x01z\x18\x03 \x01(\x01\x12\t\n\x01w\x18\x04 \x01(\x01\x42l\n\x0f\x63om.google.typeB\x0fQuaternionProtoP\x01Z@google.golang.org/genproto/googleapis/type/quaternion;quaternion\xa2\x02\x03GTPb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -18,7 +18,7 @@ end
 
 #### Source proto file: google/type/quaternion.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -36,13 +36,14 @@ end
 #
 # package google.type;
 #
-# option cc_enable_arenas = true;
 # option go_package = "google.golang.org/genproto/googleapis/type/quaternion;quaternion";
 # option java_multiple_files = true;
 # option java_outer_classname = "QuaternionProto";
 # option java_package = "com.google.type";
 # option objc_class_prefix = "GTP";
 #
+# // A quaternion, represented by four 64-bit floating point values.
+# //
 # // A quaternion is defined as the quotient of two directed lines in a
 # // three-dimensional space or equivalently as the quotient of two Euclidean
 # // vectors (https://en.wikipedia.org/wiki/Quaternion).
@@ -60,7 +61,7 @@ end
 # // where x, y, z, and w are real numbers, and i, j, and k are three imaginary
 # // numbers.
 # //
-# // Our naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
+# // The naming choice `(x, y, z, w)` comes from the desire to avoid confusion for
 # // those interested in the geometric properties of the quaternion in the 3D
 # // Cartesian space. Other texts often use alternative names or subscripts, such
 # // as `(a, b, c, d)`, `(1, i, j, k)`, or `(0, 1, 2, 3)`, which are perhaps
@@ -98,7 +99,6 @@ end
 # // it would produce a unique representation. It is thus recommended that `w` be
 # // kept positive, which can be achieved by changing all the signs when `w` is
 # // negative.
-# //
 # message Quaternion {
 #   // The x component.
 #   double x = 1;

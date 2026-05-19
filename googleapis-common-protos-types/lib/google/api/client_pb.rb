@@ -9,7 +9,7 @@ require 'google/protobuf/descriptor_pb'
 require 'google/protobuf/duration_pb'
 
 
-descriptor_data = "\n\x17google/api/client.proto\x12\ngoogle.api\x1a\x1dgoogle/api/launch_stage.proto\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\"\xbe\x01\n\x16\x43ommonLanguageSettings\x12\x1e\n\x12reference_docs_uri\x18\x01 \x01(\tB\x02\x18\x01\x12:\n\x0c\x64\x65stinations\x18\x02 \x03(\x0e\x32$.google.api.ClientLibraryDestination\x12H\n\x1aselective_gapic_generation\x18\x03 \x01(\x0b\x32$.google.api.SelectiveGapicGeneration\"\xfb\x03\n\x15\x43lientLibrarySettings\x12\x0f\n\x07version\x18\x01 \x01(\t\x12-\n\x0claunch_stage\x18\x02 \x01(\x0e\x32\x17.google.api.LaunchStage\x12\x1a\n\x12rest_numeric_enums\x18\x03 \x01(\x08\x12/\n\rjava_settings\x18\x15 \x01(\x0b\x32\x18.google.api.JavaSettings\x12-\n\x0c\x63pp_settings\x18\x16 \x01(\x0b\x32\x17.google.api.CppSettings\x12-\n\x0cphp_settings\x18\x17 \x01(\x0b\x32\x17.google.api.PhpSettings\x12\x33\n\x0fpython_settings\x18\x18 \x01(\x0b\x32\x1a.google.api.PythonSettings\x12/\n\rnode_settings\x18\x19 \x01(\x0b\x32\x18.google.api.NodeSettings\x12\x33\n\x0f\x64otnet_settings\x18\x1a \x01(\x0b\x32\x1a.google.api.DotnetSettings\x12/\n\rruby_settings\x18\x1b \x01(\x0b\x32\x18.google.api.RubySettings\x12+\n\x0bgo_settings\x18\x1c \x01(\x0b\x32\x16.google.api.GoSettings\"\xa8\x03\n\nPublishing\x12\x33\n\x0fmethod_settings\x18\x02 \x03(\x0b\x32\x1a.google.api.MethodSettings\x12\x15\n\rnew_issue_uri\x18\x65 \x01(\t\x12\x19\n\x11\x64ocumentation_uri\x18\x66 \x01(\t\x12\x16\n\x0e\x61pi_short_name\x18g \x01(\t\x12\x14\n\x0cgithub_label\x18h \x01(\t\x12\x1e\n\x16\x63odeowner_github_teams\x18i \x03(\t\x12\x16\n\x0e\x64oc_tag_prefix\x18j \x01(\t\x12;\n\x0corganization\x18k \x01(\x0e\x32%.google.api.ClientLibraryOrganization\x12;\n\x10library_settings\x18m \x03(\x0b\x32!.google.api.ClientLibrarySettings\x12)\n!proto_reference_documentation_uri\x18n \x01(\t\x12(\n rest_reference_documentation_uri\x18o \x01(\t\"\xe3\x01\n\x0cJavaSettings\x12\x17\n\x0flibrary_package\x18\x01 \x01(\t\x12L\n\x13service_class_names\x18\x02 \x03(\x0b\x32/.google.api.JavaSettings.ServiceClassNamesEntry\x12\x32\n\x06\x63ommon\x18\x03 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x1a\x38\n\x16ServiceClassNamesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"A\n\x0b\x43ppSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"A\n\x0bPhpSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"\x9b\x02\n\x0ePythonSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12N\n\x15\x65xperimental_features\x18\x02 \x01(\x0b\x32/.google.api.PythonSettings.ExperimentalFeatures\x1a\x84\x01\n\x14\x45xperimentalFeatures\x12\x1d\n\x15rest_async_io_enabled\x18\x01 \x01(\x08\x12\'\n\x1fprotobuf_pythonic_types_enabled\x18\x02 \x01(\x08\x12$\n\x1cunversioned_package_disabled\x18\x03 \x01(\x08\"B\n\x0cNodeSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"\xaa\x03\n\x0e\x44otnetSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12I\n\x10renamed_services\x18\x02 \x03(\x0b\x32/.google.api.DotnetSettings.RenamedServicesEntry\x12K\n\x11renamed_resources\x18\x03 \x03(\x0b\x32\x30.google.api.DotnetSettings.RenamedResourcesEntry\x12\x19\n\x11ignored_resources\x18\x04 \x03(\t\x12 \n\x18\x66orced_namespace_aliases\x18\x05 \x03(\t\x12\x1e\n\x16handwritten_signatures\x18\x06 \x03(\t\x1a\x36\n\x14RenamedServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x37\n\x15RenamedResourcesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"B\n\x0cRubySettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"\xbf\x01\n\nGoSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12\x45\n\x10renamed_services\x18\x02 \x03(\x0b\x32+.google.api.GoSettings.RenamedServicesEntry\x1a\x36\n\x14RenamedServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\xcf\x02\n\x0eMethodSettings\x12\x10\n\x08selector\x18\x01 \x01(\t\x12<\n\x0clong_running\x18\x02 \x01(\x0b\x32&.google.api.MethodSettings.LongRunning\x12\x1d\n\x15\x61uto_populated_fields\x18\x03 \x03(\t\x1a\xcd\x01\n\x0bLongRunning\x12\x35\n\x12initial_poll_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x1d\n\x15poll_delay_multiplier\x18\x02 \x01(\x02\x12\x31\n\x0emax_poll_delay\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x35\n\x12total_poll_timeout\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"Q\n\x18SelectiveGapicGeneration\x12\x0f\n\x07methods\x18\x01 \x03(\t\x12$\n\x1cgenerate_omitted_as_internal\x18\x02 \x01(\x08*\xa3\x01\n\x19\x43lientLibraryOrganization\x12+\n\'CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIED\x10\x00\x12\t\n\x05\x43LOUD\x10\x01\x12\x07\n\x03\x41\x44S\x10\x02\x12\n\n\x06PHOTOS\x10\x03\x12\x0f\n\x0bSTREET_VIEW\x10\x04\x12\x0c\n\x08SHOPPING\x10\x05\x12\x07\n\x03GEO\x10\x06\x12\x11\n\rGENERATIVE_AI\x10\x07*g\n\x18\x43lientLibraryDestination\x12*\n&CLIENT_LIBRARY_DESTINATION_UNSPECIFIED\x10\x00\x12\n\n\x06GITHUB\x10\n\x12\x13\n\x0fPACKAGE_MANAGER\x10\x14:9\n\x10method_signature\x12\x1e.google.protobuf.MethodOptions\x18\x9b\x08 \x03(\t:6\n\x0c\x64\x65\x66\x61ult_host\x12\x1f.google.protobuf.ServiceOptions\x18\x99\x08 \x01(\t:6\n\x0coauth_scopes\x12\x1f.google.protobuf.ServiceOptions\x18\x9a\x08 \x01(\t:8\n\x0b\x61pi_version\x12\x1f.google.protobuf.ServiceOptions\x18\xc1\xba\xab\xfa\x01 \x01(\tBi\n\x0e\x63om.google.apiB\x0b\x43lientProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xa2\x02\x04GAPIb\x06proto3"
+descriptor_data = "\n\x17google/api/client.proto\x12\ngoogle.api\x1a\x1dgoogle/api/launch_stage.proto\x1a google/protobuf/descriptor.proto\x1a\x1egoogle/protobuf/duration.proto\"\xbe\x01\n\x16\x43ommonLanguageSettings\x12\x1e\n\x12reference_docs_uri\x18\x01 \x01(\tB\x02\x18\x01\x12:\n\x0c\x64\x65stinations\x18\x02 \x03(\x0e\x32$.google.api.ClientLibraryDestination\x12H\n\x1aselective_gapic_generation\x18\x03 \x01(\x0b\x32$.google.api.SelectiveGapicGeneration\"\xfb\x03\n\x15\x43lientLibrarySettings\x12\x0f\n\x07version\x18\x01 \x01(\t\x12-\n\x0claunch_stage\x18\x02 \x01(\x0e\x32\x17.google.api.LaunchStage\x12\x1a\n\x12rest_numeric_enums\x18\x03 \x01(\x08\x12/\n\rjava_settings\x18\x15 \x01(\x0b\x32\x18.google.api.JavaSettings\x12-\n\x0c\x63pp_settings\x18\x16 \x01(\x0b\x32\x17.google.api.CppSettings\x12-\n\x0cphp_settings\x18\x17 \x01(\x0b\x32\x17.google.api.PhpSettings\x12\x33\n\x0fpython_settings\x18\x18 \x01(\x0b\x32\x1a.google.api.PythonSettings\x12/\n\rnode_settings\x18\x19 \x01(\x0b\x32\x18.google.api.NodeSettings\x12\x33\n\x0f\x64otnet_settings\x18\x1a \x01(\x0b\x32\x1a.google.api.DotnetSettings\x12/\n\rruby_settings\x18\x1b \x01(\x0b\x32\x18.google.api.RubySettings\x12+\n\x0bgo_settings\x18\x1c \x01(\x0b\x32\x16.google.api.GoSettings\"\xa8\x03\n\nPublishing\x12\x33\n\x0fmethod_settings\x18\x02 \x03(\x0b\x32\x1a.google.api.MethodSettings\x12\x15\n\rnew_issue_uri\x18\x65 \x01(\t\x12\x19\n\x11\x64ocumentation_uri\x18\x66 \x01(\t\x12\x16\n\x0e\x61pi_short_name\x18g \x01(\t\x12\x14\n\x0cgithub_label\x18h \x01(\t\x12\x1e\n\x16\x63odeowner_github_teams\x18i \x03(\t\x12\x16\n\x0e\x64oc_tag_prefix\x18j \x01(\t\x12;\n\x0corganization\x18k \x01(\x0e\x32%.google.api.ClientLibraryOrganization\x12;\n\x10library_settings\x18m \x03(\x0b\x32!.google.api.ClientLibrarySettings\x12)\n!proto_reference_documentation_uri\x18n \x01(\t\x12(\n rest_reference_documentation_uri\x18o \x01(\t\"\xe3\x01\n\x0cJavaSettings\x12\x17\n\x0flibrary_package\x18\x01 \x01(\t\x12L\n\x13service_class_names\x18\x02 \x03(\x0b\x32/.google.api.JavaSettings.ServiceClassNamesEntry\x12\x32\n\x06\x63ommon\x18\x03 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x1a\x38\n\x16ServiceClassNamesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"A\n\x0b\x43ppSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"Z\n\x0bPhpSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12\x17\n\x0flibrary_package\x18\x02 \x01(\t\"\x9b\x02\n\x0ePythonSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12N\n\x15\x65xperimental_features\x18\x02 \x01(\x0b\x32/.google.api.PythonSettings.ExperimentalFeatures\x1a\x84\x01\n\x14\x45xperimentalFeatures\x12\x1d\n\x15rest_async_io_enabled\x18\x01 \x01(\x08\x12\'\n\x1fprotobuf_pythonic_types_enabled\x18\x02 \x01(\x08\x12$\n\x1cunversioned_package_disabled\x18\x03 \x01(\x08\"B\n\x0cNodeSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"\xaa\x03\n\x0e\x44otnetSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12I\n\x10renamed_services\x18\x02 \x03(\x0b\x32/.google.api.DotnetSettings.RenamedServicesEntry\x12K\n\x11renamed_resources\x18\x03 \x03(\x0b\x32\x30.google.api.DotnetSettings.RenamedResourcesEntry\x12\x19\n\x11ignored_resources\x18\x04 \x03(\t\x12 \n\x18\x66orced_namespace_aliases\x18\x05 \x03(\t\x12\x1e\n\x16handwritten_signatures\x18\x06 \x03(\t\x1a\x36\n\x14RenamedServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\x1a\x37\n\x15RenamedResourcesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"B\n\x0cRubySettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\"\xbf\x01\n\nGoSettings\x12\x32\n\x06\x63ommon\x18\x01 \x01(\x0b\x32\".google.api.CommonLanguageSettings\x12\x45\n\x10renamed_services\x18\x02 \x03(\x0b\x32+.google.api.GoSettings.RenamedServicesEntry\x1a\x36\n\x14RenamedServicesEntry\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t:\x02\x38\x01\"\x82\x03\n\x0eMethodSettings\x12\x10\n\x08selector\x18\x01 \x01(\t\x12<\n\x0clong_running\x18\x02 \x01(\x0b\x32&.google.api.MethodSettings.LongRunning\x12\x1d\n\x15\x61uto_populated_fields\x18\x03 \x03(\t\x12\x31\n\x08\x62\x61tching\x18\x04 \x01(\x0b\x32\x1f.google.api.BatchingConfigProto\x1a\xcd\x01\n\x0bLongRunning\x12\x35\n\x12initial_poll_delay\x18\x01 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x1d\n\x15poll_delay_multiplier\x18\x02 \x01(\x02\x12\x31\n\x0emax_poll_delay\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x35\n\x12total_poll_timeout\x18\x04 \x01(\x0b\x32\x19.google.protobuf.Duration\"Q\n\x18SelectiveGapicGeneration\x12\x0f\n\x07methods\x18\x01 \x03(\t\x12$\n\x1cgenerate_omitted_as_internal\x18\x02 \x01(\x08\"\x8b\x01\n\x13\x42\x61tchingConfigProto\x12\x35\n\nthresholds\x18\x01 \x01(\x0b\x32!.google.api.BatchingSettingsProto\x12=\n\x10\x62\x61tch_descriptor\x18\x02 \x01(\x0b\x32#.google.api.BatchingDescriptorProto\"\xeb\x02\n\x15\x42\x61tchingSettingsProto\x12\x1f\n\x17\x65lement_count_threshold\x18\x01 \x01(\x05\x12\x1e\n\x16request_byte_threshold\x18\x02 \x01(\x03\x12\x32\n\x0f\x64\x65lay_threshold\x18\x03 \x01(\x0b\x32\x19.google.protobuf.Duration\x12\x1b\n\x13\x65lement_count_limit\x18\x04 \x01(\x05\x12\x1a\n\x12request_byte_limit\x18\x05 \x01(\x05\x12\"\n\x1a\x66low_control_element_limit\x18\x06 \x01(\x05\x12\x1f\n\x17\x66low_control_byte_limit\x18\x07 \x01(\x05\x12_\n$flow_control_limit_exceeded_behavior\x18\x08 \x01(\x0e\x32\x31.google.api.FlowControlLimitExceededBehaviorProto\"i\n\x17\x42\x61tchingDescriptorProto\x12\x15\n\rbatched_field\x18\x01 \x01(\t\x12\x1c\n\x14\x64iscriminator_fields\x18\x02 \x03(\t\x12\x19\n\x11subresponse_field\x18\x03 \x01(\t*\xa3\x01\n\x19\x43lientLibraryOrganization\x12+\n\'CLIENT_LIBRARY_ORGANIZATION_UNSPECIFIED\x10\x00\x12\t\n\x05\x43LOUD\x10\x01\x12\x07\n\x03\x41\x44S\x10\x02\x12\n\n\x06PHOTOS\x10\x03\x12\x0f\n\x0bSTREET_VIEW\x10\x04\x12\x0c\n\x08SHOPPING\x10\x05\x12\x07\n\x03GEO\x10\x06\x12\x11\n\rGENERATIVE_AI\x10\x07*g\n\x18\x43lientLibraryDestination\x12*\n&CLIENT_LIBRARY_DESTINATION_UNSPECIFIED\x10\x00\x12\n\n\x06GITHUB\x10\n\x12\x13\n\x0fPACKAGE_MANAGER\x10\x14*g\n%FlowControlLimitExceededBehaviorProto\x12\x12\n\x0eUNSET_BEHAVIOR\x10\x00\x12\x13\n\x0fTHROW_EXCEPTION\x10\x01\x12\t\n\x05\x42LOCK\x10\x02\x12\n\n\x06IGNORE\x10\x03:9\n\x10method_signature\x12\x1e.google.protobuf.MethodOptions\x18\x9b\x08 \x03(\t:6\n\x0c\x64\x65\x66\x61ult_host\x12\x1f.google.protobuf.ServiceOptions\x18\x99\x08 \x01(\t:6\n\x0coauth_scopes\x12\x1f.google.protobuf.ServiceOptions\x18\x9a\x08 \x01(\t:8\n\x0b\x61pi_version\x12\x1f.google.protobuf.ServiceOptions\x18\xc1\xba\xab\xfa\x01 \x01(\tBi\n\x0e\x63om.google.apiB\x0b\x43lientProtoP\x01ZAgoogle.golang.org/genproto/googleapis/api/annotations;annotations\xa2\x02\x04GAPIb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -31,14 +31,18 @@ module Google
     MethodSettings = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.MethodSettings").msgclass
     MethodSettings::LongRunning = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.MethodSettings.LongRunning").msgclass
     SelectiveGapicGeneration = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.SelectiveGapicGeneration").msgclass
+    BatchingConfigProto = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BatchingConfigProto").msgclass
+    BatchingSettingsProto = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BatchingSettingsProto").msgclass
+    BatchingDescriptorProto = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.BatchingDescriptorProto").msgclass
     ClientLibraryOrganization = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ClientLibraryOrganization").enummodule
     ClientLibraryDestination = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.ClientLibraryDestination").enummodule
+    FlowControlLimitExceededBehaviorProto = ::Google::Protobuf::DescriptorPool.generated_pool.lookup("google.api.FlowControlLimitExceededBehaviorProto").enummodule
   end
 end
 
 #### Source proto file: google/api/client.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -81,15 +85,15 @@ end
 #   //
 #   // For example, the proto RPC and annotation:
 #   //
-#   //   rpc CreateSubscription(CreateSubscriptionRequest)
-#   //       returns (Subscription) {
-#   //     option (google.api.method_signature) = "name,topic";
-#   //   }
+#   //     rpc CreateSubscription(CreateSubscriptionRequest)
+#   //         returns (Subscription) {
+#   //       option (google.api.method_signature) = "name,topic";
+#   //     }
 #   //
 #   // Would add the following Java overload (in addition to the method accepting
 #   // the request object):
 #   //
-#   //   public final Subscription createSubscription(String name, String topic)
+#   //     public final Subscription createSubscription(String name, String topic)
 #   //
 #   // The following backwards-compatibility guidelines apply:
 #   //
@@ -111,32 +115,32 @@ end
 #   //
 #   // Example:
 #   //
-#   //   service Foo {
-#   //     option (google.api.default_host) = "foo.googleapi.com";
-#   //     ...
-#   //   }
+#   //     service Foo {
+#   //       option (google.api.default_host) = "foo.googleapi.com";
+#   //       ...
+#   //     }
 #   string default_host = 1049;
 #
 #   // OAuth scopes needed for the client.
 #   //
 #   // Example:
 #   //
-#   //   service Foo {
-#   //     option (google.api.oauth_scopes) = \
-#   //       "https://www.googleapis.com/auth/cloud-platform";
-#   //     ...
-#   //   }
+#   //     service Foo {
+#   //       option (google.api.oauth_scopes) = \
+#   //         "https://www.googleapis.com/auth/cloud-platform";
+#   //       ...
+#   //     }
 #   //
 #   // If there is more than one scope, use a comma-separated string:
 #   //
 #   // Example:
 #   //
-#   //   service Foo {
-#   //     option (google.api.oauth_scopes) = \
-#   //       "https://www.googleapis.com/auth/cloud-platform,"
-#   //       "https://www.googleapis.com/auth/monitoring";
-#   //     ...
-#   //   }
+#   //     service Foo {
+#   //       option (google.api.oauth_scopes) = \
+#   //         "https://www.googleapis.com/auth/cloud-platform,"
+#   //         "https://www.googleapis.com/auth/monitoring";
+#   //       ...
+#   //     }
 #   string oauth_scopes = 1050;
 #
 #   // The API version of this service, which should be sent by version-aware
@@ -150,9 +154,9 @@ end
 #   //
 #   // Example:
 #   //
-#   //   service Foo {
-#   //     option (google.api.api_version) = "v1_20230821_preview";
-#   //   }
+#   //     service Foo {
+#   //       option (google.api.api_version) = "v1_20230821_preview";
+#   //     }
 #   string api_version = 525000001;
 # }
 #
@@ -166,6 +170,8 @@ end
 #   repeated ClientLibraryDestination destinations = 2;
 #
 #   // Configuration for which RPCs should be generated in the GAPIC client.
+#   //
+#   // Note: This field should not be used in most cases.
 #   SelectiveGapicGeneration selective_gapic_generation = 3;
 # }
 #
@@ -267,9 +273,10 @@ end
 #   //
 #   // Example of a YAML configuration::
 #   //
-#   //  publishing:
-#   //    java_settings:
-#   //      library_package: com.google.cloud.pubsub.v1
+#   //     publishing:
+#   //       library_settings:
+#   //         java_settings:
+#   //           library_package: com.google.cloud.pubsub.v1
 #   string library_package = 1;
 #
 #   // Configure the Java class name to use instead of the service's for its
@@ -281,11 +288,11 @@ end
 #   //
 #   // Example of a YAML configuration::
 #   //
-#   //  publishing:
-#   //    java_settings:
-#   //      service_class_names:
-#   //        - google.pubsub.v1.Publisher: TopicAdmin
-#   //        - google.pubsub.v1.Subscriber: SubscriptionAdmin
+#   //     publishing:
+#   //       java_settings:
+#   //         service_class_names:
+#   //           - google.pubsub.v1.Publisher: TopicAdmin
+#   //           - google.pubsub.v1.Subscriber: SubscriptionAdmin
 #   map<string, string> service_class_names = 2;
 #
 #   // Some settings.
@@ -302,6 +309,20 @@ end
 # message PhpSettings {
 #   // Some settings.
 #   CommonLanguageSettings common = 1;
+#
+#   // The package name to use in Php. Clobbers the php_namespace option
+#   // set in the protobuf. This should be used **only** by APIs
+#   // who have already set the language_settings.php.package_name" field
+#   // in gapic.yaml. API teams should use the protobuf php_namespace option
+#   // where possible.
+#   //
+#   // Example of a YAML configuration::
+#   //
+#   //     publishing:
+#   //       library_settings:
+#   //         php_settings:
+#   //           library_package: Google\Cloud\PubSub\V1
+#   string library_package = 2;
 # }
 #
 # // Settings for Python client libraries.
@@ -393,10 +414,12 @@ end
 #   // service names and values are the name to be used for the service client
 #   // and call options.
 #   //
-#   // publishing:
-#   //   go_settings:
-#   //     renamed_services:
-#   //       Publisher: TopicAdmin
+#   // Example:
+#   //
+#   //     publishing:
+#   //       go_settings:
+#   //         renamed_services:
+#   //           Publisher: TopicAdmin
 #   map<string, string> renamed_services = 2;
 # }
 #
@@ -431,10 +454,10 @@ end
 #   //
 #   // Example:
 #   //
-#   //    publishing:
-#   //      method_settings:
-#   //      - selector: google.storage.control.v2.StorageControl.CreateFolder
-#   //        # method settings for CreateFolder...
+#   //     publishing:
+#   //       method_settings:
+#   //       - selector: google.storage.control.v2.StorageControl.CreateFolder
+#   //         # method settings for CreateFolder...
 #   string selector = 1;
 #
 #   // Describes settings to use for long-running operations when generating
@@ -443,14 +466,14 @@ end
 #   //
 #   // Example of a YAML configuration::
 #   //
-#   //    publishing:
-#   //      method_settings:
-#   //      - selector: google.cloud.speech.v2.Speech.BatchRecognize
-#   //        long_running:
-#   //          initial_poll_delay: 60s # 1 minute
-#   //          poll_delay_multiplier: 1.5
-#   //          max_poll_delay: 360s # 6 minutes
-#   //          total_poll_timeout: 54000s # 90 minutes
+#   //     publishing:
+#   //       method_settings:
+#   //       - selector: google.cloud.speech.v2.Speech.BatchRecognize
+#   //         long_running:
+#   //           initial_poll_delay: 60s # 1 minute
+#   //           poll_delay_multiplier: 1.5
+#   //           max_poll_delay: 360s # 6 minutes
+#   //           total_poll_timeout: 54000s # 90 minutes
 #   LongRunning long_running = 2;
 #
 #   // List of top-level fields of the request message, that should be
@@ -459,12 +482,25 @@ end
 #   //
 #   // Example of a YAML configuration:
 #   //
-#   //    publishing:
-#   //      method_settings:
-#   //      - selector: google.example.v1.ExampleService.CreateExample
-#   //        auto_populated_fields:
-#   //        - request_id
+#   //     publishing:
+#   //       method_settings:
+#   //       - selector: google.example.v1.ExampleService.CreateExample
+#   //         auto_populated_fields:
+#   //         - request_id
 #   repeated string auto_populated_fields = 3;
+#
+#   // Batching configuration for an API method in client libraries.
+#   //
+#   // Example of a YAML configuration:
+#   //
+#   //     publishing:
+#   //       method_settings:
+#   //       - selector: google.example.v1.ExampleService.BatchCreateExample
+#   //         batching:
+#   //           element_count_threshold: 1000
+#   //           request_byte_threshold: 100000000
+#   //           delay_threshold_millis: 10
+#   BatchingConfigProto batching = 4;
 # }
 #
 # // The organization for which the client libraries are being published.
@@ -511,6 +547,8 @@ end
 #
 # // This message is used to configure the generation of a subset of the RPCs in
 # // a service for client libraries.
+# //
+# // Note: This feature should not be used in most cases.
 # message SelectiveGapicGeneration {
 #   // An allowlist of the fully qualified names of RPCs that should be included
 #   // on public client surfaces.
@@ -523,4 +561,82 @@ end
 #   // implementations to decide. Some examples may be: added annotations,
 #   // obfuscated identifiers, or other language idiomatic patterns.
 #   bool generate_omitted_as_internal = 2;
+# }
+#
+# // `BatchingConfigProto` defines the batching configuration for an API method.
+# message BatchingConfigProto {
+#   // The thresholds which trigger a batched request to be sent.
+#   BatchingSettingsProto thresholds = 1;
+#
+#   // The request and response fields used in batching.
+#   BatchingDescriptorProto batch_descriptor = 2;
+# }
+#
+# // `BatchingSettingsProto` specifies a set of batching thresholds, each of
+# // which acts as a trigger to send a batch of messages as a request. At least
+# // one threshold must be positive nonzero.
+# message BatchingSettingsProto {
+#   // The number of elements of a field collected into a batch which, if
+#   // exceeded, causes the batch to be sent.
+#   int32 element_count_threshold = 1;
+#
+#   // The aggregated size of the batched field which, if exceeded, causes the
+#   // batch to be sent. This size is computed by aggregating the sizes of the
+#   // request field to be batched, not of the entire request message.
+#   int64 request_byte_threshold = 2;
+#
+#   // The duration after which a batch should be sent, starting from the addition
+#   // of the first message to that batch.
+#   google.protobuf.Duration delay_threshold = 3;
+#
+#   // The maximum number of elements collected in a batch that could be accepted
+#   // by server.
+#   int32 element_count_limit = 4;
+#
+#   // The maximum size of the request that could be accepted by server.
+#   int32 request_byte_limit = 5;
+#
+#   // The maximum number of elements allowed by flow control.
+#   int32 flow_control_element_limit = 6;
+#
+#   // The maximum size of data allowed by flow control.
+#   int32 flow_control_byte_limit = 7;
+#
+#   // The behavior to take when the flow control limit is exceeded.
+#   FlowControlLimitExceededBehaviorProto flow_control_limit_exceeded_behavior =
+#       8;
+# }
+#
+# // The behavior to take when the flow control limit is exceeded.
+# enum FlowControlLimitExceededBehaviorProto {
+#   // Default behavior, system-defined.
+#   UNSET_BEHAVIOR = 0;
+#
+#   // Stop operation, raise error.
+#   THROW_EXCEPTION = 1;
+#
+#   // Pause operation until limit clears.
+#   BLOCK = 2;
+#
+#   // Continue operation, disregard limit.
+#   IGNORE = 3;
+# }
+#
+# // `BatchingDescriptorProto` specifies the fields of the request message to be
+# // used for batching, and, optionally, the fields of the response message to be
+# // used for demultiplexing.
+# message BatchingDescriptorProto {
+#   // The repeated field in the request message to be aggregated by batching.
+#   string batched_field = 1;
+#
+#   // A list of the fields in the request message. Two requests will be batched
+#   // together only if the values of every field specified in
+#   // `request_discriminator_fields` is equal between the two requests.
+#   repeated string discriminator_fields = 2;
+#
+#   // Optional. When present, indicates the field in the response message to be
+#   // used to demultiplex the response into multiple response messages, in
+#   // correspondence with the multiple request messages originally batched
+#   // together.
+#   string subresponse_field = 3;
 # }

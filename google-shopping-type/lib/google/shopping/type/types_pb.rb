@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"\xb1\x01\n\x06Weight\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x35\n\x04unit\x18\x02 \x01(\x0e\x32\'.google.shopping.type.Weight.WeightUnit\"B\n\nWeightUnit\x12\x1b\n\x17WEIGHT_UNIT_UNSPECIFIED\x10\x00\x12\t\n\x05POUND\x10\x01\x12\x0c\n\x08KILOGRAM\x10\x02\x42\x10\n\x0e_amount_micros\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xc1\x01\n\x0b\x44\x65stination\"\xb1\x01\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\"\x96\x03\n\x10ReportingContext\"\x81\x03\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x15\n\rDISCOVERY_ADS\x10\x02\x1a\x02\x08\x01\x12\x12\n\x0e\x44\x45MAND_GEN_ADS\x10\r\x12#\n\x1f\x44\x45MAND_GEN_ADS_DISCOVER_SURFACE\x10\x0e\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
+descriptor_data = "\n google/shopping/type/types.proto\x12\x14google.shopping.type\"\xb1\x01\n\x06Weight\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x35\n\x04unit\x18\x02 \x01(\x0e\x32\'.google.shopping.type.Weight.WeightUnit\"B\n\nWeightUnit\x12\x1b\n\x17WEIGHT_UNIT_UNSPECIFIED\x10\x00\x12\t\n\x05POUND\x10\x01\x12\x0c\n\x08KILOGRAM\x10\x02\x42\x10\n\x0e_amount_micros\"c\n\x05Price\x12\x1a\n\ramount_micros\x18\x01 \x01(\x03H\x00\x88\x01\x01\x12\x1a\n\rcurrency_code\x18\x02 \x01(\tH\x01\x88\x01\x01\x42\x10\n\x0e_amount_microsB\x10\n\x0e_currency_code\"\x88\x01\n\x0f\x43ustomAttribute\x12\x11\n\x04name\x18\x01 \x01(\tH\x00\x88\x01\x01\x12\x12\n\x05value\x18\x02 \x01(\tH\x01\x88\x01\x01\x12;\n\x0cgroup_values\x18\x03 \x03(\x0b\x32%.google.shopping.type.CustomAttributeB\x07\n\x05_nameB\x08\n\x06_value\"\xcd\x02\n\x0b\x44\x65stination\"\xbd\x02\n\x0f\x44\x65stinationEnum\x12 \n\x1c\x44\x45STINATION_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x02\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x03\x12\x11\n\rFREE_LISTINGS\x10\x04\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x05\x12\x14\n\x10YOUTUBE_SHOPPING\x10\x06\x12\x1d\n\x19YOUTUBE_SHOPPING_CHECKOUT\x10\x07\x12\x15\n\x11YOUTUBE_AFFILIATE\x10\x08\x12\x19\n\x15\x46REE_VEHICLE_LISTINGS\x10\t\x12\x0f\n\x0bVEHICLE_ADS\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\"\x8e\x04\n\x10ReportingContext\"\xf9\x03\n\x14ReportingContextEnum\x12&\n\"REPORTING_CONTEXT_ENUM_UNSPECIFIED\x10\x00\x12\x10\n\x0cSHOPPING_ADS\x10\x01\x12\x15\n\rDISCOVERY_ADS\x10\x02\x1a\x02\x08\x01\x12\x12\n\x0e\x44\x45MAND_GEN_ADS\x10\r\x12#\n\x1f\x44\x45MAND_GEN_ADS_DISCOVER_SURFACE\x10\x0e\x12\r\n\tVIDEO_ADS\x10\x03\x12\x0f\n\x0b\x44ISPLAY_ADS\x10\x04\x12\x17\n\x13LOCAL_INVENTORY_ADS\x10\x05\x12\x19\n\x15VEHICLE_INVENTORY_ADS\x10\x06\x12\x11\n\rFREE_LISTINGS\x10\x07\x12\x1e\n\x1a\x46REE_LISTINGS_UCP_CHECKOUT\x10\x13\x12\x17\n\x13\x46REE_LOCAL_LISTINGS\x10\x08\x12\x1f\n\x1b\x46REE_LOCAL_VEHICLE_LISTINGS\x10\t\x12\x15\n\x11YOUTUBE_AFFILIATE\x10\x12\x12\x14\n\x10YOUTUBE_SHOPPING\x10\n\x12\x10\n\x0c\x43LOUD_RETAIL\x10\x0b\x12\x16\n\x12LOCAL_CLOUD_RETAIL\x10\x0c\x12\x13\n\x0fPRODUCT_REVIEWS\x10\x0f\x12\x14\n\x10MERCHANT_REVIEWS\x10\x10\x12\x14\n\x10YOUTUBE_CHECKOUT\x10\x11\"M\n\x07\x43hannel\"B\n\x0b\x43hannelEnum\x12\x1c\n\x18\x43HANNEL_ENUM_UNSPECIFIED\x10\x00\x12\n\n\x06ONLINE\x10\x01\x12\t\n\x05LOCAL\x10\x02\x42p\n\x18\x63om.google.shopping.typeB\nTypesProtoP\x01Z/cloud.google.com/go/shopping/type/typepb;typepb\xaa\x02\x14Google.Shopping.Typeb\x06proto3"
 
 pool = ::Google::Protobuf::DescriptorPool.generated_pool
 pool.add_serialized_file(descriptor_data)
@@ -29,7 +29,7 @@ end
 
 #### Source proto file: google/shopping/type/types.proto ####
 #
-# // Copyright 2025 Google LLC
+# // Copyright 2026 Google LLC
 # //
 # // Licensed under the Apache License, Version 2.0 (the "License");
 # // you may not use this file except in compliance with the License.
@@ -110,7 +110,6 @@ end
 # //
 # // Destinations are used in Merchant Center to allow you to control where the
 # // products from your data feed should be displayed.
-# //
 # message Destination {
 #   // Destination values.
 #   enum DestinationEnum {
@@ -136,6 +135,25 @@ end
 #
 #     // [YouTube Shopping](https://support.google.com/merchants/answer/12362804).
 #     YOUTUBE_SHOPPING = 6;
+#
+#     // Youtube shopping checkout.
+#     YOUTUBE_SHOPPING_CHECKOUT = 7;
+#
+#     // [Youtube Affiliate](https://support.google.com/youtube/answer/13376398).
+#     YOUTUBE_AFFILIATE = 8;
+#
+#     // [Free vehicle
+#     // listings](https://support.google.com/merchants/answer/11189169).
+#     FREE_VEHICLE_LISTINGS = 9;
+#
+#     // [Vehicle ads](https://support.google.com/merchants/answer/11189169).
+#     VEHICLE_ADS = 10;
+#
+#     // [Cloud retail](https://cloud.google.com/solutions/retail).
+#     CLOUD_RETAIL = 11;
+#
+#     // [Local cloud retail](https://cloud.google.com/solutions/retail).
+#     LOCAL_CLOUD_RETAIL = 12;
 #   }
 # }
 #
@@ -146,7 +164,6 @@ end
 # // ads](https://support.google.com/merchants/answer/6149970)) or a subset of
 # // formats within a destination (for example, [Demand Gen
 # // ads](https://support.google.com/merchants/answer/13389785)).
-# //
 # message ReportingContext {
 #   // Reporting context values.
 #   enum ReportingContextEnum {
@@ -186,6 +203,10 @@ end
 #     // listings](https://support.google.com/merchants/answer/9199328).
 #     FREE_LISTINGS = 7;
 #
+#     // [Free product listings on UCP
+#     // checkout](https://developers.google.com/merchant/ucp).
+#     FREE_LISTINGS_UCP_CHECKOUT = 19;
+#
 #     // [Free local product
 #     // listings](https://support.google.com/merchants/answer/9825611).
 #     FREE_LOCAL_LISTINGS = 8;
@@ -193,6 +214,9 @@ end
 #     // [Free local vehicle
 #     // listings](https://support.google.com/merchants/answer/11544533).
 #     FREE_LOCAL_VEHICLE_LISTINGS = 9;
+#
+#     // [Youtube Affiliate](https://support.google.com/youtube/answer/13376398).
+#     YOUTUBE_AFFILIATE = 18;
 #
 #     // [YouTube
 #     // Shopping](https://support.google.com/merchants/answer/13478370).
@@ -203,6 +227,18 @@ end
 #
 #     // [Local cloud retail](https://cloud.google.com/solutions/retail).
 #     LOCAL_CLOUD_RETAIL = 12;
+#
+#     // [Product
+#     // Reviews](https://support.google.com/merchants/answer/14620732).
+#     PRODUCT_REVIEWS = 15;
+#
+#     // [Merchant
+#     // Reviews](https://developers.google.com/merchant-review-feeds).
+#     MERCHANT_REVIEWS = 16;
+#
+#     // YouTube Checkout
+#     // .
+#     YOUTUBE_CHECKOUT = 17;
 #   }
 # }
 #
