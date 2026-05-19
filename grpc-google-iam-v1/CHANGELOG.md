@@ -1,5 +1,12 @@
 # Release History
 
+### 1.12.0 (2026-05-19)
+
+#### Features
+
+* Regenerate protos and support Ruby min_version 3.2 ([#412](https://github.com/googleapis/common-protos-ruby/issues/412)) 
+* Update googleapis-common-protos dependency to 1.9.0 ([#396](https://github.com/googleapis/common-protos-ruby/issues/396)) 
+
 ### 1.11.0 (2025-04-30)
 
 #### Features
