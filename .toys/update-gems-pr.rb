@@ -63,7 +63,8 @@ def make_one_change gem_name
   return :exists if open_pr_exists? commit_message
   yoshi_pr_generator.capture enabled: !git_remote.nil?,
                              remote: git_remote,
-                             branch_name: branch_name, commit_message: commit_message do
+                             branch_name: branch_name,
+                             commit_message: commit_message do
     # The "compile" task is defined in the shared template under shared/toys-common.rb
     exec_separate_tool ["compile"]
   end
