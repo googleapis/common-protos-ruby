@@ -1,5 +1,8 @@
 name: "CI"
 
+permissions:
+  contents: read
+
 on:
   pull_request:
     branches:
@@ -31,11 +34,13 @@ jobs:
     runs-on: ${{ matrix.os }}
     steps:
       - name: Install Ruby ${{ matrix.ruby }}
-        uses: ruby/setup-ruby@v1
+        uses: ruby/setup-ruby@d45b1a4e94b71acab930e56e79c6aa188764e7f9 # v1.316.0
         with:
           ruby-version: "${{ matrix.ruby }}"
       - name: Checkout repo
-        uses: actions/checkout@v6
+        uses: actions/checkout@df4cb1c069e1874edd31b4311f1884172cec0e10 # v6.0.3
+        with:
+          persist-credentials: false
       - name: Checkout submodules
         run: |
           git submodule update --init
@@ -43,5 +48,8 @@ jobs:
         run: |
           gem install --no-document toys
       - name: Run CI
+        env:
+          GITHUB_EVENT_NAME: ${{ github.event_name }}
+          GITHUB_EVENT_PATH: ${{ github.event_path }}
         run: |
-          toys ci -v --build --test --github-event-name=${{ github.event_name }} --github-event-payload=${{ github.event_path }}
+          toys ci -v --build --test --github-event-name="$GITHUB_EVENT_NAME" --github-event-payload="$GITHUB_EVENT_PATH"
