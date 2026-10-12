@@ -51,5 +51,8 @@ jobs:
         env:
           GITHUB_EVENT_NAME: ${{ github.event_name }}
           GITHUB_EVENT_PATH: ${{ github.event_path }}
+        # Force bash: windows-latest defaults to pwsh, where "$VAR" reads an
+        # (unset) PowerShell variable instead of the env var above.
+        shell: bash
         run: |
           toys ci -v --build --test --github-event-name="$GITHUB_EVENT_NAME" --github-event-payload="$GITHUB_EVENT_PATH"
