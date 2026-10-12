@@ -28,7 +28,7 @@ jobs:
         with:
           ruby-version: "3.4"
       - name: Install tools
-        run: "gem install --no-document toys grpc-tools:1.62.0"
+        run: "gem install --no-document 'toys:~> 0.22.0' grpc-tools:1.62.0"
       - name: execute
         run: |
           toys update-gems-pr -v --fork ${GITHUB_EVENT_INPUTS_ARGS}
