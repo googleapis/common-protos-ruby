@@ -5,7 +5,7 @@
 require 'google/protobuf'
 
 
-descriptor_data = "\n\x1b\x62\x61\x63kstory/data_access.proto\x12\x10google.backstory\"6\n\x18\x44\x61taAccessIngestionLabel\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd4\x01\n\x10\x44\x61taAccessLabels\x12\x11\n\tlog_types\x18\x01 \x03(\t\x12\x1c\n\x10ingestion_labels\x18\x02 \x03(\tB\x02\x18\x01\x12\x12\n\nnamespaces\x18\x03 \x03(\t\x12\x15\n\rcustom_labels\x18\x04 \x03(\t\x12G\n\x13ingestion_kv_labels\x18\x05 \x03(\x0b\x32*.google.backstory.DataAccessIngestionLabel\x12\x1b\n\x13\x61llow_scoped_access\x18\x06 \x01(\x08\x42\x8d\x01\n\x14\x63om.google.backstoryP\x01Z9google.golang.org/genproto/googleapis/backstory;backstory\xaa\x02\x10Google.Backstory\xca\x02\x10Google\\Backstory\xea\x02\x11Google::Backstoryb\x06proto3"
+descriptor_data = "\n\x1b\x62\x61\x63kstory/data_access.proto\x12\x10google.backstory\"6\n\x18\x44\x61taAccessIngestionLabel\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\xd4\x01\n\x10\x44\x61taAccessLabels\x12\x11\n\tlog_types\x18\x01 \x03(\t\x12\x1c\n\x10ingestion_labels\x18\x02 \x03(\tB\x02\x18\x01\x12\x12\n\nnamespaces\x18\x03 \x03(\t\x12\x15\n\rcustom_labels\x18\x04 \x03(\t\x12G\n\x13ingestion_kv_labels\x18\x05 \x03(\x0b\x32*.google.backstory.DataAccessIngestionLabel\x12\x1b\n\x13\x61llow_scoped_access\x18\x06 \x01(\x08\x42\x89\x01\n\x14\x63om.google.backstoryP\x01Z5cloud.google.com/go/backstory/backstorypb;backstorypb\xaa\x02\x10Google.Backstory\xca\x02\x10Google\\Backstory\xea\x02\x11Google::Backstoryb\x06proto3"
 
 pool = Google::Protobuf::DescriptorPool.generated_pool
 
@@ -59,7 +59,7 @@ end
 # package google.backstory;
 #
 # option csharp_namespace = "Google.Backstory";
-# option go_package = "google.golang.org/genproto/googleapis/backstory;backstory";
+# option go_package = "cloud.google.com/go/backstory/backstorypb;backstorypb";
 # option java_multiple_files = true;
 # option java_package = "com.google.backstory";
 # option php_namespace = "Google\\Backstory";
