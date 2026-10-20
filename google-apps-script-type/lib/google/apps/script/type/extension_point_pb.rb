@@ -9,8 +9,30 @@ require 'google/protobuf/wrappers_pb'
 
 descriptor_data = "\n-google/apps/script/type/extension_point.proto\x12\x17google.apps.script.type\x1a\x1egoogle/protobuf/wrappers.proto\"O\n\x16MenuItemExtensionPoint\x12\x14\n\x0crun_function\x18\x01 \x01(\t\x12\r\n\x05label\x18\x02 \x01(\t\x12\x10\n\x08logo_url\x18\x03 \x01(\t\"[\n\x16HomepageExtensionPoint\x12\x14\n\x0crun_function\x18\x01 \x01(\t\x12+\n\x07\x65nabled\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.BoolValue\"j\n\x1dUniversalActionExtensionPoint\x12\r\n\x05label\x18\x01 \x01(\t\x12\x13\n\topen_link\x18\x02 \x01(\tH\x00\x12\x16\n\x0crun_function\x18\x03 \x01(\tH\x00\x42\r\n\x0b\x61\x63tion_typeB\xa8\x01\n\x1b\x63om.google.apps.script.typeP\x01Z6google.golang.org/genproto/googleapis/apps/script/type\xaa\x02\x17Google.Apps.Script.Type\xca\x02\x17Google\\Apps\\Script\\Type\xea\x02\x1aGoogle::Apps::Script::Typeb\x06proto3"
 
-pool = ::Google::Protobuf::DescriptorPool.generated_pool
-pool.add_serialized_file(descriptor_data)
+pool = Google::Protobuf::DescriptorPool.generated_pool
+
+begin
+  pool.add_serialized_file(descriptor_data)
+rescue TypeError
+  # Compatibility code: will be removed in the next major version.
+  require 'google/protobuf/descriptor_pb'
+  parsed = Google::Protobuf::FileDescriptorProto.decode(descriptor_data)
+  parsed.clear_dependency
+  serialized = parsed.class.encode(parsed)
+  file = pool.add_serialized_file(serialized)
+  warn "Warning: Protobuf detected an import path issue while loading generated file #{__FILE__}"
+  imports = [
+    ["google.protobuf.BoolValue", "google/protobuf/wrappers.proto"],
+  ]
+  imports.each do |type_name, expected_filename|
+    import_file = pool.lookup(type_name).file_descriptor
+    if import_file.name != expected_filename
+      warn "- #{file.name} imports #{expected_filename}, but that import was loaded as #{import_file.name}"
+    end
+  end
+  warn "Each proto file must use a consistent fully-qualified name."
+  warn "This will become an error in the next major version."
+end
 
 module Google
   module Apps
