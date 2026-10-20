@@ -1,5 +1,11 @@
 # Release History
 
+### 1.24.0 (2026-10-20)
+
+#### Features
+
+* Automated update of googleapis-common-protos-types ([#431](https://github.com/googleapis/common-protos-ruby/issues/431)) 
+
 ### 1.23.0 (2026-05-19)
 
 #### Features
