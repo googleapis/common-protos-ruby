@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.3.0 (2026-10-23)
+
+#### Features
+
+* Automated update of google-geo-type ([#429](https://github.com/googleapis/common-protos-ruby/issues/429)) 
+
 ### 1.2.0 (2026-05-19)
 
 #### Features
