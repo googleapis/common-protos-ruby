@@ -36,5 +36,5 @@ Gem::Specification.new do |spec|
 
   spec.add_dependency "googleapis-common-protos", "~> 1.9"
   spec.add_dependency "google-protobuf", ">= 3.18", "< 5.a"
-  spec.add_dependency "grpc", "~> 1.41"
+  spec.add_dependency "grpc", ">= 1.84.1", "< 2.a"
 end
