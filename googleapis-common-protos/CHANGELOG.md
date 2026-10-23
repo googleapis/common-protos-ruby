@@ -1,5 +1,11 @@
 # Release History
 
+### 1.11.0 (2026-10-23)
+
+#### Features
+
+* require grpc &gt;= 1.84.1 ([#448](https://github.com/googleapis/common-protos-ruby/issues/448)) 
+
 ### 1.10.0 (2026-05-19)
 
 #### Features
