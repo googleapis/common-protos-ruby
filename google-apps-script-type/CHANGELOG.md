@@ -1,5 +1,11 @@
 # Changelog
 
+### 1.9.0 (2026-10-29)
+
+#### Features
+
+* Automated update of google-apps-script-type ([#426](https://github.com/googleapis/common-protos-ruby/issues/426)) 
+
 ### 1.8.0 (2026-05-19)
 
 #### Features
